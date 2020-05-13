@@ -49,7 +49,7 @@ header nav ul li a.cta-button {
 	box-sizing: border-box;
 	color: #050a0d;
 	padding: 10px 24px;
-	transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+	transition: background-color 200ms ease-in-out 100ms, color 200ms ease-in-out 100ms;
 }
 header nav ul li a:not(.cta-button)::after {
 	background-color: #ffffff;
@@ -60,7 +60,7 @@ header nav ul li a:not(.cta-button)::after {
 	left: 0;
 	opacity: 0;
 	position: absolute;
-	transition: opacity 200ms ease-in-out;
+	transition: opacity 200ms ease-in-out 100ms;
 	width: 100%;
 }
 header nav ul li a:not(.cta-button):hover::after {
