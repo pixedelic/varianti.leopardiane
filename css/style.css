@@ -15,6 +15,7 @@ header {
 }
 #logo {
 	float: left;
+	margin: 0;
 }
 /**** nav ****/
 header nav {
