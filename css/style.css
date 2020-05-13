@@ -49,6 +49,8 @@ header nav ul li a.cta-button {
 	box-sizing: border-box;
 	color: #050a0d;
 	padding: 10px 24px;
+}
+html.dom-loaded header nav ul li a.cta-button {
 	transition: background-color 200ms ease-in-out 100ms, color 200ms ease-in-out 100ms;
 }
 header nav ul li a:not(.cta-button)::after {
