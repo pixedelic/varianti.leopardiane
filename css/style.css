@@ -115,6 +115,7 @@ header nav ul li a.cta-button:hover::after {
 }
 header nav ul li > ul {
 	background-color: #050a0d;
+	box-sizing: border-box;
 	display: block;
 	opacity: 0;
 	padding: 16px 12px;
@@ -122,7 +123,7 @@ header nav ul li > ul {
 	text-align: left; 
 	transition: opacity 200ms ease-in-out 50ms, top 0ms linear 50ms;
 	top: -1000000px;
-	width: 215px;
+	width: 220px;
 }
 header nav ul li:hover > ul {
 	opacity: 1;
@@ -175,8 +176,34 @@ header nav ul li li a:hover::after {
 	max-width: 1366px;
 	padding: 0 40px;
 }
-.limit-width::after {
+.limit-width-reduced {
+	box-sizing: border-box;
+	margin: auto;
+	max-width: calc(100% - 120px);
+	padding: 0 40px;
+}
+.limit-width::after,
+.limit-width-reduced::after {
 	clear: both;
 	content: '';
 	display: table;
+}
+/*****************************
+*	Layout pagine
+*****************************/
+.intro {
+	padding-bottom: 11vh;
+	padding-top: 15vh;
+}
+/*****************************
+*	Tipografia
+*****************************/
+h2 {
+	font-family: 'Crimson Text', serif;
+}
+.intro h2 {
+	font-size: 80px;
+	font-weight: 400;
+	line-height: 1;
+	margin: 0;
 }

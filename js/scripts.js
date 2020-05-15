@@ -51,6 +51,7 @@
 	LEOVAR.menu = function(){
 		var $header = $( 'header' ),
 			$nav = $( 'nav', $header ),
+			$parent = $nav.closest(' .limit-width' ),
 			navW, off;
 		
 		$( 'li:has(ul)', $nav ).on( 'mouseover', function(){
