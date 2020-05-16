@@ -67,7 +67,7 @@ header nav > ul > li > span {
 	font-size: 0.938em;
 	font-weight: 400;
 	line-height: 1;
-	margin: 0 15px;
+	margin: 0 20px;
 	padding: 12px 0;
 	position: relative;
 	text-decoration: none;
@@ -302,10 +302,10 @@ h3 {
 	content: '';
 	display: block;
 	height: 1px;
-	left: 15px;
+	left: 20px;
 	opacity: .5;
 	position: absolute;
-	right: 15px;
+	right: 20px;
 	z-index: -1;
 }
 #timeline-box .timeline-point {
@@ -353,10 +353,10 @@ h3 {
 	padding-top: 30px;
 }
 #timeline-box .timeline-point[data-time="start"] {
-	left: 15px;
+	left: 20px;
 }
 #timeline-box .timeline-point[data-time="end"] {
-	right: 15px;
+	right: 20px;
 }
 #timeline-box .timeline-point[data-time="1831"] {
 	left: 33%
@@ -381,9 +381,9 @@ h3 {
 	content: '';
 	display: block;
 	height: 3px;
-	left: 15px;
+	left: 20px;
 	position: absolute;
-	right: 15px;
+	right: 20px;
 	z-index: -1;
 }
 #timeline-box .box-edizione[data-time-trigger="1835"] > span::after {
@@ -396,18 +396,18 @@ h3 {
 	width: 40%;
 }
 #timeline-box .edizione-info {
-	max-width: calc(60% - 15px);
-	padding-left: 15px;
+	max-width: calc(60% - 20px);
+	padding-left: 20px;
 }
 #timeline-box .box-edizione[data-time-trigger="1831"] {
-	left: calc(33% - 15px);
+	left: calc(33% - 20px);
 	transform: translateX(-50%);
 }
 #timeline-box .box-edizione[data-time-trigger="1835"] {
-	left: calc(50% - 15px);
+	left: calc(50% - 20px);
 	transform: translateX(-50%);
 }
 #timeline-box .box-edizione[data-time-trigger="1845"] {
-	right: calc(20% - 15px);
+	right: calc(20% - 20px);
 	transform: translateX(50%);
 }
