@@ -58,7 +58,8 @@ header nav ul li {
 	display: inline-block;
 	position: relative;
 }
-header nav > ul > li > a {
+header nav > ul > li > a,
+header nav > ul > li > span {
 	color: #050a0d;
 	display: inline-block;
 	font-size: 0.938em;
@@ -76,13 +77,10 @@ header nav ul li:last-child a {
 header nav ul li a.cta-button {
 	color: #ffffff;
 	margin: 0 6px;
-	padding: 10px 24px;
+	padding: 10px 16px;
 	transition: color 200ms ease-in-out 50ms;
 }
-/*html.dom-loaded header nav ul li a.cta-button {
-	transition: background-color 200ms ease-in-out 50ms, color 200ms ease-in-out 50ms;
-}
-*/header nav > ul > li > a:not(.cta-button)::after {
+header nav > ul > li > a:not(.cta-button)::after {
 	background-color: #050a0d;
 	bottom: 0;
 	content: '';
@@ -105,7 +103,7 @@ header nav ul li a.cta-button::after {
 	border: 2px solid #050a0d;
 	border-radius: 30px;
 	content: '';
-	height: 43px;
+	height: 38px;
 	left: 0;
 	position: absolute;
 	right: 0;
@@ -121,16 +119,27 @@ header nav ul li a.cta-button:hover::after {
 	background-color: rgba(5,10,13,0);
 }
 header nav ul li > ul {
-	background-color: #050a0d;
 	box-sizing: border-box;
 	display: block;
 	opacity: 0;
-	padding: 16px 12px;
+	padding: 28px 12px 16px;
 	position: absolute;
 	text-align: left; 
 	transition: opacity 200ms ease-in-out 50ms, top 0ms linear 50ms;
 	top: -1000000px;
 	width: 220px;
+	z-index: 0;
+}
+header nav ul li > ul::before {
+	background-color: #050a0d;
+	bottom: 0;
+	content: '';
+	display: block;
+	left: 0;
+	position: absolute;
+	top: 12px;
+	width: 100%;
+	z-index: -1;
 }
 header nav ul li:hover > ul {
 	opacity: 1;
@@ -139,7 +148,8 @@ header nav ul li:hover > ul {
 header nav ul li li {
 	display: block;
 }
-header nav ul li li a {
+header nav ul li li a,
+header nav ul li li > span {
 	color: #ffffff;
 	display: block;
 	font-size: 0.875em;
@@ -152,9 +162,15 @@ header nav ul li li a {
 	transition: opacity 300ms ease-in-out 50ms, transform  300ms ease-in-out 50ms;
 	z-index: 0;
 }
-header nav ul li:hover li a {
+header nav ul li:hover li a,
+header nav ul li:hover li > span {
 	opacity: 1;
 	transform: translateY(0);
+}
+header nav ul li li > span.menu-title {
+	color: rgba(255,255,255,.5);
+	font-size: .725rem;
+	text-transform: uppercase;
 }
 header nav ul li li a::after {
 	background-color: #ffffff;
