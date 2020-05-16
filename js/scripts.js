@@ -66,12 +66,74 @@
 				$ulUl.css({ 'margin-left' : -1 * ( (offUl.left + ulW) - (off.left + navW) ) });
 			}
 		});
+	};
+
+	LEOVAR.timeLine = function(){
+		var $timeline = $('#timeline-box'),
+			$desc = $('.description', $timeline),
+			$boxes = $('.box-edizione', $timeline),
+			$triggers = $('[data-time-trigger]', $timeline);
+
+		var initTimeLine = function(){
+			$boxes.each(function(i, el){
+				$(el).css({
+					'margin-left': 0,
+					'margin-right': 0
+				});
+				var off = $(el).offset(),
+					elW = $(el).outerWidth(),
+					descR = $desc.outerWidth() + $desc.offset().left,
+					tLr = $timeline.outerWidth() + $timeline.offset().left;
+				if ( off.left < ( descR + 15 ) ) {
+					$(el).css({
+						'margin-left': descR - off.left
+					});
+				} else if ( ( off.left + elW ) > tLr ) {
+					$(el).css({
+						'margin-right': ( ( off.left + elW ) - tLr )
+					});
+				}
+			});
+		};
+		initTimeLine();
+		var setTimeLine;
+		function initSetTimeLine() {
+			clearRequestTimeout(setTimeLine);
+			setTimeLine = requestTimeout(function(){
+				initTimeLine();
+			}, 100);
+		}
+		window.addEventListener('resize', initSetTimeLine);
+
+		$('.timeline-point > a', $timeline).on('click', function(e){
+			e.preventDefault();
+			var $target = $(e.target).closest('[data-time]'),
+				dataTime = $target.attr('data-time'),
+				$trigger = $('[data-time-trigger="' + dataTime + '"]', $timeline);
+			$triggers.not($trigger).fadeOut(500);
+			$trigger.fadeIn(500);
+			initTimeLine();
+		});
+	};
+
+	LEOVAR.scroll = function(){
+		$('.onscroll-elem').each(function(ind, el){
+			var waypoint = new Waypoint({
+				element: el,
+				handler: function(direction) {
+					$(el).addClass('in-view');
+				},
+				offset: '50%' 
+			})
+		});
 	}
 
 	LEOVAR.init = function() {
 		$( document ).ready( function(){
 			$( 'html' ).addClass( 'dom-loaded' );
 			LEOVAR.menu();
+			LEOVAR.scroll();
+			LEOVAR.timeLine();
 		});
 
 	}

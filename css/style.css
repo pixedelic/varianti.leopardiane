@@ -6,7 +6,7 @@ body {
 	color: #050a0d;
 	font-family: 'Raleway', sans-serif;
 	font-size: 16px;
-	line-height: 1.3;
+	line-height: 1.5;
 	margin: 0;
 }
 a, a:active, a:focus {
@@ -15,6 +15,9 @@ a, a:active, a:focus {
 }
 a:hover {
 	text-decoration: none;
+}
+img {
+	max-width: 100%;
 }
 /*****************************
 *	Header
@@ -60,7 +63,6 @@ header nav ul li {
 }
 header nav > ul > li > a,
 header nav > ul > li > span {
-	color: #050a0d;
 	display: inline-block;
 	font-size: 0.938em;
 	font-weight: 400;
@@ -193,84 +195,32 @@ header nav ul li li a:hover::after {
 /*****************************
 *	General Layout
 *****************************/
+.light-skin {
+	background-color: #ffffff;
+	color: #050a0d;
+}
+.dark-skin {
+	background-color: #050a0d;
+	color: #ffffff;
+}
 .hero {
 	padding-bottom: 11vh;
 	padding-top: 15vh;
 }
 /*****************************
-*	Layout pagine
+*	Script
 *****************************/
-/* Home Page */
-#timeline {
-	background-color: #050a0d;
-	background-image: url(../images/leopardi-hero.jpg);
-	background-position: 50%;
-	background-repeat: no-repeat;
-	color: #ffffff;
+.onscroll-elem {
+	opacity: 0;
+	transform: translateY(10px);
+	transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
 }
-#timeline-box {
-	margin-bottom: 20px;
-	min-height: 380px;
-	position: relative;
-	z-index: 0;
+.onscroll-elem.in-view {
+	opacity: 1;
+	transform: translateY(0);
 }
-#timeline-box::after {
-	background-color: #ffffff;
-	bottom: 0;
-	content: '';
-	display: block;
-	height: 1px;
-	left: 15px;
-	opacity: .5;
-	position: absolute;
-	right: 15px;
-	z-index: -1;
-}
-#timeline-box .timeline-point {
-	bottom: 0;
-	display: block;
-	position: absolute;
-	transform: translate3d(-50%, 100%, 0);
-}
-#timeline-box .timeline-point a {
-	text-decoration: none;
-}
-#timeline-box .timeline-point::before {
-	background-color: #ffffff;
-	border-radius: 50%;
-	content: '';
-	display: block;
-	height: 11px;
-	left: 50%;
-	position: absolute;
-	top: -6px;
-	transform: translateX(-50%);
-	width: 11px;
-}
-#timeline-box .timeline-point a span {
-	display: block;
-	padding-top: 20px;
-}
-#timeline-box .timeline-point[data-time="start"] {
-	left: 15px;
-}
-#timeline-box .timeline-point[data-time="end"] {
-	right: 15px;
-}
-#timeline-box .timeline-point[data-time="1831"] {
-	left: 33%
-}
-#timeline-box .timeline-point[data-time="1835"] {
-	left: 50%;
-}
-#timeline-box .timeline-point[data-time="1845"] {
-	right: 20%;
-}
-#timeline-box .box-edizione {
-	position: absolute;
-}
-#timeline-box .edizione-img {
-	max-width: 180px;
+.hidden {
+	display: none;
 }
 /*****************************
 *	Tipografia
@@ -302,4 +252,142 @@ h3 {
 	opacity: .2;
 	vertical-align: middle;
 	width: 70px;
+}
+/*****************************
+*	Tags
+*****************************/
+.tag-highlight {
+	text-decoration: none;
+	transition: border 200ms ease-in-out 15ms;
+}
+.tag-highlight:hover {
+	border-bottom: 1px dashed transparent !important;
+}
+.dark-skin .tag-highlight {
+	border-bottom: 1px dashed rgba(255,255,255,0.5);
+}
+.light-skin .tag-highlight {
+	border-bottom: 1px dashed rgba(5,10,13,0.5);
+}
+.persona::before {
+	content: '\e056';
+	display: inline-block;
+	font-family: 'dripicons-v2';
+	font-size: .65rem;
+	margin-right: .25rem;
+	opacity: .75;
+	vertical-align: middle;
+	width: .65rem;
+}
+/*****************************
+*	Layout pagine
+*****************************/
+/* Home Page */
+#timeline {
+	background-image: url(../images/leopardi-hero.jpg);
+	background-position: 50%;
+	background-repeat: no-repeat;
+}
+#timeline-box {
+	margin-bottom: 20px;
+	min-height: 380px;
+	position: relative;
+	z-index: 0;
+}
+#timeline-box::after {
+	background-color: #ffffff;
+	bottom: 0;
+	content: '';
+	display: block;
+	height: 1px;
+	left: 15px;
+	opacity: .5;
+	position: absolute;
+	right: 15px;
+	z-index: -1;
+}
+#timeline-box .timeline-point {
+	bottom: 11px;
+	display: block;
+	position: absolute;
+	transform: translate3d(-50%, 100%, 0);
+}
+#timeline-box .timeline-point a {
+	text-decoration: none;
+}
+#timeline-box .timeline-point::before {
+	background-color: #ffffff;
+	border-radius: 50%;
+	content: '';
+	display: block;
+	height: 11px;
+	left: 50%;
+	position: absolute;
+	top: 5px;
+	transform: translateX(-50%);
+	width: 11px;
+	z-index: -1;
+}
+#timeline-box .timeline-point a span {
+	display: block;
+	padding-top: 30px;
+}
+#timeline-box .timeline-point[data-time="start"] {
+	left: 15px;
+}
+#timeline-box .timeline-point[data-time="end"] {
+	right: 15px;
+}
+#timeline-box .timeline-point[data-time="1831"] {
+	left: 33%
+}
+#timeline-box .timeline-point[data-time="1835"] {
+	left: 50%;
+}
+#timeline-box .timeline-point[data-time="1845"] {
+	right: 20%;
+}
+#timeline-box .box-edizione {
+	bottom: 30px;
+	position: absolute;
+	z-index: 0;
+}
+#timeline-box .box-edizione > span {
+	padding-bottom: 20px;
+}
+#timeline-box .box-edizione > span::after {
+	background-color: #fdb27b;
+	bottom: 0;
+	content: '';
+	display: block;
+	height: 3px;
+	left: 15px;
+	position: absolute;
+	right: 15px;
+	z-index: -1;
+}
+#timeline-box .box-edizione[data-time-trigger="1835"] > span::after {
+	background-color: #b3da67;
+}
+#timeline-box .box-edizione[data-time-trigger="1845"] > span::after {
+	background-color: #6fbcc0;
+}
+#timeline-box .edizione-img {
+	width: 40%;
+}
+#timeline-box .edizione-info {
+	max-width: calc(60% - 15px);
+	padding-left: 15px;
+}
+#timeline-box .box-edizione[data-time-trigger="1831"] {
+	left: calc(33% - 15px);
+	transform: translateX(-50%);
+}
+#timeline-box .box-edizione[data-time-trigger="1835"] {
+	left: calc(50% - 15px);
+	transform: translateX(-50%);
+}
+#timeline-box .box-edizione[data-time-trigger="1845"] {
+	right: calc(20% - 15px);
+	transform: translateX(50%);
 }

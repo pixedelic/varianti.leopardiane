@@ -40,13 +40,20 @@
 
 <!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+<!-- Griglia BootStrap -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css"/>
+<!-- Font Icon -->
+	<link rel="stylesheet" type="text/css" href="css/dripicons.css"/>
+<!-- Main CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 
 	<link rel="icon" href="favicon.png" sizes="16x16 32x32 40x40" type="image/png">
 
+<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Waypoints -->
+	<script src="js/waypoints.min.js"></script>
+<!-- Main JS -->
 	<script src="js/scripts.js"></script>
 
 </head>
@@ -59,7 +66,7 @@
 					<img src="images/logo-varianti-leopardiane.svg" id="main-logo" alt="Varianti Leopardiane - l'evolversi delle tematiche di Giacomo Leopardi attraverso le varianti dei suoi Canti"/>
 				</a>
 			</h1><!-- #logo -->
-			<nav class="align-items-center">
+			<nav class="align-items-center light-skin">
 				<ul>
 					<li>
 						<a href="https://pixedelic.github.io/variantileopardiane/" class="current">Home page</a>
@@ -120,33 +127,58 @@
 
 	<section>
 		<div id="intro" class="container hero">
-			<div class="row-reduced">
+			<div class="row-reduced onscroll-elem">
 				<h2>Grazie al <em>digitale penetrare il pensiero</em> dell&rsquo;autore partecipando <em>all&rsquo;evolversi</em> della sua poetica.</h2>
 				<p class="cite">Una dichiarazione di intenti</p>
 			</div><!-- .row-reduced -->
 		</div><!-- .row -->
 
-		<div id="timeline">
+		<div id="timeline" class="dark-skin">
 			<div class="container hero">
 				<div id="timeline-box" class="row">
-					<div class="col-3 d-flex align-items-end pb-4">
+					<div class="col-3 d-flex align-items-end pb-4 description">
 						<h3>Le edizioni dei <em>Canti</em></h3>
 					</div><!-- .col-3 -->
 					<span class="timeline-point" data-time="start"></span><!-- .timeline-point -->
 					<span class="timeline-point" data-time="1831">
-						<span class="box-edizione">
+						<a href="#"><span>1831</span></a>
+					</span><!-- .timeline-point -->
+					<span class="box-edizione col-5" data-time-trigger="1831">
+						<span class="col-12 d-flex align-items-end justify-content-md-center onscroll-elem px-0">
 							<span class="edizione-img">
 								<img src="images/fronte-piatti-1831-th.png"/>
 							</span><!-- .edizione-img -->
-						</span><!-- .box-edizione -->
-						<a href="#"><span>1831</span></a>
-					</span><!-- .timeline-point -->
+							<span class="edizione-info">
+								<p><em>Canti</em> / <a href="#" class="persona tag-highlight">Giacomo Leopardi</a> ;<br/><small>a cura di</small> <a href="#" class="persona tag-highlight">Antonio Ranieri</a>,<br/>Firenze, Piatti, 1831</p>
+							</span><!-- .edizione-info -->
+						</span><!-- .col-5 -->
+					</span><!-- .box-edizione -->
 					<span class="timeline-point" data-time="1835">
 						<a href="#"><span>1835</span></a>
 					</span><!-- .timeline-point -->
+					<span class="box-edizione col-5 hidden" data-time-trigger="1835">
+						<span class="col-12 d-flex align-items-end justify-content-md-center px-0">
+							<span class="edizione-img">
+								<img src="images/fronte-starita-1835-th.png"/>
+							</span><!-- .edizione-img -->
+							<span class="edizione-info">
+								<p><em>Canti</em> / <a href="#" class="persona tag-highlight">Giacomo Leopardi</a> ;<br/><small>a cura di</small> <a href="#" class="persona tag-highlight">Antonio Ranieri</a>,<br/>Napoli, Starita, 1835</p>
+							</span><!-- .edizione-info -->
+						</span><!-- .col-5 -->
+					</span><!-- .box-edizione -->
 					<span class="timeline-point" data-time="1845">
 						<a href="#"><span>1845</span></a>
 					</span><!-- .timeline-point -->
+					<span class="box-edizione col-5 hidden" data-time-trigger="1845">
+						<span class="col-12 d-flex align-items-end justify-content-md-center px-0">
+							<span class="edizione-img">
+								<img src="images/fronte-le-monnier-1845-th.png"/>
+							</span><!-- .edizione-img -->
+							<span class="edizione-info">
+								<p><em>Canti</em> / <a href="#" class="persona tag-highlight">Giacomo Leopardi</a> ;<br/><small>a cura di</small> <a href="#" class="persona tag-highlight">Antonio Ranieri</a>,<br/>Firenze, Le Monnier, 1845</p>
+							</span><!-- .edizione-info -->
+						</span><!-- .col-5 -->
+					</span><!-- .box-edizione -->
 					<span class="timeline-point" data-time="end"></span><!-- .timeline-point -->
 				</div><!-- #timeline-box -->
 			</div><!-- .row -->
