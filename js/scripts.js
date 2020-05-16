@@ -72,6 +72,7 @@
 		var $timeline = $('#timeline-box'),
 			$desc = $('.description', $timeline),
 			$boxes = $('.box-edizione', $timeline),
+			$targets = $('[data-time]', $timeline),
 			$triggers = $('[data-time-trigger]', $timeline);
 
 		var initTimeLine = function(){
@@ -107,7 +108,8 @@
 
 		$('.timeline-point > a', $timeline).on('click', function(e){
 			e.preventDefault();
-			var $target = $(e.target).closest('[data-time]'),
+			$targets.removeClass('active');
+			var $target = $(e.target).closest('[data-time]').addClass('active'),
 				dataTime = $target.attr('data-time'),
 				$trigger = $('[data-time-trigger="' + dataTime + '"]', $timeline);
 			$triggers.not($trigger).fadeOut(500);
