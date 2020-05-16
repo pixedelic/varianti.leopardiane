@@ -193,24 +193,6 @@ header nav ul li li a:hover::after {
 /*****************************
 *	General Layout
 *****************************/
-.limit-width {
-	box-sizing: border-box;
-	margin: auto;
-	max-width: 1366px;
-	padding: 0 40px;
-}
-.limit-width-reduced {
-	box-sizing: border-box;
-	margin: auto;
-	max-width: calc(100% - 120px);
-	padding: 0 40px;
-}
-.limit-width::after,
-.limit-width-reduced::after {
-	clear: both;
-	content: '';
-	display: table;
-}
 .hero {
 	padding-bottom: 11vh;
 	padding-top: 15vh;
