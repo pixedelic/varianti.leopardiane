@@ -228,6 +228,7 @@ header nav ul li li a:hover::after {
 h2 {
 	font-family: 'Crimson Text', serif;
 	font-size: 52px; 
+	line-height: 1.25;
 	margin-bottom: .5em;
 	margin-top: .5em;
 }
@@ -235,6 +236,7 @@ h3 {
 	font-family: 'Raleway', sans-serif;
 	font-size: 40px; 
 	font-weight: 300;
+	line-height: 1.25;
 	margin-bottom: .5em;
 	margin-top: .5em;
 }
