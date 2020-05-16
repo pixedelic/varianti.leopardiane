@@ -125,7 +125,7 @@
 				handler: function(direction) {
 					$(el).addClass('in-view');
 				},
-				offset: '50%' 
+				offset: '70%' 
 			})
 		});
 	}
@@ -137,7 +137,6 @@
 			LEOVAR.scroll();
 			LEOVAR.timeLine();
 		});
-
 	}
 
 	LEOVAR.init();
