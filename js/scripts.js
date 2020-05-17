@@ -128,6 +128,19 @@
 				offset: '70%' 
 			})
 		});
+
+		$('.parax').each(function(){
+			var $this = $(this),
+				bg = $this.css('background-image').replace(/^url\(['"](.+)['"]\)/, '$1');
+			$this.css({
+				'background-image':'none',
+				'background-color':'transparent'
+			}).parallax({
+				imageSrc: bg,
+				speed: 0.5
+			});
+		});
+
 	}
 
 	LEOVAR.init = function() {
