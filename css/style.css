@@ -300,6 +300,11 @@ h4 {
 	margin-bottom: .5em;
 	margin-top: .5em;
 }
+[class^="py-"] h2:first-child, [class*=" py-"] h2:first-child, [class^="pt-"] h2:first-child, [class*=" pt-"] h2:first-child,
+[class^="py-"] h3:first-child, [class*=" py-"] h3:first-child, [class^="pt-"] h3:first-child, [class*=" pt-"] h3:first-child,
+[class^="py-"] h4:first-child, [class*=" py-"] h4:first-child, [class^="pt-"] h4:first-child, [class*=" pt-"] h4:first-child {
+	margin-top: 0;
+}
 .underlined {
 	padding-bottom: .25em;
 	position: relative;
