@@ -48,6 +48,12 @@
 		}
 	};
 
+	LEOVAR.utils = function(){
+		$('a[href="#"]').on('click', function(e){
+			e.preventDefault();
+		});
+	};
+
 	LEOVAR.menu = function(){
 		var $header = $( 'header' ),
 			$nav = $( 'nav', $header ),
@@ -128,7 +134,9 @@
 				offset: '70%' 
 			})
 		});
+	};
 
+	LEOVAR.parax = function(){
 		$('.parax').each(function(){
 			var $this = $(this),
 				bg = $this.css('background-image').replace(/^url\(['"](.+)['"]\)/, '$1');
@@ -140,15 +148,18 @@
 				speed: 0.75
 			});
 		});
-
-	}
+	};
 
 	LEOVAR.init = function() {
 		$( document ).ready( function(){
 			$( 'html' ).addClass( 'dom-loaded' );
+			LEOVAR.utils();
 			LEOVAR.menu();
-			LEOVAR.scroll();
+			requestTimeout(function(){
+				LEOVAR.scroll();
+			}, 500);
 			LEOVAR.timeLine();
+			LEOVAR.parax();
 		});
 	}
 
