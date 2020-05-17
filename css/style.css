@@ -425,9 +425,9 @@ h3 {
 	content: '';
 	display: block;
 	height: 3px;
-	left: 20px;
+	left: 0;
 	position: absolute;
-	right: 20px;
+	right: 0;
 	z-index: -1;
 }
 #timeline-box .box-edizione[data-time-trigger="1835"] > span::after {
