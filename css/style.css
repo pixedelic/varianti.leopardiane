@@ -208,20 +208,63 @@ section {
 	color: #ffffff;
 }
 .hero {
-	padding-bottom: 11vh;
-	padding-top: 15vh;
+	padding-bottom: calc(10vh + 20px);;
+	padding-top: calc(14vh + 20px);;
+}
+.row-reduced {
+	margin: auto;
+	max-width: calc(100% - 160px);
+}
+.highlighted-box {
+	position: relative;
+}
+.highlighted-box::after {
+	background-color: #9eadb4;
+	border-radius: 3px;
+	content: '';
+	display: block;
+	height: 100%;
+	opacity: .2;
+	position: absolute;
+	top: 0;
+}
+.highlighted-box.highlighted-right::after {
+	left: -100vw;
+	right: 20px;
+}
+.thumb-box {
+	border-radius: 3px;
+	overflow: hidden;
+	padding-top: 50%;
+	position: relative;
+	width: 100%;
+}
+.thumb-box img {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate3d(-50%, -50%, 0);
 }
 /*****************************
 *	Script
 *****************************/
 .onscroll-elem {
 	opacity: 0;
-	transform: translateY(10px);
+	transform: translate3d(0,10px,0);
 	transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
+}
+.onscroll-elem.from-left {
+	transform: translate3d(-10px,0,0);
+}
+.onscroll-elem.nth-child-2 {
+	transition: opacity 500ms ease-in-out 150ms, transform 500ms ease-in-out 150ms;
+}
+.onscroll-elem.nth-child-3 {
+	transition: opacity 500ms ease-in-out 300ms, transform 500ms ease-in-out 300ms;
 }
 .onscroll-elem.in-view {
 	opacity: 1;
-	transform: translateY(0);
+	transform: translate3d(0,0,0);
 }
 .hidden {
 	display: none;
@@ -244,6 +287,14 @@ h3 {
 	margin-bottom: .5em;
 	margin-top: .5em;
 }
+h4 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 26px; 
+	font-weight: 300;
+	line-height: 1.25;
+	margin-bottom: .5em;
+	margin-top: .5em;
+}
 .underlined {
 	padding-bottom: .25em;
 	position: relative;
@@ -257,7 +308,7 @@ h3 {
 	left: 0;
 	opacity: .25;
 	position: absolute;
-	width: 100px;
+	width: 80px;
 }
 .dark-skin .underlined::after {
 	background-color: #ffffff;

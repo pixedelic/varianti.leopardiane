@@ -137,7 +137,7 @@
 				'background-color':'transparent'
 			}).parallax({
 				imageSrc: bg,
-				speed: 0.5
+				speed: 0.75
 			});
 		});
 
