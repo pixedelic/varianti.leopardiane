@@ -820,7 +820,7 @@ h4 {
 form {
 	width: 100%;
 }
-label.wrap-submit {
+.wrap-submit {
 	background-color: #ffffff;
 	border: 1px solid rgba(158,173,180,0.5);
 	border-radius: 3px;
@@ -828,7 +828,7 @@ label.wrap-submit {
 	padding: 3px;
 	width: 100%;
 }
-label.wrap-submit input[type="text"] {
+.wrap-submit input[type="text"] {
 	background: transparent;
 	border: 0;
 	color: #050a0d;
@@ -840,7 +840,7 @@ label.wrap-submit input[type="text"] {
 	padding-right: 10px;
 	text-indent: 10px;
 }
-label.wrap-submit input[type="submit"] {
+.wrap-submit input[type="submit"] {
 	background-color: #9eadb4;
 	border: 0;
 	border-radius: 2px;
