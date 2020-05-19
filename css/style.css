@@ -224,6 +224,11 @@ footer {
 	padding-bottom: calc(10vh + 20px);;
 	padding-top: calc(14vh + 20px);;
 }
+#title-hero {
+	background-image: url(../images/leopardi-hero.jpg);
+	background-position: 50%;
+	background-repeat: no-repeat;
+}
 .row-reduced {
 	margin: auto;
 	max-width: calc(100% - 160px);
@@ -263,6 +268,234 @@ footer {
 	top: 50%;
 	transform: translate3d(-50%, -50%, 0);
 }
+.poem {
+	font-family: 'Crimson Text', serif;
+	font-size: 1.875em;
+	line-height: 1.4;
+}
+.poem .stanza {
+	position: relative;
+	z-index: 0;
+}
+.poem .verse {
+	background-color: #ffffff;
+	display: inline-block;
+	padding: 0 20px 0 100px;
+	text-indent: -20px;
+}
+.poem .verse.active {
+	background-color: #ffffff;
+}
+.poem .verse[data-verse]::before {
+	display: block;
+	font-size: 0.667em;
+	left: 0;
+	line-height: 2.3;
+	opacity: .35;
+	position: absolute;
+	text-indent: 0;
+	width: 60px;
+}
+.poem span[data-vars] .verse[data-verse]::before {
+	font-size: 0.585em;
+}
+.poem span[data-vars] {
+	position: relative;
+}
+.poem span[data-vars] .verse span[data-var] {
+	color: rgba(5,10,13,0.5);
+}
+.poem span[data-vars] .variant-alert {
+	bottom: -5px;
+	cursor: pointer;
+	display: block;
+	left: 0;
+	height: 7px;
+	position: absolute;
+	width: 7px;
+	z-index: 2;
+}
+.poem .verse span[data-vars] .variant-alert {
+	left: -7px;
+}
+section[data-active-var="ms"] .poem span[data-vars] .variant-alert[data-badges*='ms'] {
+	display: none;
+}
+section[data-active-var="1831"] .poem span[data-vars] .variant-alert[data-badges*='1831'] {
+	display: none;
+}
+section[data-active-var="1835"] .poem span[data-vars] .variant-alert[data-badges*='1835'] {
+	display: none;
+}
+section[data-active-var="1845"] .poem span[data-vars] .variant-alert[data-badges*='1845'] {
+	display: none;
+}
+.poem span[data-vars] .variant-alert [data-var-badge] {
+	background-color: #6fbcc0;
+	border-radius: 50%;
+	cursor: pointer;
+	display: block;
+	height: 7px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 7px;
+}
+.poem span[data-var] {
+	display: none;
+	z-index: 0;
+}
+.poem .verse span[data-var] {
+	cursor: pointer;
+}
+.poem span[data-var] span[data-var] {
+	display: inline;
+}
+.poem .verse span[data-var] {
+	background-color: rgba(158,173,180,0.2);
+	position: relative;
+}
+section[data-active-var="ms"] .poem span[data-var*="ms"] {
+	display: inline;
+}
+section[data-active-var="1831"] .poem span[data-var*="1831"] {
+	display: inline;
+}
+section[data-active-var="1835"] .poem span[data-var*="1835"] {
+	display: inline;
+}
+section[data-active-var="1845"] .poem span[data-var*="1845"] {
+	display: inline;
+}
+.poem .show-vars {
+	display: block;
+	font-family: 'Raleway', sans-serif;
+	padding-top: 1.4em;
+	position: absolute;
+	right: 0;
+	text-indent: 0;
+}
+span.show-vars::before {
+	background-color: #9eadb4;
+	content: '';
+	display: block;
+	height: 2px;
+	left: -200%;
+	margin-top: -0.7em;
+	opacity: .2;
+	position: absolute;
+	width: calc(300% - 30px);
+	z-index: -1;
+}
+.poem .close-vars {
+	color: #9eadb4;
+	cursor: pointer;
+	font-family: 'dripicons-v2';
+	height: 20px;
+	position: absolute;
+	right: 0;
+	top: calc(0.7em - 10px);
+	width: 20px;
+}
+.poem .close-vars::before {
+	content: '9';
+	display: block;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	width: 20px;
+}
+.poem .show-vars [data-show-var] {
+	font-size: .95rem;
+}
+.poem .show-vars .verse-var {
+	color: #9eadb4;
+	font-family: 'Crimson Text', serif;
+	font-style: italic;
+	position: absolute;
+	top: -0.5em;
+}
+.poem .show-vars .verse-var > span {
+	font-size: .95rem;
+}
+.poem .show-vars .var-title,
+.poem .show-vars .var-text {
+	display: block;
+}
+.poem .show-vars .var-title {
+	color: #9eadb4;
+	font-size: .9em;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.poem .show-vars .var-text {
+	padding-bottom: 10px;
+}
+.poem .show-vars span[data-var-badge] {
+	display: inline-block;
+	height: 4px;
+	margin-right: 2px;
+	width: 9px;
+}
+.poem .show-vars span[data-var-badge]:last-child {
+	margin-right: 5px;
+}
+.poem span[data-var-badge="ms"] {
+	background-color: #d95369 !important;
+}
+.poem span[data-var-badge="1831"] {
+	background-color: #fdb27b !important;
+}
+.poem span[data-var-badge="1835"] {
+	background-color: #b3da67 !important;
+}
+.poem span[data-var-badge="1845"] {
+	background-color: #6fbcc0 !important;
+}
+/*****************************
+*	Navigazione e Tools
+*****************************/
+#filtri ul {
+	border-bottom: 3px solid rgba(158,173,180,0.5);
+	list-style: none;
+	margin: 0;
+	padding: 1em 0;
+}
+#filtri li {
+	display: inline-block;
+	transition: opacity 150ms ease-in-out;
+}
+#filtri li:not(.active) {
+	opacity: .35;
+}
+#filtri li:not(:last-child) {
+	padding-right: 30px;
+}
+#filtri a {
+	position: relative;
+	text-decoration: none;
+	z-index: 0;
+}
+#filtri a::after {
+	background: #9eadb4;
+	content: '';
+	display: block;
+	height: 5px;
+	width: 12px;
+	z-index: -1;
+}
+#filtri li.active a.var-ms::after {
+	background-color: #d95369;
+}
+#filtri li.active a.var-1831::after {
+	background-color: #fdb27b;
+}
+#filtri li.active a.var-1835::after {
+	background-color: #b3da67;
+}
+#filtri li.active a.var-1845::after {
+	background-color: #6fbcc0;
+}
 /*****************************
 *	Script
 *****************************/
@@ -290,6 +523,14 @@ footer {
 /*****************************
 *	Tipografia
 *****************************/
+h1 {
+	font-family: 'Crimson Text', serif;
+	font-size: 70px; 
+	font-weight: 400;
+	line-height: 1.25;
+	margin-bottom: .5em;
+	margin-top: .5em;
+}
 h2 {
 	font-family: 'Crimson Text', serif;
 	font-size: 52px; 
@@ -338,6 +579,13 @@ h4 {
 	background-color: #ffffff;
 	opacity: .5;
 }
+#title-hero h1 {
+	font-size: 100px;
+	line-height: 1;
+}
+#title-hero h1 + .cite {
+	margin-top: -1em;
+}
 #intro h2 {
 	font-size: 80px;
 	line-height: 1;
@@ -351,6 +599,9 @@ h4 {
 	opacity: .2;
 	vertical-align: middle;
 	width: 70px;
+}
+.dark-skin .cite::before {
+	background-color: #ffffff;
 }
 /*****************************
 *	UI

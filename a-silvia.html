@@ -2,15 +2,16 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-	<title>Home page - Varianti Leopardiane</title>
+	<title>A Silvia - Varianti Leopardiane</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Rappresentazione e confronto in formato digitale delle varianti dei testi leopardiani"/>
+	<meta name="description" content="Rappresentazione e confronto in formato digitale della poesia A Silvia di Giacomo Leopardi"/>
 	<meta name="keywords" content="Giacomo Leopardi,Canti,varianti,lezioni,filologia,letteratura italiana,idillio"/>
 	<meta name="author" content="Manuel Masia"/>
 
 <!-- Set di metadati Dublin Core -->
-	<meta name="DC.Title" content="Nome dato alla risorsa">
+	<meta name="DC.Title" content="A Silvia di Giacomo Leopardi">
+	<meta name="DC.Alternative" content="Confronto fra le varianti del canto">
 	<meta name="DC.Creator.PersonalName" content="Manuel Masia">
 	<meta name="DC.Creator.PersonalName.Address" content="manuel.masia@studio.unibo.it">
 	<meta name="DC.Subject" content="markup languages">
@@ -22,7 +23,7 @@
 	<meta name="DC.Publisher" content="Manuel Masia">
 	<meta name="DC.Date" content="2020-05-15">
 	<meta name="DC.Type" content="text">
-	<meta name="DC.Format" scheme="IMT" content="text/html">
+	<meta name="DC.Format" content="text/html">
 	<meta name="DC.Identifier" content="https://pixedelic.github.io/variantileopardiane/">
 <!-- Qui ho inserito più source con relative URI -->
 	<meta name="DC.Source" content="Manoscritti autografi di Giacomo Leopardi della Biblioteca Nazionale di Napoli">
@@ -36,59 +37,168 @@
 	<meta name="DC.Source" content="Canti (ed. Napoli 1835) / Giacomo Leopardi ; Roma: Biblioteca Italiana, 2004">
 	<meta name="DC.Source.URI" content="http://www.bibliotecaitaliana.it/scheda/bibit000469">
 	<meta name="DC.Source" content="Canti / Giacomo Leopardi ; [a cura di] Emilio Peruzzi - 2. ed. riveduta e ampliata - Milano : Biblioteca Universale Rizzoli ; Recanati : Centro Nazionale di Studi Leopardiani, 1998 - 665 p. ; 20 cm. - [ISBN] 88-17-11056-6">
-	<meta name="DC.Language" scheme = "rfc1766" content="it-IT">
+	<meta name="DC.Language" content="it-IT">
 
 <!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-
+	<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!-- Griglia BootStrap -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css"/>
+<!-- Font Icon -->
+	<link rel="stylesheet" type="text/css" href="css/dripicons.css"/>
+<!-- Main CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="js/scripts.js"></script>
+	<link rel="icon" href="favicon.png" sizes="16x16 32x32 40x40" type="image/png">
 
 </head>
 
 <body>
 	<header>
-		<div class="limit-width vertical-al">
+		<div class="container d-flex justify-content-between">
 			<h2 id="logo">
 				<a href="https://pixedelic.github.io/variantileopardiane/" title="Torna alla Home Page">
-					<img src="images/logo-varianti-leopardiane.svg" id="main-logo" alt="Logo del progetto Varianti Leopardiane"/>
+					<img src="images/logo-varianti-leopardiane.svg" id="main-logo" alt="Varianti Leopardiane - l'evolversi delle tematiche di Giacomo Leopardi attraverso le varianti dei suoi Canti"/>
 				</a>
 			</h2><!-- #logo -->
-			<nav>
+			<nav class="align-items-center light-skin">
 				<ul>
 					<li>
-						<a href="https://pixedelic.github.io/variantileopardiane/">Home page</a>
+						<a href="https://pixedelic.github.io/variantileopardiane/" title="Vai alla Home Page">Home page</a>
 					</li>
 					<li>
-						<a href="https://pixedelic.github.io/variantileopardiane/progetto.html">il Progetto</a>
+						<a href="https://pixedelic.github.io/variantileopardiane/progetto.html" title="Leggi i dettagli del progetto">il Progetto</a>
 					</li>
 					<li>
-						<a href="https://pixedelic.github.io/variantileopardiane/edizioni.html">le Edizioni</a>
+						<a href="https://pixedelic.github.io/variantileopardiane/canti.html" class="current" title="La lista dei Canti">i Canti</a>
+						<ul>
+							<li>
+								<span class="menu-title">Le edizioni</span>
+							</li>
+							<li>
+								<a href="https://pixedelic.github.io/variantileopardiane/edizioni.html" title="Le edizioni prese in esame">Tutte le edizioni</a>
+							</li>
+							<li>
+								<a href="https://pixedelic.github.io/variantileopardiane/edizioni.html#piatti" title="Firenze, Piatti 1831">Piatti 1831</a>
+							</li>
+							<li>
+								<a href="https://pixedelic.github.io/variantileopardiane/edizioni.html#piatti" title="Napoli, Starita 1835">Starita 1835</a>
+							</li>
+							<li>
+								<a href="https://pixedelic.github.io/variantileopardiane/edizioni.html#piatti" title="Firenze, Le Monnier 1845">Le Monnier 1845</a>
+							</li>
+						</ul>
 					</li>
 					<li>
-						<a href="https://pixedelic.github.io/variantileopardiane/canti.html" class="cta-button">i Canti</a>
+						<a href="https://pixedelic.github.io/variantileopardiane/memoria.html" class="cta-button" title="Il tema della Memoria">la Memoria</a>
 					</li>
 					<li>
-						<a href="https://pixedelic.github.io/variantileopardiane/contatti.html">Contatti</a>
+						<a href="https://pixedelic.github.io/variantileopardiane/concordanze.html" title="Le concordanze">Concordanze</a>
+						<ul>
+							<li>
+								<span class="menu-title">Altre tematiche</span>
+							</li>
+							<li>
+								<a href="https://pixedelic.github.io/variantileopardiane/natura.html" title="Il tema della Natura">Natura</a>
+							</li>
+							<li>
+								<a href="https://pixedelic.github.io/variantileopardiane/pessimismo-storico.html" title="Il Pessimismo storico">Pessimismo storico</a>
+							</li>
+							<li>
+								<a href="https://pixedelic.github.io/variantileopardiane/patria.html" title="Il tema della Patria">La patria</a>
+							</li>
+							<li>
+								<a href="https://pixedelic.github.io/variantileopardiane/pessimismo-cosmico.html" title="Il Pessimismo cosmico">Pessimismo cosmico</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="https://pixedelic.github.io/variantileopardiane/contatti.html" title="Contatta lo sviluppatore">Contatti</a>
 					</li>
 				</ul>
 			</nav>
-		</div><!-- .limit-width -->
+		</div><!-- .row -->
 	</header>
 
-	<nav>
-	</nav>
-	
-	<section>
-	</section>
+	<main>
+		<section data-active-var="1845">
+			<div id="title-hero" class="parax dark-skin">
+				<div class="container hero">
+					<div class="row justify-content-end">
+						<div class="col-9-5 onscroll-elem">
+							<h1>A Silvia</h1>
+							<p class="cite">(Pisa. 19. 20. Aprile. | 1828.)</p>
+						</div><!-- .col-9-5 -->
+					</div><!-- .row -->
+				</div><!-- .container.hero -->
+			</div><!-- #title-hero -->
+			<div class="container py-5">
+				<div class="row flex-row-reverse">
+					<nav id="filtri" class="col-9-5">
+						<ul>
+							<li class="active">
+								<a href="#" title="Visualizza le varianti dell'edizione Le Monnier 1845" class="var-1845" data-trigger="1845">Le Monnier 1845</a>
+							</li>
+							<li>
+								<a href="#" title="Visualizza le varianti dell'edizione Starita 1835" class="var-1835" data-trigger="1835">Starita 1835</a>
+							</li>
+							<li>
+								<a href="#" title="Visualizza le varianti dell'edizione Piatti 1831" class="var-1831" data-trigger="1831">Piatti 1831</a>
+							</li>
+							<li>
+								<a href="#" title="Visualizza le varianti del Manoscritto" class="var-ms" data-trigger="ms">Manoscritto</a>
+							</li>
+						</ul>
+					</nav><!-- #filtri -->
+				</div><!-- .row -->
+			</div><!-- .container -->
+			<div class="container">
+				<div class="row flex-row-reverse">
+					<div class="poem col-9-5">
+						<p class="stanza">
+							<span class="verse" data-verse="1">Silvia, <span data-vars="true"><span data-var="ms,1831">sovvienti</span><span data-var="1835">rammenti</span><span data-var="1845">rimembri</span></span> ancora</span><br/>
+							<span class="verse" data-verse="2">Quel tempo <span data-vars="true"><span data-var="ms">de la</span><span data-var="1831,1835,1845">della</span></span> tua via mortale,</span><br/>
+							<span class="verse" data-verse="3">Quando beltà <span data-vars="true"><span data-var="ms">splende<del>v</del>a</span><span data-var="1831,1835,1845">splendeva</span></span></span><br/>
+							<span data-vars="true"><span data-var="ms"><span class="verse" data-verse="3bis" data-show-verse="true"><span data-var><del>Ne la fronte e nel sen tuo verginale,</del></span></span><br/></span></span>
+							<span data-vars="true"><span data-var="ms"><span class="verse" data-verse="add@place=margin:left" data-show-verse="true"><span data-var>Nel volto verginale</span></span><br/></span></span>
+							<span class="verse" data-verse="4">Negli occhi tuoi ridenti e fuggitivi,</span><br/>
+							<span class="verse" data-verse="5" data-show-verse="true">E tu, lieta e pensosa, il limitare</span><br/>
+							<span class="verse" data-verse="6">Di gioventù salivi?</span><br/>
+						</p>
+						<p class="stanza">
+							<span class="verse" data-verse="7">Sonavan le quiete</span><br/>
+							<span class="verse" data-verse="8">Stanze, e le vie dintorno,</span><br/>
+							<span class="verse" data-verse="9">Al tuo perpetuo canto</span><br/>
+							<span class="verse" data-verse="10" data-show-verse="true">Allor che all'opre femminili intenta</span><br/>
+							<span class="verse" data-verse="11">Sedevi, assai contenta</span><br/>
+							<span class="verse" data-verse="12">Di quel vago avvenir che in mente avevi.</span><br/>
+							<span class="verse" data-verse="13">Era il maggio odoroso: e tu solevi</span><br/>
+							<span class="verse" data-verse="14">Così menare il giorno.</span><br/>
+						</p>
+					</div>
 
-	<aside>
-	</aside>
+					<aside class="col-2-5">
+						Aside
+					</aside>
+				</div><!-- .row -->
+			</div><!-- .container -->
+		</section>
+	</main>
 
-	<footer>
+	<footer class="parax dark-skin">
+		<div class="container">
+			<div class="row py-5">
+			</div><!-- .row -->
+		</div><!-- .container -->
 	</footer>
+
+<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Waypoints -->
+	<script src="js/waypoints.min.js"></script>
+<!-- Parallax -->
+	<script src="js/parallax.min.js"></script>
+<!-- Main JS -->
+	<script src="js/scripts.js"></script>
+
 </body>
 </html>
