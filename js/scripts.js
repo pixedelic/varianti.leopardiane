@@ -216,13 +216,22 @@
 
 					$('.show-vars').remove();
 
-					if ( $('span[data-var]', $dv).length ) {
-						text = $('span[data-var]', $dv).html();
-					}
-					for (di = 0; di < dataArr.length; di++) {
-						badge = badge + '<span data-var-badge="' + dataArr[di] + '"></span>';
-					}
-					out = out + '<span data-show-var="' + dataVar + '"><span class="var-title">' + badge + dataVar.replace(/,/g, ", ") + '</span><span class="var-text">' + text + '</span></span>';
+					$dataVars.each(function(i, dV){
+						var $dv = $(dV),
+							dataVar = $dv.attr('data-var'),
+							dataArr = dataVar.split(','),
+							text = $dv.html(),
+							badge = '',
+							di;
+
+						if ( $('span[data-var]', $dv).length ) {
+							text = $('span[data-var]', $dv).html();
+						}
+						for (di = 0; di < dataArr.length; di++) {
+							badge = badge + '<span data-var-badge="' + dataArr[di] + '"></span>';
+						}
+						out = out + '<span data-show-var="' + dataVar + '"><span class="var-title">' + badge + dataVar.replace(/,/g, ", ") + '</span><span class="var-text">' + text + '</span></span>';
+					});
 
 					var verseAbbr = '';
 					if ( dataVerse.indexOf('@') === -1 ) {
