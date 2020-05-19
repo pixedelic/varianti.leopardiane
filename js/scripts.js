@@ -150,6 +150,113 @@
 		});
 	};
 
+	LEOVAR.poem = function(){
+		var style = '';
+		$('.poem').each(function(){
+			var $poem = $(this),
+				$lines = $('.verse', $poem),
+				$verses = $('.verse[data-verse][data-show-verse="true"]', $poem),
+				$vars = $('span[data-vars]', $poem);
+
+			$verses.each(function(i, verse){
+				var num = $(verse).attr('data-verse'),
+					num_0 = num,
+					fontStyle = '';
+				if ( num_0.indexOf('@') !== -1 ) {
+					num_0 = num_0.split('@');
+					num_0 = num_0[0];
+					fontStyle = 'font-style:italic;'
+				}
+
+				style = style + '.verse[data-verse="' + num + '"]::before{content:"' + num_0 + '";' + fontStyle +'}';
+			});
+
+			$vars.each(function(){
+				var $cont = $(this),
+					$dataVars = $('> span[data-var]', $cont),
+					dataString = '',
+					badges = '';
+				$dataVars.each(function(i, dV){
+					var $dv = $(dV),
+						dataVar = $dv.attr('data-var'),
+						dataArr = dataVar.split(','),
+						di;
+
+					for (di = 0; di < dataArr.length; di++) {
+						dataString = dataString + dataArr[di] + ' ';
+						badges = badges + '<span data-var-badge="' + dataArr[di] + '"></span>';
+					}
+				});	
+				$cont.prepend('<span class="variant-alert" data-badges="' + dataString + '">' + badges + '</span>');	
+
+				$('span[data-var-badge]', $cont).on('click', function(e){
+					//e.stopPropagation();
+					var $badge = $(this),
+						badge = $badge.attr('data-var-badge');
+					$('#filtri a[data-trigger="' + badge + '"').click();
+				});
+
+				$dataVars.on('click',function(){
+					$lines.removeClass('active');
+					var $verse = $cont.closest('.verse').addClass('active'),
+						$verseInt = $('.verse', $cont).addClass('active'),
+						dataVerse = $verseInt.length ? $verseInt.attr('data-verse') : $verse.attr('data-verse'),
+						$dataVars = $('> span[data-var]', $cont),
+						off = $cont.position(),
+						$aside = $cont.closest('.container').find('aside'),
+						colW = $aside.outerWidth(),
+						out = '',
+
+						$dv = $(this),
+						dataVar = $dv.attr('data-var'),
+						dataArr = dataVar.split(','),
+						text = $dv.html(),
+						badge = '',
+						di;
+
+					$('.show-vars').remove();
+
+					if ( $('span[data-var]', $dv).length ) {
+						text = $('span[data-var]', $dv).html();
+					}
+					for (di = 0; di < dataArr.length; di++) {
+						badge = badge + '<span data-var-badge="' + dataArr[di] + '"></span>';
+					}
+					out = out + '<span data-show-var="' + dataVar + '"><span class="var-title">' + badge + dataVar.replace(/,/g, ", ") + '</span><span class="var-text">' + text + '</span></span>';
+
+					var verseAbbr = '';
+					if ( dataVerse.indexOf('@') === -1 ) {
+						verseAbbr = 'v. ';
+					}
+
+					$dv.closest('.stanza').append('<span class="show-vars" style="top:' + off.top + 'px; width:' + colW + 'px"><span class="verse-var"><span>' + verseAbbr + dataVerse + '</span></span>' + out + '<span class="close-vars"></span></span>');
+
+					$('.close-vars').on('click', function(){
+						var $span = $(this).closest('.show-vars').remove();
+						$('.poem .verse').removeClass('active');	
+					});
+
+					$(window).trigger('resize');
+				});
+			});
+		});
+		$('body').append('<style>' + style + '</style>');
+
+		$('#filtri a').on('click', function(){
+			var $a = $(this),
+				ediz = $a.attr('data-trigger');
+
+			$('.show-vars').remove();
+			$('.poem .verse').removeClass('active');
+
+			$a.closest('#filtri').find('li').removeClass('active');
+			$a.closest('li').addClass('active');
+			$a.closest('section[data-active-var]').attr('data-active-var',ediz);
+
+			$(window).trigger('resize');
+		});
+	};
+
 	LEOVAR.init = function() {
 		$( document ).ready( function(){
 			$( 'html' ).addClass( 'dom-loaded' );
@@ -160,6 +267,7 @@
 			}, 500);
 			LEOVAR.timeLine();
 			LEOVAR.parax();
+			LEOVAR.poem();
 		});
 	}
 
