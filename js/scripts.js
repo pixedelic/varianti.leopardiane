@@ -198,9 +198,9 @@
 
 				$dataVars.on('click',function(){
 					$lines.removeClass('active');
-					var $verse = $cont.closest('.verse').addClass('active'),
-						$verseInt = $('.verse', $cont).addClass('active'),
-						dataVerse = $verseInt.length ? $verseInt.attr('data-verse') : $verse.attr('data-verse'),
+					var $verse = $('.verse', $cont).length ? $('.verse', $cont) : $cont.closest('.verse'),
+						versePos = $verse.position(),
+						dataVerse = $verse.attr('data-verse'),
 						$dataVars = $('> span[data-var]', $cont),
 						off = $cont.position(),
 						$aside = $cont.closest('.container').find('aside'),
@@ -213,6 +213,8 @@
 						text = $dv.html(),
 						badge = '',
 						di;
+
+					$verse.addClass('active');
 
 					$('.show-vars').remove();
 
@@ -227,10 +229,13 @@
 						if ( $('span[data-var]', $dv).length ) {
 							text = $('span[data-var]', $dv).html();
 						}
-						for (di = 0; di < dataArr.length; di++) {
-							badge = badge + '<span data-var-badge="' + dataArr[di] + '"></span>';
+						if ( typeof $dv.attr('data-content') !== 'undefined' && $dv.attr('data-content') !== '' ) {
+							text += ' ' + $dv.attr('data-content');
 						}
-						out = out + '<span data-show-var="' + dataVar + '"><span class="var-title">' + badge + dataVar.replace(/,/g, ", ") + '</span><span class="var-text">' + text + '</span></span>';
+						for (di = 0; di < dataArr.length; di++) {
+							badge += '<span data-var-badge="' + dataArr[di] + '"></span>';
+						}
+						out += '<span data-show-var="' + dataVar + '"><span class="var-title">' + badge + dataVar.replace(/,/g, ", ") + '</span><span class="var-text">' + text + '</span></span>';
 					});
 
 					var verseAbbr = '';
@@ -238,7 +243,12 @@
 						verseAbbr = 'v. ';
 					}
 
-					$dv.closest('.stanza').append('<span class="show-vars" style="top:' + off.top + 'px; width:' + colW + 'px"><span class="verse-var"><span>' + verseAbbr + dataVerse + '</span></span>' + out + '<span class="close-vars"></span></span>');
+					var offTop = off.top;
+					if ( versePos.top < 0 ) {
+						offTop = offTop + versePos.top;
+					}
+
+					$dv.closest('.stanza').append('<span class="show-vars" style="top:' + offTop + 'px; width:' + colW + 'px"><span class="verse-var"><span>' + verseAbbr + dataVerse + '</span></span>' + out + '<span class="close-vars"></span></span>');
 
 					$('.close-vars').on('click', function(){
 						var $span = $(this).closest('.show-vars').remove();

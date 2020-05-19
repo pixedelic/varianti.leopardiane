@@ -280,6 +280,7 @@ footer {
 .poem .verse {
 	background-color: #ffffff;
 	display: inline-block;
+	max-width: calc(74% - 20px);
 	padding: 0 20px 0 100px;
 	text-indent: -20px;
 }
@@ -296,27 +297,45 @@ footer {
 	text-indent: 0;
 	width: 60px;
 }
-.poem span[data-vars] .verse[data-verse]::before {
-	font-size: 0.585em;
-}
 .poem span[data-vars] {
 	position: relative;
 }
-.poem span[data-vars] .verse span[data-var] {
+.poem .verse span[data-vars] {
+	border-right: 2px solid #ffffff;
+}
+.poem span[data-vars] .verse[data-verse]::before {
+	font-size: 0.585em;
+}
+.poem span[data-vars] .verse[data-verse="add@place=margin:left"]::before {
+	top: 0.2em;
+}
+.poem span[data-vars] .verse[data-verse="add@place=margin:left"] [data-var] {
 	color: rgba(5,10,13,0.5);
+	font-size: .825em;
+	font-style: italic;
+}
+.poem span[data-vars] .verse[data-verse="add@place=margin:left"] [data-var]::before {
+	content: 'U';
+	color: rgba(5,10,13,0.25);
+	font-family: 'dripicons-v2';
+	font-size: .625em;
+	font-style: normal;
+	margin-left: -1em;
 }
 .poem span[data-vars] .variant-alert {
-	bottom: -5px;
 	cursor: pointer;
 	display: block;
 	left: 0;
 	height: 7px;
 	position: absolute;
+	top: 0;
 	width: 7px;
 	z-index: 2;
 }
 .poem .verse span[data-vars] .variant-alert {
+	bottom: -3px;
 	left: -7px;
+	top: auto;
 }
 section[data-active-var="ms"] .poem span[data-vars] .variant-alert[data-badges*='ms'] {
 	display: none;
@@ -336,7 +355,7 @@ section[data-active-var="1845"] .poem span[data-vars] .variant-alert[data-badges
 	cursor: pointer;
 	display: block;
 	height: 7px;
-	left: 0;
+	left: 1px;
 	position: absolute;
 	top: 0;
 	width: 7px;
@@ -345,14 +364,13 @@ section[data-active-var="1845"] .poem span[data-vars] .variant-alert[data-badges
 	display: none;
 	z-index: 0;
 }
-.poem .verse span[data-var] {
-	cursor: pointer;
-}
 .poem span[data-var] span[data-var] {
 	display: inline;
 }
 .poem .verse span[data-var] {
 	background-color: rgba(158,173,180,0.2);
+	border-radius: 3px;
+	cursor: pointer;
 	position: relative;
 }
 section[data-active-var="ms"] .poem span[data-var*="ms"] {
@@ -380,11 +398,11 @@ span.show-vars::before {
 	content: '';
 	display: block;
 	height: 2px;
-	left: -200%;
+	left: -230%;
 	margin-top: -0.7em;
 	opacity: .2;
 	position: absolute;
-	width: calc(300% - 30px);
+	width: calc(330% - 30px);
 	z-index: -1;
 }
 .poem .close-vars {
@@ -432,10 +450,11 @@ span.show-vars::before {
 	padding-bottom: 10px;
 }
 .poem .show-vars span[data-var-badge] {
+	border-radius: 2px;
 	display: inline-block;
 	height: 4px;
-	margin-right: 2px;
-	width: 9px;
+	margin-right: 1px;
+	width: 6px;
 }
 .poem .show-vars span[data-var-badge]:last-child {
 	margin-right: 5px;
@@ -478,6 +497,7 @@ span.show-vars::before {
 }
 #filtri a::after {
 	background: #9eadb4;
+	border-radius: 3px;
 	content: '';
 	display: block;
 	height: 5px;
