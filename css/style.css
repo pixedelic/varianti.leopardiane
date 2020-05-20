@@ -297,6 +297,30 @@ footer {
 	text-indent: 0;
 	width: 60px;
 }
+.poem .page-break {
+	border-color: rgba(158,173,180,0.35);
+	border-bottom-style: dashed;
+	border-bottom-width: 2px;
+	color: #9eadb4;
+	display: block;
+	font-family: 'Crimson Text', serif;
+	font-size: .95rem;
+	font-style: italic;
+	height: 0;
+	margin: 1em 0;
+	position: relative;
+	width: 100%;
+}
+.poem .page-break .page-above {
+	position: absolute;
+	right: 1em;
+	top: -1.5em;
+}
+.poem .page-break .page-below {
+	position: absolute;
+	right: 1em;
+	bottom: -1.5em;
+}
 .poem span[data-vars] {
 	position: relative;
 }
