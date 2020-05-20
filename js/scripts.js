@@ -154,12 +154,12 @@
 		var style = '';
 		$('.poem').each(function(){
 			var $poem = $(this),
-				$lines = $('.verse', $poem),
-				$verses = $('.verse[data-verse][data-show-verse="true"]', $poem),
+				$lines = $('.line', $poem),
+				$verses = $('.line[data-step][data-show-step="true"]', $poem),
 				$vars = $('span[data-vars]', $poem);
 
 			$verses.each(function(i, verse){
-				var num = $(verse).attr('data-verse'),
+				var num = $(verse).attr('data-step'),
 					num_0 = num,
 					fontStyle = '';
 				if ( num_0.indexOf('@') !== -1 ) {
@@ -168,7 +168,7 @@
 					fontStyle = 'font-style:italic;'
 				}
 
-				style = style + '.verse[data-verse="' + num + '"]::before{content:"' + num_0 + '";' + fontStyle +'}';
+				style = style + '.line[data-step="' + num + '"]::before{content:"' + num_0 + '";' + fontStyle +'}';
 			});
 
 			$vars.each(function(){
@@ -198,9 +198,9 @@
 
 				$dataVars.on('click',function(){
 					$lines.removeClass('active');
-					var $verse = $('.verse', $cont).length ? $('.verse', $cont) : $cont.closest('.verse'),
+					var $verse = $('.line', $cont).length ? $('.line', $cont) : $cont.closest('.line'),
 						versePos = $verse.position(),
-						dataVerse = $verse.attr('data-verse'),
+						dataVerse = $verse.attr('data-step'),
 						$dataVars = $('> span[data-var]', $cont),
 						off = $cont.position(),
 						$aside = $cont.closest('.container').find('aside'),
@@ -248,11 +248,11 @@
 						offTop = offTop + versePos.top;
 					}
 
-					$dv.closest('.stanza').append('<span class="show-vars" style="top:' + offTop + 'px; width:' + colW + 'px"><span class="verse-var"><span>' + verseAbbr + dataVerse + '</span></span>' + out + '<span class="close-vars"></span></span>');
+					$dv.closest('.stanza').append('<span class="show-vars" style="top:' + offTop + 'px; width:' + colW + 'px"><span class="line-var"><span>' + verseAbbr + dataVerse + '</span></span>' + out + '<span class="close-vars"></span></span>');
 
 					$('.close-vars').on('click', function(){
 						var $span = $(this).closest('.show-vars').remove();
-						$('.poem .verse').removeClass('active');	
+						$('.poem .line').removeClass('active');	
 					});
 
 					$(window).trigger('resize');
@@ -266,7 +266,7 @@
 				ediz = $a.attr('data-trigger');
 
 			$('.show-vars').remove();
-			$('.poem .verse').removeClass('active');
+			$('.poem .line').removeClass('active');
 
 			$a.closest('#filtri').find('li').removeClass('active');
 			$a.closest('li').addClass('active');
