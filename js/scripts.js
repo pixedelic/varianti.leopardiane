@@ -270,6 +270,26 @@
 		});
 	};
 
+	LEOVAR.sticky = function(){
+		$('.sticky').each(function(i, el){
+			$(el).stickySidebar({
+				topSpacing: 60,
+				bottomSpacing: 60,
+			});
+		});
+	};
+
+	LEOVAR.gallery = function(){
+		$('.lightbox').each(function(i, el){
+			lightGallery( el, {
+				mode: 'lg-slide',
+				cssEasing : 'cubic-bezier(0.25, 0, 0.25, 1)',
+				height: 'calc(100% - 88px)',
+				thumbnail: false
+			}); 
+		});
+	};
+
 	LEOVAR.init = function() {
 		$( document ).ready( function(){
 			$( 'html' ).addClass( 'dom-loaded' );
@@ -281,6 +301,8 @@
 			LEOVAR.timeLine();
 			LEOVAR.parax();
 			LEOVAR.poem();
+			LEOVAR.sticky();
+			LEOVAR.gallery();
 		});
 	}
 

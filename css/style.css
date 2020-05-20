@@ -579,6 +579,34 @@ span.show-vars::before {
 	display: none;
 }
 /*****************************
+*	Plugins
+*****************************/
+.lg-outer .lg-inner {
+	height: calc(100% - 44px);
+	top: 44px;
+}
+.lg-backdrop {
+	background-color: rgba(5,10,13,0.9);
+}
+.lg-toolbar {
+	background-color: rgba(5,10,13,0.25);
+}
+.lg-toolbar .lg-icon {
+	color: rgba(255,255,255,.5);
+}
+.lg-actions .lg-next, .lg-actions .lg-prev {
+	background-color: rgba(5,10,13,0.25);
+	color: rgba(255,255,255,.5);
+}
+.lg-sub-html {
+	background-color: rgba(5,10,13,0.25);
+	color: rgba(255,255,255,.9);
+	font-size: .9rem;
+}
+.lg-outer .lg-item {
+  background-image: url("../images/oval.svg");
+}
+/*****************************
 *	Tipografia
 *****************************/
 h1 {
@@ -851,6 +879,10 @@ h4 {
 	right: calc(-50vw - 20px);
 	top: 0;
 	width: calc(66.666667% + 50vw);
+}
+/* Pagine interne */
+a img {
+	border-radius: 3px;
 }
 /*****************************
 *	Forms

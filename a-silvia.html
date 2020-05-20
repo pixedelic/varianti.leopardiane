@@ -45,6 +45,8 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css"/>
 <!-- Font Icon -->
 	<link rel="stylesheet" type="text/css" href="css/dripicons.css"/>
+<!-- Lightbox -->
+	<link rel="stylesheet" type="text/css" href="css/lightgallery.css"/>
 <!-- Main CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 
@@ -131,7 +133,7 @@
 					</div><!-- .row -->
 				</div><!-- .container.hero -->
 			</div><!-- #title-hero -->
-			<div class="container py-5">
+			<div class="container pt-5">
 				<div class="row flex-row-reverse">
 					<nav id="filtri" class="col-9-5">
 						<ul>
@@ -561,7 +563,22 @@
 					</div>
 
 					<aside class="col-2-5">
-						Aside
+						<div class="sticky">
+							<div class="gallery lightbox">
+								<a href="images/a-silvia/giacomo_leopardi-a_silvia-1.jpg" title="Vedi il manoscritto">
+									<img src="images/a-silvia/giacomo_leopardi-a_silvia-th-1.png" alt="A Silvia, manoscritto - pag. 1<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 1r"/>
+								</a>
+								<a href="images/a-silvia/giacomo_leopardi-a_silvia-2.jpg" class="hidden" title="A Silvia, manoscritto - pag. 2<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 1v">
+									<img src="images/a-silvia/giacomo_leopardi-a_silvia-th-2.png" alt="A Silvia, manoscritto - pag. 2<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 1v"/>
+								</a>
+								<a href="images/a-silvia/giacomo_leopardi-a_silvia-3.jpg" class="hidden" title="A Silvia, manoscritto - pag. 3<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 2r">
+									<img src="images/a-silvia/giacomo_leopardi-a_silvia-th-3.png" alt="A Silvia, manoscritto - pag. 3<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 2r"/>
+								</a>
+								<a href="images/a-silvia/giacomo_leopardi-a_silvia-4.jpg" class="hidden" title="A Silvia, manoscritto - pag. 4<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 2v">
+									<img src="images/a-silvia/giacomo_leopardi-a_silvia-th-4.png" alt="A Silvia, manoscritto - pag. 4<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 2v"/>
+								</a>
+							</div><!-- .gallery -->
+						</div><!-- .sticky -->
 					</aside>
 				</div><!-- .row -->
 			</div><!-- .container -->
@@ -583,6 +600,12 @@
 	<script src="js/parallax.min.js"></script>
 <!-- Lightbox -->
 	<script src="js/lightgallery.min.js"></script>
+	<script src="js/lg-fullscreen.min.js"></script>
+	<script src="js/lg-pager.min.js"></script>
+	<script src="js/lg-thumbnail.min.js"></script>
+	<script src="js/lg-zoom.min.js"></script>
+<!-- Sticky -->
+	<script src="js/jquery.sticky-sidebar.min.js"></script>
 <!-- Main JS -->
 	<script src="js/scripts.js"></script>
 
