@@ -160,15 +160,9 @@
 
 			$verses.each(function(i, verse){
 				var num = $(verse).attr('data-step'),
-					num_0 = num,
-					fontStyle = '';
-				if ( num_0.indexOf('@') !== -1 ) {
-					num_0 = num_0.split('@');
-					num_0 = num_0[0];
-					fontStyle = 'font-style:italic;'
-				}
+					num_0 = num;
 
-				style = style + '.line[data-step="' + num + '"]::before{content:"' + num_0 + '";' + fontStyle +'}';
+				style = style + '.line[data-step="' + num + '"]::before{content:"' + num_0 + '";}';
 			});
 
 			$vars.each(function(){

@@ -355,7 +355,7 @@ footer {
 .poem span[data-vars] .line[data-step="add@place=bottom"] [data-var]::before {
 	content: 'T';
 }
-.poem span[data-vars] .line[data-step="add@place=bottom:opposite"] [data-var]::before {
+.poem span[data-vars] .line[data-step="add@place=top:opposite"] [data-var]::before {
 	content: 'q';
 	margin-left: -1.2em;
 	padding-right: 0.2em;
