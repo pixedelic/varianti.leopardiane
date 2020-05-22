@@ -280,13 +280,9 @@
 	};
 
 	LEOVAR.gallery = function(){
-		$('.lightbox').each(function(i, el){
-			lightGallery( el, {
-				mode: 'lg-slide',
-				cssEasing : 'cubic-bezier(0.25, 0, 0.25, 1)',
-				height: 'calc(100% - 88px)',
-				thumbnail: false
-			}); 
+		$('[data-fancybox]').fancybox({
+			animationEffect: "fade",
+			transitionEffect: "slide",
 		});
 	};
 
