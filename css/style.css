@@ -10,6 +10,9 @@ body {
 	line-height: 1.5;
 	margin: 0;
 }
+* {
+	outline: none !important;
+}
 a, a:active, a:focus {
 	color: inherit;
 	text-decoration: underline;
@@ -663,35 +666,15 @@ span.show-vars::before {
 /*****************************
 *	Plugins
 *****************************/
-.lg-outer .lg-inner {
-	height: calc(100% - 44px);
-	top: 44px;
-}
-.lg-backdrop {
-	background-color: rgba(5,10,13,0.9);
-}
-.lg-toolbar {
-	background-color: rgba(5,10,13,0.25);
-}
-.lg-toolbar .lg-icon {
-	color: rgba(255,255,255,.5);
-}
-.lg-actions .lg-next, .lg-actions .lg-prev {
-	background-color: rgba(5,10,13,0.25);
-	color: rgba(255,255,255,.5);
-}
-.lg-sub-html {
-	background-color: rgba(5,10,13,0.25);
-	color: rgba(255,255,255,.9);
-	font-size: .9rem;
-}
-.lg-outer .lg-item {
-  background-image: url("../images/oval.svg");
+.fancybox-content {
+	box-shadow: 0 0 150px rgba(5,10,13,0.35);
+	font-size: .925em;
+	width: 855px;
 }
 /*****************************
 *	Tipografia
 *****************************/
-h1 {
+h1, .h1 {
 	font-family: 'Crimson Text', serif;
 	font-size: 70px; 
 	font-weight: 400;
@@ -699,7 +682,7 @@ h1 {
 	margin-bottom: .5em;
 	margin-top: .5em;
 }
-h2 {
+h2, .h2 {
 	font-family: 'Crimson Text', serif;
 	font-size: 52px; 
 	font-weight: 400;
@@ -707,7 +690,7 @@ h2 {
 	margin-bottom: .5em;
 	margin-top: .5em;
 }
-h3 {
+h3, .h3 {
 	font-family: 'Raleway', sans-serif;
 	font-size: 40px; 
 	font-weight: 300;
@@ -715,7 +698,7 @@ h3 {
 	margin-bottom: .5em;
 	margin-top: .5em;
 }
-h4 {
+h4, .h4 {
 	font-family: 'Raleway', sans-serif;
 	font-size: 26px; 
 	font-weight: 300;
@@ -723,6 +706,36 @@ h4 {
 	margin-bottom: .5em;
 	margin-top: .5em;
 }
+h5, .h5 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.15em; 
+	font-weight: 300;
+	line-height: 1.25;
+	margin-bottom: .5em;
+	margin-top: .5em;
+}
+.var-badge::before {
+	border-radius: 3px;
+	content: '';
+	display: inline-block;
+	height: 5px;
+	margin-right: 10px;
+	width: 12px;
+	z-index: -1;
+}
+.var-ms::before {
+	background-color: #d95369;
+}
+.var-1831::before {
+	background-color: #fdb27b;
+}
+.var-1835::before {
+	background-color: #b3da67;
+}
+.var-1845::before {
+	background-color: #6fbcc0;
+}
+
 [class^="py-"] h2:first-child, [class*=" py-"] h2:first-child, [class^="pt-"] h2:first-child, [class*=" pt-"] h2:first-child,
 [class^="py-"] h3:first-child, [class*=" py-"] h3:first-child, [class^="pt-"] h3:first-child, [class*=" pt-"] h3:first-child,
 [class^="py-"] h4:first-child, [class*=" py-"] h4:first-child, [class^="pt-"] h4:first-child, [class*=" pt-"] h4:first-child {
@@ -1002,6 +1015,14 @@ a img {
 .lightbox a:hover::before,
 .lightbox a:hover::after {
 	opacity: 1;
+}
+#file-xml .ui i {
+	font-size: .9em;
+	margin-right: .5em;
+	vertical-align: baseline;
+}
+#file-xml a.ui {
+	margin: 0 .35em;
 }
 /*****************************
 *	Forms

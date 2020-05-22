@@ -15,7 +15,6 @@
 					<name xml:id="mm">Manuel Masia</name>
 				</respStmt>
 			</titleStmt>
-			<extent>...</extent>
 			<publicationStmt>
 				<distributor corresp="#mm">Manuel Masia</distributor>
 				<address>
@@ -244,7 +243,7 @@
 				<lg>
 					<l>
 						Tu pria che l'erbe inaridisse il verno,
-						<add place="margin right" rend="flag">i poggi scolorisse. autunno. dopo il trapassar, l&rsquo;aggirar, di poche lune, occulto.</add>
+						<add place="margin right" rend="flag">i poggi scolorisse. autunno. dopo il trapassar, l'aggirar, di poche lune, occulto.</add>
 					</l>
 					<l>
 						Da chiuso morbo consumata e vinta,
