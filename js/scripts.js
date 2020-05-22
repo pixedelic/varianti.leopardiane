@@ -134,6 +134,56 @@
 				offset: '70%' 
 			})
 		});
+
+		var filtriDim = function(){
+			var $filtri = $('#filtri'),
+				$filtriBack = $('#filtri-backplace'),
+				$ul = $('> ul', $filtri),
+				$filtriPH = $('#filtri-placeholder'),
+				off = $filtri.offset(),
+				filtriH = $ul.outerHeight(),
+				filtriW = $filtri.width();
+
+			$filtriPH.css({
+				'left': off.left,
+				'width': filtriW
+			});
+
+			$filtriBack.css({
+				'height': filtriH,
+				'width': filtriW
+			});
+		};
+
+		var setTimeLine;
+		function initSet() {
+			clearRequestTimeout(initSet);
+			initSet = requestTimeout(function(){
+				filtriDim();
+			}, 100);
+		}
+		window.addEventListener('resize', initSet);	
+		filtriDim();	
+
+		$('#filtri').each(function(ind, el){
+			var $filtri = $(el),
+				$ul = $('> ul', $filtri),
+				$filtriBack = $('#filtri-backplace'),
+				$filtriPH = $('#filtri-placeholder');
+			var waypoint = new Waypoint({
+				element: el,
+				handler: function(direction) {
+					if ( direction === 'down' ) {
+						$ul.appendTo($filtriPH);
+						$filtriPH.add($filtriBack).show();
+					} else {
+						$ul.appendTo($filtri);
+						$filtriPH.add($filtriBack).hide();
+					}
+				},
+				offset: 0
+			})
+		});
 	};
 
 	LEOVAR.parax = function(){
@@ -187,7 +237,7 @@
 					//e.stopPropagation();
 					var $badge = $(this),
 						badge = $badge.attr('data-var-badge');
-					$('#filtri a[data-trigger="' + badge + '"').click();
+					$('.filtri a[data-trigger="' + badge + '"').click();
 				});
 
 				$dataVars.on('click',function(){
@@ -202,6 +252,7 @@
 						out = '',
 
 						$dv = $(this),
+						$stanza = $dv.closest('.stanza'),
 						dataVar = $dv.attr('data-var'),
 						dataArr = dataVar.split(','),
 						text = $dv.html(),
@@ -242,7 +293,26 @@
 						offTop = offTop + versePos.top;
 					}
 
-					$dv.closest('.stanza').append('<span class="show-vars" style="top:' + offTop + 'px; width:' + colW + 'px"><span class="line-var"><span>' + verseAbbr + dataVerse + '</span></span>' + out + '<span class="close-vars"></span></span>');
+					var $showVars = $('<span class="show-vars" />');
+					$showVars.append('<span class="line-var"><span>' + verseAbbr + dataVerse + '</span></span>' + out + '<span class="close-vars"></span>');
+					$showVars.css({ 
+						'top': offTop,
+						'width': colW
+					});
+
+					$stanza.append($showVars);
+
+					var varsH = $showVars.height(),
+						stanzaT = $stanza.position().top,
+						poemH = $poem.outerHeight(),
+						diff = ( stanzaT + offTop + varsH + 100 ) - poemH;
+
+					if ( diff > 0 ) {
+						$showVars.css({ 
+							'margin-top':diff * -1
+						});
+					}
+
 
 					$('.close-vars').on('click', function(){
 						var $span = $(this).closest('.show-vars').remove();
@@ -255,14 +325,14 @@
 		});
 		$('body').append('<style>' + style + '</style>');
 
-		$('#filtri a').on('click', function(){
+		$('.filtri a').on('click', function(){
 			var $a = $(this),
 				ediz = $a.attr('data-trigger');
 
 			$('.show-vars').remove();
 			$('.poem .line').removeClass('active');
 
-			$a.closest('#filtri').find('li').removeClass('active');
+			$a.closest('.filtri').find('li').removeClass('active');
 			$a.closest('li').addClass('active');
 			$a.closest('section[data-active-var]').attr('data-active-var',ediz);
 
@@ -272,9 +342,13 @@
 
 	LEOVAR.sticky = function(){
 		$('.sticky').each(function(i, el){
-			$(el).stickySidebar({
+			var $sticky = $(el).stickySidebar({
 				topSpacing: 60,
 				bottomSpacing: 60,
+			});
+
+			$(window).on('resize', function(){
+				$sticky.stickySidebar('updateSticky');
 			});
 		});
 	};

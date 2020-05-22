@@ -46,7 +46,7 @@
 <!-- Font Icon -->
 	<link rel="stylesheet" type="text/css" href="css/dripicons.css"/>
 <!-- Lightbox -->
-	<link rel="stylesheet" type="text/css" href="css/lightgallery.css"/>
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css"/>
 <!-- Main CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 
@@ -135,7 +135,7 @@
 			</div><!-- #title-hero -->
 			<div class="container pt-5">
 				<div class="row flex-row-reverse">
-					<nav id="filtri" class="col-9-5">
+					<nav id="filtri" class="col-9-5 filtri">
 						<ul>
 							<li>
 								<a href="#" title="Visualizza le varianti del Manoscritto" class="var-ms" data-trigger="ms">Manoscritto</a>
@@ -151,6 +151,21 @@
 							</li>
 						</ul>
 					</nav><!-- #filtri -->
+					<div id="filtri-placeholder" class="filtri"></div>
+					<div id="filtri-backplace"></div>
+					<nav id="breadcrumbs" class="col-9-5">
+						<ul>
+							<li>
+								<a href="#" title="Home page">Home</a>
+							</li>
+							<li>
+								<a href="#" title="I Canti">i Canti</a>
+							</li>
+							<li>
+								A Silvia
+							</li>
+						</ul>
+					</nav>
 				</div><!-- .row -->
 			</div><!-- .container -->
 			<div class="container">
@@ -294,7 +309,7 @@
 							</span>
 							<br/>
 							<span class="line" data-step="18">
-								E di me si spendea la miglior <span data-vars="true"><span data-var="ms">parte;</span><span data-var="1831,1835,1845">parte,</span></span>
+								E di me si spendea la miglior <span data-vars="true"><span data-var="ms" data-content="[il punto e virgola sembra forse cancellato dal prolungamento della &quot;e&quot;]">parte;</span><span data-var="1831,1835,1845">parte,</span></span>
 							</span>
 							<br/>
 							<span class="line" data-step="19">
@@ -468,7 +483,7 @@
 							<span class="line" data-step="48">Ragionavan d&rsquo;amore.</span>
 						</p>
 						<p class="stanza">
-							<span class="line" data-step="49">Anche peria fra poco</span>
+							<span class="line" data-step="49"><span data-vars="true"><span data-var="ms,1831">Anco</span><span data-var="1835,1845">Anche</span></span> peria fra poco</span>
 							<br/>
 							<span data-vars="true">
 								<span data-var="ms">
@@ -478,7 +493,13 @@
 									<br/>
 								</span>
 							</span>
-							<span class="line" data-step="50" data-show-step="true">La speranza mia dolce: agli anni miei</span>
+							<span class="line" data-step="50" data-show-step="true">La speranza
+								<span data-vars="true"><span data-var="ms"><del>[|?]</del></span></span>
+								mia dolce:
+								<span data-vars="true"><span data-var="ms"><del>a[c?]</del></span></span>
+								<span data-vars="true"><span data-var="ms,1831">a gli</span><span data-var="1835,1845">agli</span></span>
+								anni miei
+							</span>
 							<br/>
 							<span data-vars="true">
 								<span data-var="ms">
@@ -532,6 +553,15 @@
 								Questa la sorte <span data-vars="true"><span data-var="ms,1831">de l&rsquo;</span><span data-var="1835,1845">dell&rsquo;</span></span>umane genti?
 							</span>
 							<br/>
+							<span data-vars="true">
+								<span data-var="ms">
+									<span class="line" data-step="add@place=margin:left">
+										<span data-var>umana vita? Ne la stagion fiorita.</span>
+									</span>
+									<br/>
+								</span>
+							</span>
+							<br/>
 							<span class="line" data-step="60" data-show-step="true">
 								<span data-vars="true"><span data-var="ms,1831">A l&rsquo;</span><span data-var="1835,1845">All&rsquo;</span></span>apparir del vero,
 							</span>
@@ -547,7 +577,7 @@
 								</span>
 							</span>
 							<span class="line" data-step="62">
-								<span data-vars="true"><span data-var="ms"><del>Un sepolcro deserto, inonorato,</del><sup>La fredda morte ed una tomba ignuda<sup></span><span data-var="1831,1835,1845">La fredda morte ed una tomba ignuda</span></span>
+								<span data-vars="true"><span data-var="ms"><del>Un sepolcro deserto, inonorato,</del><sup>La fredda morte ed una tomba ignuda</sup></span><span data-var="1831,1835,1845">La fredda morte ed una tomba ignuda</span></span>
 							</span>
 							<br/>
 							<span data-vars="true">
@@ -564,20 +594,23 @@
 
 					<aside class="col-2-5">
 						<div class="sticky">
-							<div class="gallery lightbox">
-								<a href="images/a-silvia/giacomo_leopardi-a_silvia-1.jpg" title="Vedi il manoscritto">
-									<img src="images/a-silvia/giacomo_leopardi-a_silvia-th-1.png" alt="A Silvia, manoscritto - pag. 1<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 1r"/>
+							<div class="gallery">
+								<a href="images/a-silvia/giacomo_leopardi-a_silvia-1.jpg" data-fancybox="a-silvia" title="Vedi il manoscritto" data-caption="A Silvia, manoscritto autografo - pag. 1<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 1r">
+									<img src="images/a-silvia/giacomo_leopardi-a_silvia-th-1.png" alt="A Silvia, manoscritto autografo - pag. 1<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 1r"/>
 								</a>
-								<a href="images/a-silvia/giacomo_leopardi-a_silvia-2.jpg" class="hidden" title="A Silvia, manoscritto - pag. 2<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 1v">
-									<img src="images/a-silvia/giacomo_leopardi-a_silvia-th-2.png" alt="A Silvia, manoscritto - pag. 2<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 1v"/>
+								<a href="images/a-silvia/giacomo_leopardi-a_silvia-2.jpg" data-fancybox="a-silvia" class="hidden" title="A Silvia, manoscritto autografo - pag. 2<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 1v" data-caption="A Silvia, manoscritto autografo - pag. 2<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 1v">
+									<img src="images/a-silvia/giacomo_leopardi-a_silvia-th-2.png" alt="A Silvia, manoscritto autografo - pag. 2<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 1v"/>
 								</a>
-								<a href="images/a-silvia/giacomo_leopardi-a_silvia-3.jpg" class="hidden" title="A Silvia, manoscritto - pag. 3<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 2r">
-									<img src="images/a-silvia/giacomo_leopardi-a_silvia-th-3.png" alt="A Silvia, manoscritto - pag. 3<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 2r"/>
+								<a href="images/a-silvia/giacomo_leopardi-a_silvia-3.jpg" data-fancybox="a-silvia" class="hidden" title="A Silvia, manoscritto autografo - pag. 3<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 2r" data-caption="A Silvia, manoscritto autografo - pag. 3<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 2r">
+									<img src="images/a-silvia/giacomo_leopardi-a_silvia-th-3.png" alt="A Silvia, manoscritto autografo - pag. 3<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 2r"/>
 								</a>
-								<a href="images/a-silvia/giacomo_leopardi-a_silvia-4.jpg" class="hidden" title="A Silvia, manoscritto - pag. 4<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 2v">
-									<img src="images/a-silvia/giacomo_leopardi-a_silvia-th-4.png" alt="A Silvia, manoscritto - pag. 4<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 2v"/>
+								<a href="images/a-silvia/giacomo_leopardi-a_silvia-4.jpg" data-fancybox="a-silvia" class="hidden" title="A Silvia, manoscritto autografo - pag. 4<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 2v" data-caption="A Silvia, manoscritto autografo - pag. 4<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 2v">
+									<img src="images/a-silvia/giacomo_leopardi-a_silvia-th-4.png" alt="A Silvia, manoscritto autografo - pag. 4<br/>Biblioteca Nazionale di Napoli - C.L.XXI.7a, c. 2v"/>
 								</a>
 							</div><!-- .gallery -->
+							<a data-fancybox="metadati" data-src="#metadati" href="javascript:;" class="side-link ui"><i class="icon dripicons-list"></i>Vedi i metadati</a>
+							<div class="hidden" id="metadati">Ciao!!</div>
+							<a href="#" class="side-link ui"><i class="icon dripicons-document"></i>File XML</a>
 						</div><!-- .sticky -->
 					</aside>
 				</div><!-- .row -->
@@ -599,11 +632,7 @@
 <!-- Parallax -->
 	<script src="js/parallax.min.js"></script>
 <!-- Lightbox -->
-	<script src="js/lightgallery.min.js"></script>
-	<script src="js/lg-fullscreen.min.js"></script>
-	<script src="js/lg-pager.min.js"></script>
-	<script src="js/lg-thumbnail.min.js"></script>
-	<script src="js/lg-zoom.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
 <!-- Sticky -->
 	<script src="js/jquery.sticky-sidebar.min.js"></script>
 <!-- Main JS -->
