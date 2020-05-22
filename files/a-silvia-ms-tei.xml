@@ -1,0 +1,346 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" >
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title type="main">A Silvia</title>
+				<title type="sub">Manoscritto autografo del 1828 trascritto in edizione elettronica e machine readable</title>
+				<author xml:id="gl" ref="http://viaf.org/viaf/12311353">
+					<persName>
+						<name type="forename">Giacomo</name>
+						<name type="surname">Leopardi</name>
+					</persName>
+				</author>
+				<respStmt>
+					<resp>editor</resp>
+					<name xml:id="mm">Manuel Masia</name>
+				</respStmt>
+			</titleStmt>
+			<extent>...</extent>
+			<publicationStmt>
+				<distributor corresp="#mm">Manuel Masia</distributor>
+				<address>
+					<addrLine>https://pixedelic.github.io/variantileopardiane/</addrLine>
+					<addrLine>manue.masia@studio.unibo.it</addrLine>
+				</address>
+				<availability>
+					<p>
+						Questa risorsa digitale è liberamente accessibile per uso personale o scientifico. Se ne vieta ogni utilizzo commerciale.
+					</p>
+				</availability>
+			</publicationStmt>
+			<sourceDesc>
+				<bibl>
+					<title>A Silvia</title>
+					<author corresp="#gl">
+						<persName>
+							<name type="forename">Giacomo</name>
+							<name type="surname">Leopardi</name>
+						</persName>
+					</author>
+					<editor xml:id="ar" ref="https://viaf.org/viaf/41882223/">
+						<persName>
+							<name type="forename">Antonio</name>
+							<name type="surname">Ranieri</name>
+						</persName>
+					</editor>
+					<distributor xml:id="bnn" ref="http://digitale.bnnonline.it/">Biblioteca Nazionale di Napoli</distributor>
+					<availability>
+						<p>Il manoscritto originale è conservato presso la Biblioteca Nazionale di Napoli e fruibile on line</p>
+					</availability>
+					<ptr target="http://digitale.bnnonline.it/index.php?it/148/a-silvia-1828"/>
+				</bibl>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+	<text>
+		<pb xml:id="asilvia1r" facs="‎⁨../images⁩/a-silvia⁩/giacomo_leopardi-a_silvia-1.jpg" type="recto"/><!-- ID e facs non so se siano corretti -->
+		<front>
+			<docTitle>
+				<titlePart>A Silvia.</titlePart>
+			</docTitle>
+			<dateline>
+				<name type="place">Pisa.</name>,
+				<date from="1828-04-19" to="1828-04-20">19.20.Aprile.1828.</date>
+			</dateline>
+		</front>
+		<body>
+			<lg type="canzone-libera">
+				<lg type="stanza">
+					<l>
+						Silvia, sovvienti ancora
+					</l>
+					<l>
+						Quel tempo de la tua vita mortale,
+					</l>
+					<l>
+						Quando beltà splend<del rend="doublestrikes(vertical)">e</del>a
+					</l>
+					<l>
+						<del rend="overstrike">Ne la fronte e nel sen tuo verginale,</del>
+						<add place="margin left">Nel volto verginale</add>
+					</l>
+					<l>
+						<del rend="doublestrikes(vertical)">E</del>
+						Ne gli 
+						<subst>
+							<del rend="overstrike" seq="1">sguardi incerti</del>
+							<add place="supralinear" rend="unmarked" seq="2">occhi tuoi ridenti</add>
+						</subst>
+						e fuggitivi,
+						<add place="margin left">E ne gli occhi tuoi molli e fuggitivi. dolci, vaghi</add>
+					</l>
+					<l>
+						E tu, lieta e 
+						<subst>
+							<del rend="overstrike" seq="1">pudica,</del>
+							<add place="supralinear" rend="insertion" seq="2">pensosa,</add>
+						</subst>
+						il limitare
+					</l>
+					<l>Di gioventù salivi?</l>
+				</lg>
+				<lg type="stanza">
+					<l enjamb="yes">
+						Sonavan le quiete
+					</l>
+					<l>
+						Stanze, e le vie dintorno,
+					</l>
+					<l>
+						Al tuo perpetuo canto,
+					</l>
+					<l>
+						Allor che a l'opre femminili intenta
+					</l>
+					<l>
+						Sedevi, assai contenta
+					</l>
+					<l>
+						Di quel vago avvenir che in mente avevi.
+						<add place="margin left">dolce.</add>
+					</l>
+					<l>
+						Era il maggio odoroso: e tu solevi
+					</l>
+					<l>
+						Così menare il giorno.
+					</l>
+				</lg>
+				<lg type="stanza">
+					<l>
+						Io gli studi 
+						<del rend="overstrike">miei dolci</del>
+						<add place="margin left">lunghi.</add>
+						leggiadri
+					</l>
+					<l>
+						Talor lasciando e le sudate carte,<metamark function="insertion" rend="cross" xml:id="crossCarte">†</metamark><!-- qui non sono riuscito a capire come renderlo -->
+						<add place="margin left">dilette.</add>
+					</l>
+					<addSpan rend="cross" spanTo="#crossCarte" seq="1"/><!-- ...e qui -->
+					<l>
+						<add place="margin left">
+							<metamark function="insertion" rend="cross" spanTo="#crossEnd">†</metamark>
+							Ove il tempo mio primo
+						</add>
+					</l>
+					<addSpan spanTo="#crossEnd" seq="2"/><!-- ...e infine qui -->
+					<l>
+						<add place="margin left">
+							E di me si spendea la miglior parte
+							<supplied reason="illegible">
+								<choice>
+									<seg>,</seg>
+									<seg>;</seg>
+								</choice>
+							</supplied>
+						</add>
+						<addSpan rend="cross" spanTo="#asilvia2v" seq="1"/><!-- ...e qui -->
+						<add place="top opposite">
+							Ov'io di me spendea, Ov'io ponea di me la miglior parte. Ove de gli anni primi, acerbi, verdi Trapassando, Dispensando, i<del rend="doublestrikes(vertical)"><unclear reason="illegible" unit="char" extent="1">o</unclear></del>' venia la miglior parte. l'età più verde. E de gli anni io spendea la ec. l'età fiorita. Ove il fior de le forze ec.
+						</add>
+					</l>
+					<l>
+						D'in su i 
+						<del rend="overstrike" seq="1">balconi</del><metamark function="insertion" rend="caret">^</metamark>
+						<add place="supralinear" rend="insertion" seq="2">veroni</add>
+						balconi veroni del paterno ostello
+					</l>
+					<l>
+						Porgea gli orecchi al suon de la tua voce,
+					</l>
+					<l>
+						Ed a la man veloce
+					</l>
+					<l>
+						Che
+						<del rend="overstrike" seq="1">balconi</del>
+						<add place="supralinear" rend="insertion" seq="2">percorrea</add>
+						la faticosa tela.
+					</l>
+					<pb xml:id="asilvia1v" facs="‎⁨../images⁩/a-silvia⁩/giacomo_leopardi-a_silvia-2.jpg" type="verso"/><!-- ID e facs non so se siano corretti -->
+					<l>
+						Mirava il ciel sereno,
+					</l>
+					<l>
+						Le vie dorate e gli orti,
+					</l>
+					<l>
+						E quinci il mar da lungi, e quindi il monte.
+					</l>
+					<l>
+						Lingua mortal non dice
+					</l>
+					<l>
+						Quel ch'io sentiva in seno.
+					</l>
+				</lg>
+				<lg type="stanza">
+					<l>
+						Che pensieri soavi,
+					</l>
+					<l>
+						Che speranze, che cori, o Silvia mia!
+						<add place="margin right">cori Furo i nostri a quel tempo, o S. mia!</add>
+					</l>
+					<l>
+						Quale allor ci apparia
+						<add place="margin right">Quale, qual ci ap. Qual ci appariva allora. quale apparia Ne l'alme nostre allora.</add>
+					</l>
+					<l>
+						La vita umana e il fato!
+					</l>
+					<l>
+						Quando sovviemmi di cotanta speme,
+						<add place="margin right">Qualor.</add>
+					</l>
+					<l>
+						Un
+						<del rend="overstrike" seq="1">cordoglio</del><metamark function="insertion" rend="caret">^</metamark>
+						<add place="supralinear" rend="insertion" seq="2">affetto</add>
+						mi preme
+					</l>
+					<l>
+						Acerbo e sconsolato,
+					</l>
+					<l>
+						E tornami a doler di mia sventura.
+						<add place="margin right">Ritornami. E fammi ancor pietà la. E tornami pietà. E sento ancor.</add>
+					</l>
+					<l>
+						O natura, o natura,
+					</l>
+					<l>
+						Perchè non rendi poi
+						<add place="margin right">serbi.</add>
+					</l>
+					<l>
+						Quel che prometti allor? perchè di tanto
+					</l>
+					<l>
+						Inganni i figli tuoi?
+					</l>
+				</lg>
+				<lg>
+					<l>
+						Tu pria che l'erbe inaridisse il verno,
+						<add place="margin right" rend="flag">i poggi scolorisse. autunno. dopo il trapassar, l&rsquo;aggirar, di poche lune, occulto.</add>
+					</l>
+					<l>
+						Da chiuso morbo consumata e vinta,
+					</l>
+					<l>
+						Perivi, o tenerella. E non vedevi
+					</l>
+					<l>
+						Il fior de gli anni tuoi;
+					</l>
+					<l>
+						Non ti molceva il core
+						<add place="margin right">sonava in. scendeva al.</add>
+					</l>
+					<l>
+						La dolce lode or de le negre chiome,
+						<add place="margin right">chiome brune.</add>
+					</l>
+					<pb xml:id="asilvia2r" facs="‎⁨../images⁩/a-silvia⁩/giacomo_leopardi-a_silvia-3.jpg" type="recto"/><!-- ID e facs non so se siano corretti -->
+					<l>
+						Or de gli sguardi innamorati e schivi;
+						<add place="margin left">chiome verecondi.</add>
+					</l>
+					<l>
+						Nè teco le compagne a i dì festivi
+					</l>
+					<l>
+						Ragionavan d'amore.
+					</l>
+				</lg>
+				<lg>
+					<l enjamb="yes">
+						Anco peria fra poco
+						<add place="margin left">fra breve. ben tosto. Così.</add>
+					</l>
+					<l>
+						La speranza
+						<del rend="triplestrikes"><unclear reason="illegible" unit="char" extent="1">|</unclear></del>
+						mia dolce:
+						<del rend="doublestrikes"><unclear reason="illegible" unit="char" extent="1">ac</unclear></del>
+						a gli anni miei
+						<add place="margin left">vaga.</add>
+					</l>
+					<l enjamb="yes">
+						Anco negaro i fati
+						<add place="margin left">negar la giovanezza i fati. Come ec. Negar così ec.</add>
+					</l>
+					<l>
+						La giovanezza. Ahi come,
+					</l>
+					<l>
+						Come passata sei,
+					</l>
+					<l>
+						Cara compagna de l'età mia nova,
+					</l>
+					<l>
+						Mia lagrimata speme!
+						<add place="margin left">sfortunata.</add>
+					</l>
+					<l enjamb="yes">
+						Questo è quel mondo? questi
+					</l>
+					<l>
+						I diletti, l'amor, l'opre, gli eventi
+					</l>
+					<l>
+						Onde cotanto ragionammo insieme?
+						<add place="margin left">sì spesso.</add>
+					</l>
+					<l>
+						Questa la sorte de l'umane genti?
+						<add place="margin left">umana vita? Ne la stagion fiorita</add>
+					</l>
+					<l>
+						A l'apparir del vero,
+					</l>
+					<l>
+						Tu, misera, cadesti: e con la mano
+						<add place="bottom">
+							cadesti. Sol, porgendo la mano. La misera cadea.[,] Sol ec. cadeva: e ec. Il giorno estremo.
+						</add>
+					</l>
+					<l>
+						<subst>
+							<del rend="overstrike" seq="1">Un sepolcro deserto, inonorato,</del>
+							<add place="supralinear" rend="unmarked" seq="2">La fredda morte ed una tomba ignuda</add>
+						</subst>
+						<add place="margin left">La fredda, scura, morte ed una tomba ignuda, avello. Un sepolcro deserto e l'Ombre ignude. A me la tomba inonorata e nuda.</add>
+					</l>
+					<l>
+						Mostravi di lontano.
+					</l>
+				</lg>
+			</lg>
+			<pb xml:id="asilvia2v" facs="‎⁨../images⁩/a-silvia⁩/giacomo_leopardi-a_silvia-4.jpg" type="verso"/><!-- ID e facs non so se siano corretti -->
+		</body>
+	</text>
+</TEI>
