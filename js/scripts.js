@@ -144,15 +144,19 @@
 				filtriH = $ul.outerHeight(),
 				filtriW = $filtri.width();
 
-			$filtriPH.css({
-				'left': off.left,
-				'width': filtriW
-			});
+			if ( $filtri.length ) {
 
-			$filtriBack.css({
-				'height': filtriH,
-				'width': filtriW
-			});
+				$filtriPH.css({
+					'left': off.left,
+					'width': filtriW
+				});
+
+				$filtriBack.css({
+					'height': filtriH,
+					'width': filtriW
+				});
+
+			}
 		};
 
 		var setTimeLine;
@@ -258,6 +262,10 @@
 						text = $dv.html(),
 						badge = '',
 						di;
+
+					if ( ! $stanza.length ) {
+						$stanza = $verse;
+					}
 
 					$verse.addClass('active');
 

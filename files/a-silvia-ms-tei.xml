@@ -42,9 +42,9 @@
 							<name type="surname">Ranieri</name>
 						</persName>
 					</editor>
-					<distributor xml:id="bnn" ref="http://digitale.bnnonline.it/">Biblioteca Nazionale di Napoli</distributor>
+					<distributor xml:id="bnn" ref="http://digitale.bnnonline.it/">Biblioteca Nazionale di Napoli «Vittorio Emanuele III»</distributor>
 					<availability>
-						<p>Il manoscritto originale è conservato presso la Biblioteca Nazionale di Napoli e fruibile on line</p>
+						<p>Il manoscritto originale è conservato presso la Biblioteca Nazionale di Napoli «Vittorio Emanuele III» e fruibile on line</p>
 					</availability>
 					<ptr target="http://digitale.bnnonline.it/index.php?it/148/a-silvia-1828"/>
 				</bibl>
@@ -66,7 +66,9 @@
 			<lg type="canzone-libera">
 				<lg type="stanza">
 					<l>
-						Silvia, sovvienti ancora
+						<persName>
+							<name type="forename" xml:id="silvia" ref="../refs/persone.rdf#silvia">Silvia</name>
+						</persName>, sovvienti ancora
 					</l>
 					<l>
 						Quel tempo de la tua vita mortale,

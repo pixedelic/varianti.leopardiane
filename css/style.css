@@ -49,6 +49,11 @@ a.ui i.icon {
 	display: block;
 	margin-bottom: 1em;
 }
+hr {
+	background-color: rgba(158,173,180,0.2);
+	border: 0;
+	height: 1px
+}
 /*****************************
 *	Header
 *****************************/
@@ -228,9 +233,19 @@ header nav ul li li a:hover::after {
 section {
 	overflow: hidden;
 }
+aside {
+	font-size: .9em;
+}
 aside > div,
 aside .inner-wrapper-sticky > div {
 	margin-bottom: 2em;
+}
+.aside-box {
+	border-bottom: 2px solid rgba(158, 173, 180, 0.2);
+	padding-bottom: 1em;
+}
+.aside-box > h6 {
+	margin-bottom: 1em;
 }
 footer {
 	background-image: url(../images/footer-bg.jpg);
@@ -249,9 +264,12 @@ footer {
 }
 .hero {
 	padding-bottom: calc(10vh + 20px);;
-	padding-top: calc(14vh + 20px);;
+	padding-top: calc(10vh + 20px);;
 }
-#title-hero {
+.hero > div {
+	overflow: hidden;
+}
+.title-hero {
 	background-image: url(../images/leopardi-hero.jpg);
 	background-position: 50%;
 	background-repeat: no-repeat;
@@ -299,7 +317,10 @@ footer {
 	font-family: 'Crimson Text', serif;
 	font-size: 1.875em;
 	line-height: 1.4;
+	min-height: 400px;
+	padding-bottom: 2em;
 	padding-top: 1em;
+	position: relative;
 }
 .poem .stanza {
 	position: relative;
@@ -452,8 +473,12 @@ section[data-active-var="1845"] .poem span[data-var*="1845"] {
 	display: inline;
 }
 .poem .show-vars {
+	color: initial;
 	display: block;
 	font-family: 'Raleway', sans-serif;
+	font-variant: none;
+	font-weight: initial;
+	letter-spacing: 0;
 	padding-top: 1.4em;
 	position: absolute;
 	right: 0;
@@ -537,6 +562,12 @@ span.show-vars::before {
 .poem span[data-var-badge="1845"] {
 	background-color: #6fbcc0 !important;
 }
+.search-query {
+	border-bottom: 2px dashed #d95369;
+}
+.search-result {
+	border-bottom: 1px solid transparent;
+}
 /*****************************
 *	Navigazione e Tools
 *****************************/
@@ -548,7 +579,7 @@ span.show-vars::before {
 	padding-left: 20px;
 	position: fixed;
 	top: 0;
-	z-index: 1;
+	z-index: 2;
 }
 #filtri-placeholder::before {
 	background: #ffffff;
@@ -615,6 +646,8 @@ span.show-vars::before {
 #breadcrumbs {
 	height: 0;
 	overflow: visible;
+	position: relative;
+	z-index: 1;
 }
 #breadcrumbs ul {
 	font-size: .8rem;
@@ -639,6 +672,61 @@ span.show-vars::before {
 	color: inherit;
 	text-decoration: none;
 }
+.pagination {
+	border-top: 3px solid rgba(158,173,180,0.5);
+	max-width: calc(74% - 20px);
+	padding: 2em 0;
+	position: relative;
+}
+.pagination a {
+	font-size: .9em;
+	text-decoration: none;
+}
+.pagination i {
+	font-size: 18px;
+	padding: 0 0.2em;
+	vertical-align: middle;
+}
+.pagination a.go-to-list {
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+}
+.pagination a.prev-canto::before {
+	content: 'U';
+	font-family: 'dripicons-v2';
+	opacity: .85;
+	padding-right: .35em;
+	vertical-align: middle;
+}
+.pagination a.next-canto::after {
+	content: 'V';
+	font-family: 'dripicons-v2';
+	opacity: .85;
+	padding-left: .35em;
+	vertical-align: middle;
+}
+.pagination .page-items {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.pagination .page-item {
+	display: inline-block;
+}
+.pagination .page-item a {
+	border-radius: 3px;
+	display: block;
+	line-height: 2;
+	text-align: center;
+	width: 2em;
+}
+.pagination .page-item a.current-page {
+	background-color: rgba(158,173,180,0.25);
+	cursor: text;
+	pointer-events: none;
+}
+
 /*****************************
 *	Script
 *****************************/
@@ -666,10 +754,30 @@ span.show-vars::before {
 /*****************************
 *	Plugins
 *****************************/
+.fancybox-bg {
+	background-color: #050a0d;
+}
+.fancybox-is-open .fancybox-bg {
+	opacity: .85;
+}
 .fancybox-content {
 	box-shadow: 0 0 150px rgba(5,10,13,0.35);
 	font-size: .925em;
 	width: 855px;
+}
+.fancybox-thumbs__list a::before {
+	background-color: #050a0d;
+	border: 0;
+	opacity: .5;
+}
+.fancybox-thumbs__list a.fancybox-thumbs-active::before {
+	opacity: 0;
+}
+.fancybox-show-thumbs .fancybox-thumbs {
+	background-color: rgba(5,10,13,0.5);
+}
+.fancybox-content hr {
+	margin: 2em -20px;
 }
 /*****************************
 *	Tipografia
@@ -714,7 +822,40 @@ h5, .h5 {
 	margin-bottom: .5em;
 	margin-top: .5em;
 }
+h6, .h6 {
+	color: #9eadb4;
+	font-family: 'Raleway', sans-serif;
+	font-size: .925rem; 
+	font-weight: 700;
+	line-height: 1.25;
+	margin-bottom: .5em;
+	margin-top: .5em;
+	text-transform: uppercase;
+}
+h5 a {
+	text-decoration: none;
+}
+.poem-title {
+	font-size: 1em;
+	position: relative;
+	z-index: 1;
+}
+.poem-title .line {
+	color: #9eadb4;
+	font-family: 'Crimson Text', serif;
+	font-weight: 600;
+	font-variant: small-caps;
+	letter-spacing: .1em;
+	margin: 1em 0 .5em;
+}
+.poem-title + p {
+	margin-top: 0;
+}
+.poem-title a i {
+	font-size: .5em;
+}
 .var-badge::before {
+	background-color: #9eadb4;
 	border-radius: 3px;
 	content: '';
 	display: inline-block;
@@ -760,12 +901,27 @@ h5, .h5 {
 	background-color: #ffffff;
 	opacity: .5;
 }
-#title-hero h1 {
+.title-hero h1 {
 	font-size: 100px;
 	line-height: 1;
 }
-#title-hero h1 + .cite {
-	margin-top: -1em;
+#page-title h1::before {
+	background-color: #9eadb4;
+	content: '';
+	display: inline-block;
+	height: 2px;
+	margin-left: calc(-50vw - 40px);
+	margin-right: 40px;
+	opacity: .5;
+	vertical-align: baseline;
+	width: 50vw;
+}
+#page-title.dark-skin h1::before {
+	background-color: #ffffff;
+	opacity: .2;
+}
+#page-title h1 + p {
+	margin-top: -2em;
 }
 #intro h2 {
 	font-size: 80px;
@@ -843,6 +999,7 @@ h5, .h5 {
 #timeline-box {
 	margin-bottom: 20px;
 	min-height: 380px;
+	overflow: visible;
 	position: relative;
 	z-index: 0;
 }
@@ -982,6 +1139,9 @@ a img {
 	position: relative;
 	z-index: 0;
 }
+#page-title {
+	background-color: rgba(158, 173, 180, 0.2);
+}
 .lightbox a:not(.hidden) {
 	display: block;
 	position: relative;
@@ -1049,6 +1209,7 @@ form {
 	outline: 0 !important;
 	padding-right: 10px;
 	text-indent: 10px;
+	width: 0;
 }
 .wrap-submit input[type="submit"] {
 	background-color: #9eadb4;
@@ -1063,4 +1224,8 @@ form {
 	padding: 0 16px;
 	text-decoration: none;
 	text-transform: uppercase;
+}
+form label {
+	display: block;
+	padding-top: .5em;
 }

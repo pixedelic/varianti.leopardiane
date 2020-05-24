@@ -1,0 +1,425 @@
+<!-- Doctype declaration -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<title>Concordanze - Risultati della ricerca - Varianti Leopardiane</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Rappresentazione e confronto in formato digitale della poesia A Silvia di Giacomo Leopardi"/>
+	<meta name="keywords" content="Giacomo Leopardi,Canti,varianti,lezioni,filologia,letteratura italiana,idillio"/>
+	<meta name="author" content="Manuel Masia"/>
+
+<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!-- Griglia BootStrap -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css"/>
+<!-- Font Icon -->
+	<link rel="stylesheet" type="text/css" href="css/dripicons.css"/>
+<!-- Lightbox -->
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css"/>
+<!-- Main CSS -->
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+	<link rel="icon" href="favicon.png" sizes="16x16 32x32 40x40" type="image/png">
+
+</head>
+
+<body>
+	<header>
+		<div class="container d-flex justify-content-between">
+			<h2 id="logo">
+				<a href="index.html" title="Torna alla Home Page">
+					<img src="images/logo-varianti-leopardiane.svg" id="main-logo" alt="Varianti Leopardiane - l'evolversi delle tematiche di Giacomo Leopardi attraverso le varianti dei suoi Canti"/>
+				</a>
+			</h2><!-- #logo -->
+			<nav class="align-items-center light-skin">
+				<ul>
+					<li>
+						<a href="index.html" title="Vai alla Home Page">Home page</a>
+					</li>
+					<li>
+						<a href="progetto.html" title="Leggi i dettagli del progetto">il Progetto</a>
+					</li>
+					<li>
+						<a href="canti.html" title="La lista dei Canti">i Canti</a>
+						<ul>
+							<li>
+								<span class="menu-title">Le edizioni</span>
+							</li>
+							<li>
+								<a href="edizioni.html" title="Le edizioni prese in esame">Tutte le edizioni</a>
+							</li>
+							<li>
+								<a href="edizioni.html#piatti" title="Firenze, Piatti 1831">Piatti 1831</a>
+							</li>
+							<li>
+								<a href="edizioni.html#starita" title="Napoli, Starita 1835">Starita 1835</a>
+							</li>
+							<li>
+								<a href="edizioni.html#le-monnier" title="Firenze, Le Monnier 1845">Le Monnier 1845</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="memoria.html" class="cta-button" title="Il tema della Memoria">la Memoria</a>
+					</li>
+					<li>
+						<a href="concordanze.html" title="Le concordanze" class="current">Concordanze</a>
+						<ul>
+							<li>
+								<span class="menu-title">Altre tematiche</span>
+							</li>
+							<li>
+								<a href="natura.html" title="Il tema della Natura">Natura</a>
+							</li>
+							<li>
+								<a href="pessimismo-storico.html" title="Il Pessimismo storico">Pessimismo storico</a>
+							</li>
+							<li>
+								<a href="patria.html" title="Il tema della Patria">La patria</a>
+							</li>
+							<li>
+								<a href="pessimismo-cosmico.html" title="Il Pessimismo cosmico">Pessimismo cosmico</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="contatti.html" title="Contatta lo sviluppatore">Contatti</a>
+					</li>
+				</ul>
+			</nav>
+		</div><!-- .row -->
+	</header>
+
+	<main>
+		<section data-active-var="1845">
+			<div id="page-title">
+				<div class="container hero">
+					<div class="row justify-content-end">
+						<div class="col-9-5 onscroll-elem">
+							<h1>Risultati per: &ldquo;rimembr*&rdquo;</h1>
+							<p>15 risultati</p>
+						</div><!-- .col-9-5 -->
+					</div><!-- .row -->
+				</div><!-- .container.hero -->
+			</div><!-- #title-hero -->
+			<div class="container pt-5">
+				<div class="row flex-row-reverse">
+					<nav id="filtri" class="col-9-5 filtri">
+						<ul>
+							<li>
+								<a href="#" title="Visualizza le varianti del Manoscritto" class="var-ms" data-trigger="ms">Manoscritto</a>
+							</li>
+							<li>
+								<a href="#" title="Visualizza le varianti dell'edizione Piatti 1831" class="var-1831" data-trigger="1831">Piatti 1831</a>
+							</li>
+							<li>
+								<a href="#" title="Visualizza le varianti dell'edizione Starita 1835" class="var-1835" data-trigger="1835">Starita 1835</a>
+							</li>
+							<li class="active">
+								<a href="#" title="Visualizza le varianti dell'edizione Le Monnier 1845" class="var-1845" data-trigger="1845">Le Monnier 1845</a>
+							</li>
+						</ul>
+					</nav><!-- #filtri -->
+					<div id="filtri-placeholder" class="filtri"></div>
+					<div id="filtri-backplace"></div>
+					<nav id="breadcrumbs" class="col-9-5">
+						<ul>
+							<li>
+								<a href="index.html" title="Home page">Home</a>
+							</li>
+							<li>
+								<a href="concordanze.html" title="Concordanze">Concordanze</a>
+							</li>
+							<li>
+								Risultati della ricerca
+							</li>
+						</ul>
+					</nav>
+				</div><!-- .row -->
+			</div><!-- .container -->
+			<div class="container">
+				<div class="row flex-row-reverse">
+					<div class="col-9-5">
+						<div class="poem">
+							<div class="search-result">
+								<h5 class="poem-title">
+									<a href="#" title="Vai al canto">
+										<span class="line" data-step="titolo">
+											<span data-vars="true">
+												<span data-var="ms">Idillio |</span>
+											</span>
+											La sera del
+											<span data-vars="true">
+												<span data-var="ms,1831">giorno festivo</span>
+												<span data-var="1835,1845">d&igrave; di festa</span>
+											</span>
+											<i class="icon dripicons-arrow-thin-right"></i>
+										</span>
+									</a>
+								</h5>
+								<p class="stanza">
+									<span class="line" data-step="17" data-show-step="true">
+										Questo dì fu solenne: or da&rsquo; trastulli
+									</span>
+									<br/>
+									<span class="line" data-step="18" data-show-step="true">
+										Prendi
+										<span data-vars="true">
+											<span data-var="ms">giorno festivo</span>
+											<span data-var="1831,1835,1845">riposo;</span>
+										</span>
+										e forse ti <span class="search-query">rimembra</span>
+									</span>
+									<br/>
+									<span class="line" data-step="19" data-show-step="true">
+										In sogno a quanti oggi piacesti, e quanti
+									</span>
+								</p>
+							</div><!-- .search-result -->
+
+							<div class="search-result">
+								<h5 class="poem-title">
+									<a href="#" title="Vai al canto">
+										<span class="line" data-step="titolo">
+											<span data-vars="true">
+												<span data-var="ms">Idillio | La Luna</span>
+												<span data-var="1831,1835,1845">Alla luna</span>
+											</span>
+											<i class="icon dripicons-arrow-thin-right"></i>
+										</span>
+									</a>
+								</h5>
+								<p class="stanza">
+									<span class="line" data-step="1" data-show-step="true">
+										O graziosa
+										<span data-vars="true">
+											<span data-var="ms">Luna,</span>
+											<span data-var="1831,1835,1845">luna,</span>
+										</span>
+										io mi <span class="search-query">rammento</span>
+									</span>
+									<br/>
+									<span class="line" data-step="2" data-show-step="true">
+										<span data-vars="true">
+											<span data-var="ms">Ch<del>&rsquo;</del>e, <del>or volge un anno</del> or volge <del>&egrave; presso a</del> un anno,</span>
+											<span data-var="1831,1835,1845">Che or volge l&rsquo;anno,</span>
+										</span>
+										<span data-vars="true">
+											<span data-var="ms,1831">io</span>
+										</span>
+										<span data-vars="true">
+											<span data-var="ms">sovra questo colle</span>
+											<span data-var="1831,1835,1845">sovra questo colle</span>
+										</span>
+									</span>
+								</p>
+							</div><!-- .search-result -->
+
+							<div class="search-result">
+								<h5 class="poem-title">
+									<a href="#" title="Vai al canto">
+										<span class="line" data-step="titolo">
+											<span data-vars="true">
+												<span data-var="ms">Idillio | Il Sogno</span>
+												<span data-var="1831,1835,1845">Il sogno</span>
+											</span>
+											<i class="icon dripicons-arrow-thin-right"></i>
+										</span>
+									</a>
+								</h5>
+								<p class="stanza">
+									<span class="line" data-step="11" data-show-step="true">
+										<span data-vars="true">
+											<span data-var="ms">A<del>ccosto</del>ppressommi</span>
+											<span data-var="1831,1835,1845">Appressommi</span>
+										</span>
+										la destra, e sospirando,
+									</span>
+									<br/>
+									<span class="line" data-step="12" data-show-step="true">
+										Vivi<span data-vars="true"><span 
+											data-var="ms"> pur,</span><span
+											data-var="1831,1835,1845">, tu</span></span>
+										mi disse, e <span class="search-query">ricordanza</span> alcuna
+									</span>
+									<br/>
+									<span class="line" data-step="13" data-show-step="true">
+										Serbi di noi? Donde, risposi, e come
+									</span>
+									<br/>
+									<span class="line">
+										[...]
+									</span>
+									<br/>
+									<span class="line" data-step="69" data-show-step="true">
+										Consentimi ch&rsquo;io
+										<span data-vars="true">
+											<span data-var="ms"><del>s</del></span>
+										</span>
+										&lsquo;l sappia e mi soccorra
+									</span>
+									<br/>
+									<span class="line" data-step="70" data-show-step="true">
+										La
+										<span data-vars="true">
+											<span data-var="ms"><span class="search-query">rimembranza</span>,</span>
+											<span data-var="1831,1835,1845"><span class="search-query">rimembranza</span></span>
+										</span>
+										or che
+										<span data-vars="true">
+											<span data-var="ms">&lsquo;l</span>
+											<span data-var="1831,1835,1845">il</span>
+										</span>
+										futuro &egrave; tolto
+									</span>
+									<br/>
+									<span class="line" data-step="71" data-show-step="true">
+										<span data-vars="true">
+											<span data-var="ms">A<del>&rsquo;</del> i</span>
+											<span data-var="1831">A i</span>
+											<span data-var="1835,1845">Ai</span>
+										</span>
+										nostri giorni. 
+										<span data-vars="true">
+											<span data-var="ms">Ed ella:</span>
+											<span data-var="1831,1835,1845">E quella</span>
+										</span>
+										ti conforta,
+									</span>
+								</p>
+							</div><!-- .search-result -->
+
+							<div class="search-result">
+								<h5 class="poem-title">
+									<a href="#" title="Vai al canto">
+										<span class="line" data-step="titolo">
+											<span data-vars="true">
+												<span data-var="ms">Idillio | La <del>V</del>vita solitaria</span>
+												<span data-var="1831,1835,1845">La vita solitaria</span>
+											</span>
+											<i class="icon dripicons-arrow-thin-right"></i>
+										</span>
+									</a>
+								</h5>
+								<p class="stanza">
+									<span class="line" data-step="42" data-show-step="true">
+										Lo strinse la sciaura, e in
+										<span data-vars="true">
+											<span data-var="ms">ghiacc<del>h</del>io</span>
+											<span data-var="1831,1835,1845">ghiaccio</span>
+										</span>
+										&egrave;
+										<span data-vars="true">
+											<span data-var="ms">v&oacute;lto</span>
+											<span data-var="1831,1835,1845">volto</span>
+										</span>
+									</span>
+									<br/>
+									<span class="line" data-step="43" data-show-step="true">
+										Nel fior
+										<span data-vars="true">
+											<span data-var="ms,1831">de gli</span>
+											<span data-var="1835,1845">degli</span>
+										</span>
+										anni. Mi
+										<span data-vars="true">
+											<span data-var="ms,1831"><span class="search-query">sovviene</span> il</span>
+											<span data-var="1835,1845"><span class="search-query">sovvien</span> del</span>
+										</span>
+										tempo
+									</span>
+									<br/>
+									<span class="line" data-step="44" data-show-step="true">
+										Che mi scendesti in seno. Era quel dolce
+									</span>
+								</p>
+							</div><!-- .search-result -->
+
+							<div class="search-result">
+								<h5 class="poem-title">
+									<a href="a-silvia.html" title="Vai al canto">
+										<span class="line" data-step="titolo">
+											A Silvia
+											<i class="icon dripicons-arrow-thin-right"></i>
+										</span>
+									</a>
+								</h5>
+								<p class="stanza">
+									<span class="line" data-step="1" data-show-step="true">
+										Silvia, 
+										<span data-vars="true">
+											<span data-var="ms,1831" class="search-query">sovvienti</span>
+											<span data-var="1835" class="search-query">rammenti</span>
+											<span data-var="1845" class="search-query">rimembri</span>
+										</span>
+										ancora
+									</span>
+									<br/>
+									<span class="line" data-step="2" data-show-step="true">
+										Quel tempo 
+										<span data-vars="true">
+											<span data-var="ms,1831">de la</span>
+											<span data-var="1835,1845">della</span>
+										</span> 
+										tua vita mortale,
+									</span>
+								</p>
+							</div><!-- .search-result -->
+						</div><!-- .poem -->
+
+						<nav class="pagination py-5 d-flex justify-content-center">
+							<ul class="page-items"><li
+								class="page-item"><a class="page-link current-page" href="#">1</a></li><li
+								class="page-item"><a class="page-link" href="#">2</a></li><li
+								class="page-item"><a class="page-link" href="#">3</a>
+							</li></ul>
+  						</nav><!-- .pagination -->
+
+					</div><!-- .col-9-5 -->
+
+					<aside class="col-2-5">
+						<div class="sticky">
+							<div id="search-box" class="aside-box">
+								<h6>Concordanze</h6>
+								<form action="concordanze.html">
+									<label for="cerca_concordanze">Cerca fra le concordanze</label>
+									<div class="wrap-submit">
+										<input type="text" id="cerca_concordanze" name="cerca" value=""/>
+										<input type="submit" value="Vai"/>
+									</div>
+									<label for="macrotemi">
+										<input type="checkbox" id="macrotemi" name="macrotemi" value="macrotemi">
+										<small>Cerca fra i macrotemi</small>
+									</label>
+								</form>
+							</div><!-- .search -->
+						</div><!-- .sticky -->
+					</aside>
+				</div><!-- .row -->
+			</div><!-- .container -->
+		</section>
+	</main>
+
+	<footer class="parax dark-skin">
+		<div class="container">
+			<div class="row py-5">
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</footer>
+
+<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Waypoints -->
+	<script src="js/waypoints.min.js"></script>
+<!-- Parallax -->
+	<script src="js/parallax.min.js"></script>
+<!-- Lightbox -->
+	<script src="js/jquery.fancybox.min.js"></script>
+<!-- Sticky -->
+	<script src="js/jquery.sticky-sidebar.min.js"></script>
+<!-- Main JS -->
+	<script src="js/scripts.js"></script>
+
+</body>
+</html>
