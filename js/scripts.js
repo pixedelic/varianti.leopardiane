@@ -368,6 +368,26 @@
 		});
 	};
 
+	LEOVAR.tabs = function(){
+		$('.nav.nav-tabs').each(function(){
+			var $nav = $(this),
+				$tabs = $('.nav-item', $nav),
+				$content = $(' + .tab-content', $nav),
+				$panels = $('.tab-pane', $content);
+
+			$tabs.on('click', $tabs, function(){
+				var $tab = $(this),
+					$target = $tab.attr('data-target-panel'),
+					$panel = $panels.filter('[data-panel="' + $target + '"]');
+
+				$tabs.add($panels).removeClass('active');
+				$tab.add($panel).addClass('active');
+
+				$(window).trigger('resize');
+			});
+		})
+	};
+
 	LEOVAR.init = function() {
 		$( document ).ready( function(){
 			$( 'html' ).addClass( 'dom-loaded' );
@@ -381,6 +401,7 @@
 			LEOVAR.poem();
 			LEOVAR.sticky();
 			LEOVAR.gallery();
+			LEOVAR.tabs();
 		});
 	}
 

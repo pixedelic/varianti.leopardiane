@@ -30,11 +30,7 @@ li:not(:first-child) {
 	margin-top: .2em;
 }
 a.ui {
-	color: #9eadb4;
-	font-size: .825rem;
-	font-weight: 700;
 	text-decoration: none;
-	text-transform: uppercase;
 }
 a.ui:hover {
 	text-decoration: underline;
@@ -53,6 +49,41 @@ hr {
 	background-color: rgba(158,173,180,0.2);
 	border: 0;
 	height: 1px
+}
+table {
+	border: 0;
+	border-collapse: separate;
+    border-spacing: 1px;
+}
+table tr {
+	padding-bottom: 1px;
+}
+table tr:nth-child(odd) th,
+table tr:nth-child(odd) td {
+	background-color: rgba(158,173,180,0.2);
+}
+table th,
+table td {
+	margin: 0;
+	padding: 0.75em 1em;
+	vertical-align: top;
+}
+table th {
+	font-weight: 700;
+	width: 180px;
+}
+table td {
+	border: 0;
+	min-width: 300px;
+}
+table td i.icon {
+	font-size: .75em;
+}
+table ul:first-child {
+	margin-top: 0;
+}
+table ul:last-child {
+	margin-bottom: 0;
 }
 /*****************************
 *	Header
@@ -240,12 +271,28 @@ aside > div,
 aside .inner-wrapper-sticky > div {
 	margin-bottom: 2em;
 }
-.aside-box {
+.aside-box:not(:last-child) {
 	border-bottom: 2px solid rgba(158, 173, 180, 0.2);
 	padding-bottom: 1em;
 }
 .aside-box > h6 {
 	margin-bottom: 1em;
+}
+.aside-box ul {
+	list-style: none;
+}
+.aside-box ul li::before {
+	content: 'V';
+	font-family: 'dripicons-v2';
+	font-size: .85em;
+	margin: 0 .5em 0 -1em;
+	vertical-align: middle;
+}
+.aside-box ul li a:first-child:last-child {
+	text-decoration: none;
+}
+.aside-box ul li a:first-child:last-child:hover {
+	text-decoration: underline;
 }
 footer {
 	background-image: url(../images/footer-bg.jpg);
@@ -726,6 +773,25 @@ span.show-vars::before {
 	cursor: text;
 	pointer-events: none;
 }
+.nav.nav-tabs {
+	border-bottom: 1px solid rgba(158,173,180,0.25);
+	margin-bottom: 1em;
+}
+.nav.nav-tabs .nav-item {
+	border: 1px solid rgba(158,173,180,0.25);
+	border-bottom-color: transparent;
+	border-radius: 3px 3px 0 0;
+	display: inline-block;
+	margin: 0 5px -1px 0;
+	padding: 0.65em 1em;
+	text-decoration: none;
+}
+.nav.nav-tabs .nav-item.active {
+	border-color: transparent;
+}
+.tab-content .tab-pane:not(.active) {
+	display: none;
+}
 
 /*****************************
 *	Script
@@ -876,7 +942,6 @@ h5 a {
 .var-1845::before {
 	background-color: #6fbcc0;
 }
-
 [class^="py-"] h2:first-child, [class*=" py-"] h2:first-child, [class^="pt-"] h2:first-child, [class*=" pt-"] h2:first-child,
 [class^="py-"] h3:first-child, [class*=" py-"] h3:first-child, [class^="pt-"] h3:first-child, [class*=" pt-"] h3:first-child,
 [class^="py-"] h4:first-child, [class*=" py-"] h4:first-child, [class^="pt-"] h4:first-child, [class*=" pt-"] h4:first-child {
@@ -910,11 +975,11 @@ h5 a {
 	content: '';
 	display: inline-block;
 	height: 2px;
-	margin-left: calc(-50vw - 40px);
+	margin-left: calc(-21.5% - 40px);
 	margin-right: 40px;
 	opacity: .5;
 	vertical-align: baseline;
-	width: 50vw;
+	width: 21.5%;
 }
 #page-title.dark-skin h1::before {
 	background-color: #ffffff;
@@ -984,7 +1049,6 @@ h5 a {
 	margin-right: .5em;
 	opacity: .75;
 	text-transform: none;
-	vertical-align: middle;
 	width: 1em;
 }
 /*****************************
@@ -1227,5 +1291,5 @@ form {
 }
 form label {
 	display: block;
-	padding-top: .5em;
+	padding: .5em 0;
 }
