@@ -350,13 +350,13 @@
 
 	LEOVAR.sticky = function(){
 		$('.sticky').each(function(i, el){
-			var $sticky = $(el).stickySidebar({
-				topSpacing: 60,
-				bottomSpacing: 60,
+			var $off = $('#filtri-container').outerHeight(),
+				$sticky = $(el).stick_in_parent({
+				offset_top: 67
 			});
 
 			$(window).on('resize', function(){
-				$sticky.stickySidebar('updateSticky');
+				$(document.body).trigger("sticky_kit:recalc");
 			});
 		});
 	};
@@ -388,6 +388,21 @@
 		})
 	};
 
+	LEOVAR.collpase = function(){
+		$('a.collapse').on('click', function(){
+			var $a = $(this),
+				$parent = $a.parent(),
+				$toggle = $(' + .collapsible', $a);
+			if ( !$toggle.length ) {
+				$toggle = $(' + .collapsible', $parent);
+			}
+			$a.add($toggle).toggleClass('active');
+			$toggle.slideToggle(400, 'easeOutExpo', function(){
+				$(window).trigger('resize');
+			});
+		});
+	};
+
 	LEOVAR.init = function() {
 		$( document ).ready( function(){
 			$( 'html' ).addClass( 'dom-loaded' );
@@ -402,6 +417,7 @@
 			LEOVAR.sticky();
 			LEOVAR.gallery();
 			LEOVAR.tabs();
+			LEOVAR.collpase();
 		});
 	}
 

@@ -1,4 +1,3 @@
-<!-- Doctype declaration -->
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -21,12 +20,12 @@
 	<meta name="DC.Subject" content="letteratura italiana del Ottocento">
 	<meta name="DC.Description" content="Rappresentazione e confronto in formato digitale delle varianti e delle concordanze dei testi leopardiani">
 	<meta name="DC.Publisher" content="https://github.com/">
-	<meta name="DC.Date" content="2020-05-15">
+	<meta name="DC.Date" content="2020-06-18">
 	<meta name="DC.Type" content="text">
 	<meta name="DC.Format" content="text/html">
 	<meta name="DC.Identifier" content="https://pixedelic.github.io/variantileopardiane/">
 <!-- Qui ho inserito più source con relative URI -->
-	<meta name="DC.Source" content="Manoscritti autografi di Giacomo Leopardi della Biblioteca Nazionale di Napoli &laquo;Vittorio Emanuele III&raquo;">
+	<meta name="DC.Source" content="Manoscritti autografi di Giacomo Leopardi della Biblioteca Nazionale di Napoli `Vittorio Emanuele III`">
 	<meta name="DC.Source.URI" content="http://www.bnnonline.it/">
 	<meta name="DC.Source" content="Canti / Giacomo Leopardi ; Roma: Biblioteca Italiana, 2004">
 	<meta name="DC.Source.URI" content="http://www.bibliotecaitaliana.it/scheda/bibit000850">
@@ -185,8 +184,7 @@
 				<div class="row">
 					<div class="col-4 py-5 onscroll-elem">
 						<h3 class="underlined">Il progetto</h3>
-						<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam.</p>
-						<p>Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+						<p>L'intento del progetto, oltre a conservare e condividere attraverso il digitale l'opera del poeta recanatese, &egrave; quello di offrire allo studioso o al semplice appassionato una modalit&agrave; veloce e intuitiva per partecipare dell'evolversi della poetica e del pensiero leopardiano.</p>
 						<p><a href="#" class="forward" title="Scopri i dettagli">Scopri i dettagli</a></p>
 					</div><!-- .col-4 -->
 					<div id="recanati-biblio" class="parax">
@@ -200,11 +198,11 @@
 				<div class="row align-items-start">
 					<div class="col-4 highlighted-box highlighted-right py-5 onscroll-elem from-left">
 						<h4 class="underlined">Concordanze</h4>
-						<p>Nullam quis risus eget urna mollis ornare vel eu leo risus eget.</p>
-						<p>Etiam porta sem malesuada magna mollis euismod sed diam.</p>
+						<p>Cerca le concordanze all'interno dell'opera leopardiana e attraverso le varianti.</p>
+						<p>Metti a confronto le scelte e le revisioni che l'autore ha compiuto nelle varie stesure e edizioni.</p>
 						<form action="concordanze.html">
 							<div class="wrap-submit">
-								<input type="text" id="cerca-concordanze" name="cerca" value=""/>
+								<input type="text" id="cerca-concordanze" name="cerca" value="" placeholder="es: rimembr*"/>
 								<input type="submit" value="Vai"/>
 							</div>
 						</form>
@@ -245,15 +243,22 @@
 		</section>
 	</main>
 
-	<footer class="parax dark-skin">
+	<footer class="parax">
 		<div class="container">
-			<div class="row py-5">
+			<div class="row justify-content-center">
+				<div class="col-auto text-center">
+					Digital Humanities e patrimonio culturale — Laurea Magistrale di Italianistica<br/>
+					Progetto realizzato da <a href="mailto:manuel.masia@studio.unibo.it" target="_blank">Manuel Masia</a><br/>
+					a.a. 2019-2020
+				</div>
 			</div><!-- .row -->
 		</div><!-- .container -->
 	</footer>
 
 <!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Easing -->
+	<script src="js/jquery.easing.min.js"></script>
 <!-- Waypoints -->
 	<script src="js/waypoints.min.js"></script>
 <!-- Parallax -->

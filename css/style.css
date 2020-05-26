@@ -85,6 +85,17 @@ table ul:first-child {
 table ul:last-child {
 	margin-bottom: 0;
 }
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
 /*****************************
 *	Header
 *****************************/
@@ -180,10 +191,12 @@ header nav ul li a.cta-button::after {
 	transition: background-color 200ms ease-in-out 50ms;
 	z-index: -1;
 }
-header nav ul li a.cta-button:hover {
+header nav ul li a.cta-button:hover,
+header nav ul li a.cta-button.current {
 	color: #050a0d;
 }
-header nav ul li a.cta-button:hover::after {
+header nav ul li a.cta-button:hover::after,
+header nav ul li a.cta-button.current::after {
 	background-color: rgba(5,10,13,0);
 }
 header nav ul li > ul {
@@ -268,7 +281,7 @@ aside {
 	font-size: .9em;
 }
 aside > div,
-aside .inner-wrapper-sticky > div {
+aside .sticky > div {
 	margin-bottom: 2em;
 }
 .aside-box:not(:last-child) {
@@ -299,7 +312,10 @@ footer {
 	background-size: cover;
 	background-position: 50% 100%;
 	background-repeat: no-repeat;
-	margin-top: 1em;
+	color: rgba(255,255,255,.75);
+	font-size: .825em;
+	margin-top: 10vh;
+	padding: calc(5vh + 2.25rem) 0;
 }
 .light-skin {
 	background-color: #ffffff;
@@ -792,7 +808,31 @@ span.show-vars::before {
 .tab-content .tab-pane:not(.active) {
 	display: none;
 }
-
+a.collapse {
+	text-decoration: none;
+}
+a.collapse::after {
+	content: "\54";
+	display: inline-block;
+	font-family: 'dripicons-v2';
+	font-size: .85em;
+	margin-left: .5em;
+	vertical-align: text-bottom;
+	transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+a.collapse.active::after {
+	transform: scaleY(-1);
+}
+ul.collapsible {
+	display: none;
+	opacity: 0;
+	overflow: hidden;
+	transition: opacity 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+ul.collapsible.active {
+	opacity: 1;
+	transition: opacity 400ms cubic-bezier(0.16, 1, 0.3, 1) 400ms;
+}
 /*****************************
 *	Script
 *****************************/
@@ -1026,7 +1066,7 @@ h5 a {
 	width: 1em;
 }
 /*****************************
-*	Tags
+*	Tags e links
 *****************************/
 .tag-highlight {
 	text-decoration: none;
@@ -1246,7 +1286,12 @@ a img {
 	vertical-align: baseline;
 }
 #file-xml a.ui {
+    color: #9eadb4;
+    font-size: .825rem;
+    font-weight: 700;
 	margin: 0 .35em;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 /*****************************
 *	Forms
