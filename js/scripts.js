@@ -350,9 +350,12 @@
 
 	LEOVAR.sticky = function(){
 		$('.sticky').each(function(i, el){
-			var $off = $('#filtri-container').outerHeight(),
-				$sticky = $(el).stick_in_parent({
-				offset_top: 67
+			var offset_top = $(el).attr('data-offset');
+			if ( typeof offset_top === 'undefined' || offset_top === '' ) {
+				offset_top = 67;
+			}
+			var $sticky = $(el).stick_in_parent({
+				offset_top: parseFloat( offset_top )
 			});
 
 			$(window).on('resize', function(){
@@ -388,7 +391,7 @@
 		})
 	};
 
-	LEOVAR.collpase = function(){
+	LEOVAR.collapse = function(){
 		$('a.collapse').on('click', function(){
 			var $a = $(this),
 				$parent = $a.parent(),
@@ -400,6 +403,93 @@
 			$toggle.slideToggle(400, 'easeOutExpo', function(){
 				$(window).trigger('resize');
 			});
+		});
+	};
+
+	LEOVAR.sortTable = function(){
+		var $table = $('#list-canti'),
+			$thead = $('thead', $table),
+			$ths = $('th', $thead),
+			$tbody = $('tbody', $table),
+			$trs = $('tr', $tbody),
+			$legenda = $('#legenda'),
+			$gruppi = $('#gruppi'),
+			$luoghi = $('#luoghi');
+
+		$trs.each(function(){
+			var $tr = $(this),
+				$badges = $('span[data-var-badge]', $tr),
+				place = $('td:nth-child(4)', $tr).text().toLowerCase().replace(/\s\s+/g, ' '),
+				$tds = $('td', $tr),
+				dataEd = new Array;
+
+			$badges.each(function(i,el){
+				dataEd.push( $(el).attr('data-var-badge') )
+			});
+
+			$tds.each(function(){
+				$(this).wrapInner('<span />');
+			});
+
+			$tr.attr('data-edizione', dataEd.toString()).attr('data-place',place);
+		});
+
+		$table.tablesorter({
+			headerTemplate: '',
+			sortInitialOrder: 'desc',
+			selectorSort: 'th.col-sort'
+		});
+
+		$ths.on('click', function(){
+			var $th = $(this);
+			$ths.removeClass('active');
+			$th.addClass('active');
+		});
+
+		$('span[data-var-badge]', $table).on('click', function(){
+			var $badge = $(this),
+				$ed = $badge.attr('data-var-badge');
+
+			$table.attr('data-visible-tr', $ed);
+		});
+
+		$('a[data-var-badge]', $legenda).on('click', function(){
+			var $badge = $(this),
+				$ed = $badge.attr('data-var-badge');
+
+			$('.aside-box ul li a:first-child').removeClass('fade');
+			if ( $ed !== 'ms' ) {
+				$('a[data-var-badge]', $legenda).addClass('fade');
+				$badge.removeClass('fade');
+			}
+
+			$table.attr('data-visible-tr', $ed);
+		});
+
+		$('a[data-var-group]', $gruppi).on('click', function(){
+			var $group = $(this),
+				$ed = $group.attr('data-var-group');
+
+			$('.aside-box ul li a:first-child').removeClass('fade');
+			if ( $ed !== 'ms' ) {
+				$('a[data-var-group]', $gruppi).addClass('fade');
+				$group.removeClass('fade');
+			}
+
+			$table.attr('data-visible-tr', $ed);
+		});
+
+		$('a[data-var-place]', $luoghi).on('click', function(){
+			var $place = $(this),
+				$ed = $place.attr('data-var-place');
+
+			$('.aside-box ul li a:first-child').removeClass('fade');
+			if ( $ed !== 'ms' ) {
+				$('a[data-var-place]', $luoghi).addClass('fade');
+				$place.removeClass('fade');
+			}
+
+			$table.attr('data-visible-tr', $ed);
 		});
 	};
 
@@ -417,7 +507,8 @@
 			LEOVAR.sticky();
 			LEOVAR.gallery();
 			LEOVAR.tabs();
-			LEOVAR.collpase();
+			LEOVAR.collapse();
+			LEOVAR.sortTable();
 		});
 	}
 

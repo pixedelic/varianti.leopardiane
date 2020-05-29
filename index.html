@@ -77,6 +77,12 @@
 								<a href="edizioni.html" title="Le edizioni prese in esame">Tutte le edizioni</a>
 							</li>
 							<li>
+								<a href="edizioni.html#piatti" title="Bologna, Nobili 1824">Nobili 1824</a>
+							</li>
+							<li>
+								<a href="edizioni.html#piatti" title="Bologna, Stamperia Muse 1826">Stamperia Muse 1826</a>
+							</li>
+							<li>
 								<a href="edizioni.html#piatti" title="Firenze, Piatti 1831">Piatti 1831</a>
 							</li>
 							<li>
@@ -134,7 +140,32 @@
 					<div class="col-3 d-flex align-items-end pb-4 description onscroll-elem">
 						<h3>Le edizioni dei <em>Canti</em></h3>
 					</div><!-- .col-3 -->
-					<span class="timeline-point" data-time="start"></span><!-- .timeline-point -->
+					<span class="timeline-point" data-time="1824">
+						<a href="#" title="Visualizza Nobili 1824"><span>1824</span></a>
+					</span><!-- .timeline-point -->
+					<span class="box-edizione col-5 hidden" data-time-trigger="1824">
+						<span class="col-12 d-flex align-items-end justify-content-md-center px-0">
+							<span class="edizione-img">
+								<img src="images/fronte-nobili-1824-th.png" alt="Frontespizio Starita 1824"/>
+							</span><!-- .edizione-img -->
+							<span class="edizione-info">
+								<em>Canti</em> / <a href="#" class="persona tag-highlight" title="Vedi la scheda di Giacomo Leopardi">Giacomo Leopardi</a>;<br/><small>a cura di</small> <a href="#" class="persona tag-highlight" title="Vedi la scheda di Antonio Ranieri">Antonio Ranieri</a>,<br/>Napoli, Starita, 1824
+							</span><!-- .edizione-info -->
+						</span><!-- .col-5 -->
+					</span><!-- .box-edizione -->
+					<span class="timeline-point" data-time="1826">
+						<a href="#" title="Visualizza Stamperia delle Muse 1826"><span>1826</span></a>
+					</span><!-- .timeline-point -->
+					<span class="box-edizione col-5 hidden" data-time-trigger="1826">
+						<span class="col-12 d-flex align-items-end justify-content-md-center onscroll-elem px-0 nth-child-2">
+							<span class="edizione-img">
+								<img src="images/fronte-muse-1826-th.png" alt="Frontespizio Stamperia delle Muse 1826"/>
+							</span><!-- .edizione-img -->
+							<span class="edizione-info">
+								<em>Canti</em> / <a href="#" class="persona tag-highlight" title="Vedi la scheda di Giacomo Leopardi">Giacomo Leopardi</a>;<br/><small>a cura di</small> <a href="#" class="persona tag-highlight" title="Vedi la scheda di Antonio Ranieri">Antonio Ranieri</a>,<br/>Firenze, Piatti, 1826
+							</span><!-- .edizione-info -->
+						</span><!-- .col-5 -->
+					</span><!-- .box-edizione -->
 					<span class="timeline-point active" data-time="1831">
 						<a href="#" title="Visualizza Piatti 1831"><span>1831</span></a>
 					</span><!-- .timeline-point -->
@@ -174,7 +205,6 @@
 							</span><!-- .edizione-info -->
 						</span><!-- .col-5 -->
 					</span><!-- .box-edizione -->
-					<span class="timeline-point" data-time="end"></span><!-- .timeline-point -->
 				</div><!-- #timeline-box -->
 			</div><!-- .row -->
 		</section><!-- #timeline -->
@@ -184,7 +214,7 @@
 				<div class="row">
 					<div class="col-4 py-5 onscroll-elem">
 						<h3 class="underlined">Il progetto</h3>
-						<p>L'intento del progetto, oltre a conservare e condividere attraverso il digitale l'opera del poeta recanatese, &egrave; quello di offrire allo studioso o al semplice appassionato una modalit&agrave; veloce e intuitiva per partecipare dell'evolversi della poetica e del pensiero leopardiano.</p>
+						<p>Questo progetto, oltre voler conservare e condividere grazie al digitale l'opera del poeta recanatese, vuole offrire allo studioso o al semplice appassionato una modalit&agrave; veloce e intuitiva per partecipare all'evolversi della poetica e del pensiero leopardiano.</p>
 						<p><a href="#" class="forward" title="Scopri i dettagli">Scopri i dettagli</a></p>
 					</div><!-- .col-4 -->
 					<div id="recanati-biblio" class="parax">
@@ -267,6 +297,8 @@
 	<script src="js/jquery.fancybox.min.js"></script>
 <!-- Sticky -->
 	<script src="js/jquery.sticky-sidebar.min.js"></script>
+<!-- Table Sorter -->
+	<script src="js/jquery.tablesorter.js"></script>
 <!-- Main JS -->
 	<script src="js/scripts.js"></script>
 

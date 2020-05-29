@@ -1,4 +1,4 @@
-<TEI xmlns="http://www.tei-c.org/ns/1.0" >
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
 	<teiHeader>
 		<fileDesc>
 			<titleStmt>
@@ -82,7 +82,7 @@
 						Quel tempo de la tua vita mortale,
 					</l>
 					<l n="3">
-						Quando beltà splend<del rend="doublestrikes(vertical)">e</del>a
+						Quando beltà splende<del rend="doublestrikes(vertical)">v</del>a
 					</l>
 					<l n="3bis">
 						<del rend="overstrike">Ne la fronte e nel sen tuo verginale,</del>
@@ -146,7 +146,7 @@
 						Talor lasciando e le sudate <rhyme xml:id="arte-16">carte</rhyme>,<metamark function="insertion" rend="cross" xml:id="crossCarte">†</metamark><!-- qui non sono riuscito a capire come renderlo -->
 						<add place="margin left">dilette.</add>
 					</l>
-					<addSpan rend="cross" spanTo="#crossCarte" seq="1"/><!-- ...e qui -->
+					<addSpan rend="cross" spanTo="#crossCarte"/><!-- ...e qui -->
 					<l n="17">
 						<add place="margin left">
 							<metamark function="insertion" rend="cross" spanTo="#crossEnd">†</metamark>
@@ -171,9 +171,11 @@
 					</l>
 					<l n="19">
 						D'in su i 
-						<del rend="overstrike" seq="1">balconi</del><metamark function="insertion" rend="caret">^</metamark>
-						<add place="supralinear" rend="insertion" seq="2">veroni</add>
-						del paterno ostello
+						<subst>
+							<del rend="overstrike" seq="1">balconi</del>
+							<add place="supralinear" rend="insertion" seq="2">veroni</add>
+						</subst>
+						<metamark function="insertion" rend="caret">^</metamark>del paterno ostello
 					</l>
 					<l n="20">
 						Porgea gli orecchi al suon de la tua <rhyme xml:id="oce-20">voce</rhyme>,
@@ -183,8 +185,10 @@
 					</l>
 					<l n="22">
 						Che
-						<del rend="overstrike" seq="1">percotea</del>
-						<add place="supralinear" rend="insertion" seq="2">percorrea</add>
+						<subst>
+							<del rend="overstrike" seq="1">percotea</del>
+							<add place="supralinear" rend="insertion" seq="2">percorrea</add>
+						</subst>
 						la faticosa tela.
 					</l>
 					<pb xml:id="asilvia1v" facs="‎⁨../images⁩/a-silvia⁩/giacomo_leopardi-a_silvia-2.jpg" type="verso"/><!-- ID e facs non so se siano corretti -->
@@ -225,9 +229,11 @@
 					</l>
 					<l n="33">
 						Un
-						<del rend="overstrike" seq="1">cordoglio</del><metamark function="insertion" rend="caret">^</metamark>
-						<add place="supralinear" rend="insertion" seq="2">affetto</add>
-						mi <rhyme corresp="eme-32">preme</rhyme>
+						<subst>
+							<del rend="overstrike" seq="1">cordoglio</del>
+							<add place="supralinear" rend="insertion" seq="2">affetto</add>
+						</subst>
+						<metamark function="insertion" rend="caret"/>mi <rhyme corresp="eme-32">preme</rhyme>
 					</l>
 					<l n="34">
 						Acerbo e <rhyme corresp="ato-31">sconsolato</rhyme>,

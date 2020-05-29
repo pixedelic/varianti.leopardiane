@@ -53,10 +53,23 @@ hr {
 table {
 	border: 0;
 	border-collapse: separate;
-    border-spacing: 1px;
+    border-spacing: 1px 0;
+    width: 100%;
+}
+table + table {
+	margin-top: 1em;
 }
 table tr {
 	padding-bottom: 1px;
+}
+table th[colspan="2"],
+table thead th {
+	background-color: #ffffff !important;
+	border-bottom: 2px solid rgba(158,173,180,0.2);
+	color: #9eadb4;
+	font-variant: small-caps;
+	text-align: left;
+	text-transform: lowercase;
 }
 table tr:nth-child(odd) th,
 table tr:nth-child(odd) td {
@@ -74,6 +87,8 @@ table th {
 }
 table td {
 	border: 0;
+}
+table th + td:last-child {
 	min-width: 300px;
 }
 table td i.icon {
@@ -84,6 +99,10 @@ table ul:first-child {
 }
 table ul:last-child {
 	margin-bottom: 0;
+}
+table tbody tr:nth-child(even):last-child th,
+table tbody tr:nth-child(even):last-child td {
+    border-bottom: 2px solid rgba(158,173,180,0.2);;
 }
 .text-left {
   text-align: left !important;
@@ -274,9 +293,6 @@ header nav ul li li a:hover::after {
 /*****************************
 *	General Layout
 *****************************/
-section {
-	overflow: hidden;
-}
 aside {
 	font-size: .9em;
 }
@@ -294,17 +310,24 @@ aside .sticky > div {
 .aside-box ul {
 	list-style: none;
 }
-.aside-box ul li::before {
+.aside-box ul.plain {
+	padding-left: 0;
+}
+.aside-box ul:not(.plain) li::before {
 	content: 'V';
 	font-family: 'dripicons-v2';
-	font-size: .85em;
-	margin: 0 .5em 0 -1em;
+	font-size: .8em;
+	margin: 0 .25em 0 -1em;
 	vertical-align: middle;
 }
-.aside-box ul li a:first-child:last-child {
+.aside-box ul li a:first-child {
 	text-decoration: none;
+	transition: opacity 150ms ease-in-out;
 }
-.aside-box ul li a:first-child:last-child:hover {
+.aside-box ul li a.fade {
+	opacity: .35;
+}
+.aside-box ul li a:first-child:hover {
 	text-decoration: underline;
 }
 footer {
@@ -603,27 +626,45 @@ span.show-vars::before {
 .poem .show-vars .var-text {
 	padding-bottom: 10px;
 }
+span[data-var-badge] {
+	border-radius: 3px;
+	display: inline-block;
+	height: 6px;
+	margin-bottom: 1px;
+	margin-right: 2px;
+	width: 6px;
+}
+span[data-var-badge] {
+	background-color: #9eadb4 !important;
+}
+span[data-var-badge="ms"] {
+	background-color: #d95369 !important;
+}
+span[data-var-badge="1824"] {
+	background-color: #e378bf !important;
+}
+span[data-var-badge="1826"] {
+	background-color: #8380e2 !important;
+}
+span[data-var-badge="1831"] {
+	background-color: #fdb27b !important;
+}
+span[data-var-badge="1835"] {
+	background-color: #b3da67 !important;
+}
+span[data-var-badge="1845"] {
+	background-color: #6fbcc0 !important;
+}
+.var-badge-wrap {
+	padding-top: 11px;
+}
 .poem .show-vars span[data-var-badge] {
 	border-radius: 2px;
-	display: inline-block;
 	height: 4px;
 	margin-right: 1px;
-	width: 6px;
 }
 .poem .show-vars span[data-var-badge]:last-child {
 	margin-right: 5px;
-}
-.poem span[data-var-badge="ms"] {
-	background-color: #d95369 !important;
-}
-.poem span[data-var-badge="1831"] {
-	background-color: #fdb27b !important;
-}
-.poem span[data-var-badge="1835"] {
-	background-color: #b3da67 !important;
-}
-.poem span[data-var-badge="1845"] {
-	background-color: #6fbcc0 !important;
 }
 .search-query {
 	border-bottom: 2px dashed #d95369;
@@ -707,15 +748,23 @@ span.show-vars::before {
 	background-color: #6fbcc0;
 }
 #breadcrumbs {
-	height: 0;
 	overflow: visible;
 	position: relative;
 	z-index: 1;
 }
+#filtri-backplace + #breadcrumbs {
+	height: 0;
+}
 #breadcrumbs ul {
+	border-bottom: 3px solid rgba(158,173,180,0.5);
 	font-size: .8rem;
+	margin-bottom: 0;
 	margin-top: .5em;
+	padding-bottom: 1em;
 	text-align: right;
+}
+#filtri-backplace + #breadcrumbs ul {
+	border-bottom: 0;
 }
 #breadcrumbs li {
 	color: #9eadb4;
@@ -973,6 +1022,12 @@ h5 a {
 .var-ms::before {
 	background-color: #d95369;
 }
+.var-1824::before {
+	background-color: #e378bf;
+}
+.var-1826::before {
+	background-color: #8380e2;
+}
 .var-1831::before {
 	background-color: #fdb27b;
 }
@@ -1151,12 +1206,12 @@ h5 a {
 	border-radius: 50%;
 	content: '';
 	display: block;
-	height: 11px;
+	height: 9px;
 	left: 50%;
 	position: absolute;
-	top: 5px;
+	top: 6px;
 	transform: translateX(-50%);
-	width: 11px;
+	width: 9px;
 	z-index: -1;
 }
 #timeline-box .timeline-point a span {
@@ -1169,14 +1224,20 @@ h5 a {
 #timeline-box .timeline-point[data-time="end"] {
 	right: 20px;
 }
+#timeline-box .timeline-point[data-time="1824"] {
+	left: 32%
+}
+#timeline-box .timeline-point[data-time="1826"] {
+	left: 40%
+}
 #timeline-box .timeline-point[data-time="1831"] {
-	left: 33%
+	left: 52%
 }
 #timeline-box .timeline-point[data-time="1835"] {
-	left: 50%;
+	left: 66%;
 }
 #timeline-box .timeline-point[data-time="1845"] {
-	right: 20%;
+	right: 12%;
 }
 #timeline-box .box-edizione {
 	bottom: 30px;
@@ -1197,6 +1258,12 @@ h5 a {
 	right: 0;
 	z-index: -1;
 }
+#timeline-box .box-edizione[data-time-trigger="1824"] > span::after {
+	background-color: #e378bf;
+}
+#timeline-box .box-edizione[data-time-trigger="1826"] > span::after {
+	background-color: #8380e2;
+}
 #timeline-box .box-edizione[data-time-trigger="1835"] > span::after {
 	background-color: #b3da67;
 }
@@ -1210,16 +1277,24 @@ h5 a {
 	max-width: calc(60% - 20px);
 	padding-left: 20px;
 }
+#timeline-box .box-edizione[data-time-trigger="1824"] {
+	left: calc(32% - 20px);
+	transform: translateX(-50%);
+}
+#timeline-box .box-edizione[data-time-trigger="1826"] {
+	left: calc(40% - 20px);
+	transform: translateX(-50%);
+}
 #timeline-box .box-edizione[data-time-trigger="1831"] {
-	left: calc(33% - 20px);
+	left: calc(52% - 20px);
 	transform: translateX(-50%);
 }
 #timeline-box .box-edizione[data-time-trigger="1835"] {
-	left: calc(50% - 20px);
+	left: calc(66% - 20px);
 	transform: translateX(-50%);
 }
 #timeline-box .box-edizione[data-time-trigger="1845"] {
-	right: calc(20% - 20px);
+	right: calc(12% - 20px);
 	transform: translateX(50%);
 }
 #progetto-desc .row {
@@ -1292,6 +1367,75 @@ a img {
 	margin: 0 .35em;
     text-decoration: none;
     text-transform: uppercase;
+}
+#list-canti {
+	margin-top: 2em;
+}
+#list-canti tr td:nth-child(1),
+#list-canti tr td:nth-child(4),
+#list-canti tr td:last-child {
+	font-size: .825em;
+	line-height: 1.75rem;
+	white-space: nowrap;
+}
+#list-canti tr td:nth-child(1) {
+	color: #9eadb4;
+}
+#list-canti th {
+	font-size: .9em;
+	padding-right: 2em;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+#list-canti th:not(.col-edizioni) {
+	cursor: pointer;
+}
+#list-canti th:not(.col-edizioni).active::after {
+	content: 'W';
+	display: inline-block;
+	font-family: 'dripicons-v2';
+	font-size: .85em;
+	margin-right: -0.5em;
+	padding-left: .5em;
+	width: 0;
+}
+#list-canti th.tablesorter-headerDesc.active::after {
+	content: 'T';
+}
+#list-canti th.col-no,
+#list-canti th.col-id {
+	width: 0
+}
+#list-canti th.col-titolo {
+	width: 100%;
+}
+#list-canti span[data-var-badge] {
+	cursor: pointer;
+}
+#list-canti tr td {
+	transition: opacity 200ms ease-in-out 50ms;
+}
+#list-canti[data-visible-tr="ms"] tr:not([data-edizione*="ms"]) td,
+#list-canti[data-visible-tr="1824"] tr:not([data-edizione*="1824"]) td,
+#list-canti[data-visible-tr="1826"] tr:not([data-edizione*="1826"]) td,
+#list-canti[data-visible-tr="1831"] tr:not([data-edizione*="1831"]) td,
+#list-canti[data-visible-tr="1835"] tr:not([data-edizione*="1835"]) td,
+#list-canti[data-visible-tr="1845"] tr:not([data-edizione*="1845"]) td {
+	opacity: .2;
+}
+#list-canti[data-visible-tr="idilli"] tr:not([data-group*="idilli"]) td,
+#list-canti[data-visible-tr="canzoni"] tr:not([data-group*="canzoni"]) td,
+#list-canti[data-visible-tr="grandi"] tr:not([data-group*="grandi"]) td,
+#list-canti[data-visible-tr="aspasia"] tr:not([data-group*="aspasia"]) td,
+#list-canti[data-visible-tr="ultimi"] tr:not([data-group*="ultimi"]) td {
+	opacity: .2;
+}
+#list-canti[data-visible-tr="recanati"] tr:not([data-place*="recanati"]) td,
+#list-canti[data-visible-tr="pisa"] tr:not([data-place*="pisa"]) td,
+#list-canti[data-visible-tr="napoli"] tr:not([data-place*="napoli"]) td,
+#list-canti[data-visible-tr="ferrigni"] tr:not([data-place*="ferrigni"]) td {
+	opacity: .2;
 }
 /*****************************
 *	Forms
