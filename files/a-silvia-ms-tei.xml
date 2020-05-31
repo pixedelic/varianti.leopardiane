@@ -26,7 +26,8 @@
 						Questa risorsa digitale è liberamente accessibile per uso personale o scientifico. Se ne vieta ogni utilizzo commerciale.
 					</p>
 				</availability>
-				<idno>valeo21</idno>
+				<idno type="valeo">valeo21</idno>
+				<idno type="wikidata">https://www.wikidata.org/wiki/Q4489699</idno>
 			</publicationStmt>
 			<notesStmt>
 				<note>

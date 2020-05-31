@@ -1,7 +1,7 @@
 (function($) {
 	"use strict";
-	var LEOVAR = window.LEOVAR || {};
-	window.LEOVAR = LEOVAR;
+	var VARLEO = window.VARLEO || {};
+	window.VARLEO = VARLEO;
 
 	window.requestAnimFrame = (function() {
 	return  window.requestAnimationFrame	   ||
@@ -48,13 +48,13 @@
 		}
 	};
 
-	LEOVAR.utils = function(){
+	VARLEO.utils = function(){
 		$('a[href="#"]').on('click', function(e){
 			e.preventDefault();
 		});
 	};
 
-	LEOVAR.menu = function(){
+	VARLEO.menu = function(){
 		var $header = $( 'header' ),
 			$nav = $( 'nav', $header ),
 			$parent = $nav.closest(' .limit-width' ),
@@ -74,7 +74,7 @@
 		});
 	};
 
-	LEOVAR.timeLine = function(){
+	VARLEO.timeLine = function(){
 		var $timeline = $('#timeline-box'),
 			$desc = $('.description', $timeline),
 			$boxes = $('.box-edizione', $timeline),
@@ -124,7 +124,7 @@
 		});
 	};
 
-	LEOVAR.scroll = function(){
+	VARLEO.scroll = function(){
 		$('.onscroll-elem').each(function(ind, el){
 			var waypoint = new Waypoint({
 				element: el,
@@ -190,7 +190,7 @@
 		});
 	};
 
-	LEOVAR.parax = function(){
+	VARLEO.parax = function(){
 		$('.parax').each(function(){
 			var $this = $(this),
 				bg = $this.css('background-image').replace(/^url\(['"](.+)['"]\)/, '$1');
@@ -204,7 +204,7 @@
 		});
 	};
 
-	LEOVAR.poem = function(){
+	VARLEO.poem = function(){
 		var style = '';
 		$('.poem').each(function(){
 			var $poem = $(this),
@@ -348,7 +348,7 @@
 		});
 	};
 
-	LEOVAR.sticky = function(){
+	VARLEO.sticky = function(){
 		$('.sticky').each(function(i, el){
 			var offset_top = $(el).attr('data-offset');
 			if ( typeof offset_top === 'undefined' || offset_top === '' ) {
@@ -364,14 +364,14 @@
 		});
 	};
 
-	LEOVAR.gallery = function(){
+	VARLEO.gallery = function(){
 		$('[data-fancybox]').fancybox({
 			animationEffect: "fade",
 			transitionEffect: "slide",
 		});
 	};
 
-	LEOVAR.tabs = function(){
+	VARLEO.tabs = function(){
 		$('.nav.nav-tabs').each(function(){
 			var $nav = $(this),
 				$tabs = $('.nav-item', $nav),
@@ -391,7 +391,7 @@
 		})
 	};
 
-	LEOVAR.collapse = function(){
+	VARLEO.collapse = function(){
 		$('a.collapse').on('click', function(){
 			var $a = $(this),
 				$parent = $a.parent(),
@@ -406,7 +406,7 @@
 		});
 	};
 
-	LEOVAR.sortTable = function(){
+	VARLEO.sortTable = function(){
 		var $table = $('#list-canti'),
 			$thead = $('thead', $table),
 			$ths = $('th', $thead),
@@ -458,7 +458,7 @@
 				$ed = $badge.attr('data-var-badge');
 
 			$('.aside-box ul li a:first-child').removeClass('fade');
-			if ( $ed !== 'ms' ) {
+			if ( $ed !== '1845' ) {
 				$('a[data-var-badge]', $legenda).addClass('fade');
 				$badge.removeClass('fade');
 			}
@@ -471,7 +471,7 @@
 				$ed = $group.attr('data-var-group');
 
 			$('.aside-box ul li a:first-child').removeClass('fade');
-			if ( $ed !== 'ms' ) {
+			if ( $ed !== '1845' ) {
 				$('a[data-var-group]', $gruppi).addClass('fade');
 				$group.removeClass('fade');
 			}
@@ -484,7 +484,7 @@
 				$ed = $place.attr('data-var-place');
 
 			$('.aside-box ul li a:first-child').removeClass('fade');
-			if ( $ed !== 'ms' ) {
+			if ( $ed !== '1845' ) {
 				$('a[data-var-place]', $luoghi).addClass('fade');
 				$place.removeClass('fade');
 			}
@@ -493,25 +493,77 @@
 		});
 	};
 
-	LEOVAR.init = function() {
+	VARLEO.smoothScroll = function(){
+
+		if ( window.location.hash ) scroll(0,0);
+
+		$('a[href*="#"]').on('click', function(e) {
+			var href = $(this).attr('href'),
+				$href;
+			if ( href !== '#' ) {
+				href = href.split('#');
+				$href = $('#' + href[1]);
+				if ( $href.length && typeof $href.offset() !== 'undefined' ) {
+					$('html, body').animate({
+						scrollTop: $href.offset().top + 'px'
+					}, 1000, 'easeOutExpo');
+				}
+			}
+		});
+
+		if(window.location.hash) {
+			var $hash = $(window.location.hash);
+			if ( $hash.length && typeof $hash.offset() !== 'undefined' ) {
+				$('html, body').animate({
+					scrollTop: $hash.offset().top + 'px'
+				}, 1000, 'easeOutExpo');
+			}
+		}
+	};
+
+	VARLEO.textCloud = function(){
+		var $iframes = $('iframe');
+
+		$iframes.each(function(){
+			var $iframe = $(this),
+				w = parseFloat($iframes.attr('width')),
+				h = parseFloat($iframe.attr('height')),
+				ratio, frW;
+
+			ratio = h / w;
+			var resizeiFrame = function(){
+				frW = $iframe.width();
+				$iframe.css({
+					height: frW * ratio
+				});
+			};
+			resizeiFrame();
+			$(window).on('resize load', resizeiFrame);
+
+		});
+	};
+
+	VARLEO.init = function() {
 		$( document ).ready( function(){
 			$( 'html' ).addClass( 'dom-loaded' );
-			LEOVAR.utils();
-			LEOVAR.menu();
+			VARLEO.utils();
+			VARLEO.menu();
 			requestTimeout(function(){
-				LEOVAR.scroll();
+				VARLEO.scroll();
 			}, 500);
-			LEOVAR.timeLine();
-			LEOVAR.parax();
-			LEOVAR.poem();
-			LEOVAR.sticky();
-			LEOVAR.gallery();
-			LEOVAR.tabs();
-			LEOVAR.collapse();
-			LEOVAR.sortTable();
+			VARLEO.timeLine();
+			VARLEO.parax();
+			VARLEO.poem();
+			VARLEO.sticky();
+			VARLEO.gallery();
+			VARLEO.tabs();
+			VARLEO.collapse();
+			VARLEO.sortTable();
+			VARLEO.smoothScroll();
+			VARLEO.textCloud();
 		});
 	}
 
-	LEOVAR.init();
+	VARLEO.init();
 
 })(jQuery);
