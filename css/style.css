@@ -358,12 +358,17 @@ ul.temi-tag li a {
 	border: 2px solid rgba(158,173,180,0);
 	border-radius: 20px;
 	display: block;
-	font-size: .95em;
-	margin: 0 2px 5px 0;
+	font-size: .92em;
+	font-weight: 700;
+	margin: 0 3px 5px 0;
 	padding: 2px 8px;
 	text-decoration: none;
 	text-transform: capitalize;
 	transition: background-color 250ms ease-in-out, border-color 250ms ease-in-out !important;
+}
+aside ul.temi-tag li a {
+	font-size: .8em;
+	margin: 0 1px 2px 0;
 }
 ul.temi-tag li a:hover {
 	background-color: rgba(158,173,180,0);
