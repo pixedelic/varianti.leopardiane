@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<leovar:metadata xmlns:leovar="https://github.com/pixedelic/variantileopardiane/"
+<leovar:metadata xmlns:leovar="https://pixedelic.github.io/variantileopardiane/"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="https://github.com/pixedelic/variantileopardiane/ https://github.com/pixedelic/variantileopardiane/schema.xsd"
+  xsi:schemaLocation="https://pixedelic.github.io/variantileopardiane/ https://pixedelic.github.io/variantileopardiane/schema.xsd"
   xmlns:dc="http://purl.org/dc/elements/1.1/"
   xmlns:tei="http://www.tei-c.org/ns/1.0"
   xmlns:dcterms="http://purl.org/dc/terms/">
