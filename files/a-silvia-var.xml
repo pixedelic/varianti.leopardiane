@@ -1,33 +1,356 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<leovar:metadata xmlns:leovar="https://pixedelic.github.io/variantileopardiane/"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="https://pixedelic.github.io/variantileopardiane/ https://pixedelic.github.io/variantileopardiane/schema.xsd"
-  xmlns:dc="http://purl.org/dc/elements/1.1/"
-  xmlns:tei="http://www.tei-c.org/ns/1.0"
-  xmlns:dcterms="http://purl.org/dc/terms/">
-<!-- Ho tentato di creare lo schema -->
-  <dc:title xsi:type="mp:viaf" mp:ref="https://viaf.org/viaf/148046998/">UKOLN</dc:title>
-  <dcterms:alternative>UK Office for Library and Information Networking</dcterms:alternative>
-  <dc:subject> national centre, network information support, library community, awareness, research, information services,public library networking, bibliographic management, distributed library systems, metadata, resource discovery, conferences,lectures, workshops
-  </dc:subject>
-<!-- I subject sono basati su vocabolari controllati, usando dcterms come namespace per quelli accolti dalle specifiche-->
-  <dc:subject xsi:type="dcterms:DDC">062</dc:subject>
-  <dc:subject xsi:type="dcterms:UDC">061(410)</dc:subject>
-  <dc:subject xsi:type="dcterms:LCSH">http://id.loc.gov/authorities/subjects/sh85083022.html</dc:subject>
-  <dc:description>UKOLN is a national focus of expertise in digital information management. It provides policy, research and awareness services to the UK library, information and cultural heritage communities. UKOLN is based at the University of Bath.
-  </dc:description>
-  <dc:description xml:lang="fr">UKOLN est un centre national d'expertise dans la gestion de l'information digitale.</dc:description>
-  <dc:publisher>UKOLN, University of Bath</dc:publisher>
-  <dc:coverage xsi:type="dcterms:TGN" mp:ref="http://vocab.getty.edu/page/tgn/7011197">Bath</dc:coverage>
-  <dcterms:isPartOf xsi:type="dcterms:URI">http://www.bath.ac.uk/</dcterms:isPartOf>
-  <dc:identifier xsi:type="dcterms:URI">http://www.ukoln.ac.uk/
-  </dc:identifier>
-<!-- dcterms per forma controllata delle date-->
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2001-07-18
-  </dcterms:modified>
-<!-- dcterms per forma controllata del formato-->
-  <dc:format xsi:type="dcterms:IMT">text/html</dc:format>
-  <dcterms:extent>14 Kbytes</dcterms:extent>
-<!-- qui l'URL con le specifiche di dcterms-->
-  <dc:source>https://www.dublincore.org/specifications/dublin-core/dcmi-terms/</dc:source>
-</leovar:metadata>
+<leovar:metavarianti xmlns:leovar="https://pixedelic.github.io/variantileopardiane/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://pixedelic.github.io/variantileopardiane/ https://pixedelic.github.io/variantileopardiane/schema.xsd"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:dcterms="http://purl.org/dc/terms/">
+	<leovar:header>
+		<leovar:filedesc>
+			<leovar:title>A Silvia - Varianti a confronto</leovar:title>
+			<leovar:creator xml:id="mm" xsi:type="persona">
+				<leovar:firstname>Manuel</leovar:firstname>
+				<leovar:lastname>Masia</leovar:lastname>
+			</leovar:creator>
+			<leovar:filetype>text/xml</leovar:filetype>
+		</leovar:filedesc>
+		<leovar:sourcedesc>
+			<leovar:title>A Silvia</leovar:title>
+			<dcterms:isPartOf dc:title="Canti" xsi:type="URI">https://viaf.org/viaf/180775090/</dcterms:isPartOf>
+			<leovar:sources>
+				<leovar:sourcestm xml:id="ms_na" seq="1">
+					<leovar:sourcelevel xsi:type="item">
+						<leovar:author xml:id="gl_pers" xsi:type="persona" ref="https://viaf.org/viaf/12311353/">
+							<leovar:firstname>Giacomo</leovar:firstname>
+							<leovar:lastname>Leopardi</leovar:lastname>
+						</leovar:author>
+						<dc:date>start=1828-04-19 end=1828-04-20</dc:date>
+					</leovar:sourcelevel>
+					<leovar:sourcelevel xsi:type="manifestation">
+						<leovar:publisher xml:id="bnn_org" xsi:type="organizzazione" ref="https://viaf.org/viaf/123993876/">
+							<leovar:orgname>Biblioteca Nazionale di Napoli</leovar:orgname>
+						</leovar:publisher>
+						<dc:source xsi:type="SBN">NA0079</dc:source>
+						<dc:source xsi:type="URI">http://digitale.bnnonline.it/</dc:source>
+						<dc:format xsi:type="IMT">RFC2046</dc:format>
+						<dc:date>2011</dc:date>
+					</leovar:sourcelevel>
+					<dcterms:isPartOf xml:id="carte_leopardi" xsi:type="text">Carte Leopardi</dcterms:isPartOf>
+				</leovar:sourcestm>
+				<leovar:sourcestm xml:id="piatti_1831" seq="2">
+					<leovar:sourcelevel xsi:type="manifestation">
+						<leovar:publisher xml:id="wp_org" xsi:type="organizzazione">
+							<leovar:orgname>Wikipedia</leovar:orgname>
+						</leovar:publisher>
+						<dc:source xsi:type="URI">https://it.wikisource.org/wiki/Indice:Leopardi_-_Canti,_Piatti,_Firenze_1831.djvu</dc:source>
+					</leovar:sourcelevel>
+					<leovar:sourcelevel xsi:type="expression">
+						<leovar:author xlink:href="#gl_pers"/>
+						<dc:source xsi:type="isbd">Canti del Conte Giacomo Leopardi / Giacomo Leopardi – Firenze : Guglielmo Piatti, 1831</dc:source>
+						<dc:date>1831</dc:date>
+					</leovar:sourcelevel>
+				</leovar:sourcestm>
+				<leovar:sourcestm xml:id="starita_1835" seq="3">
+					<leovar:sourcelevel xsi:type="manifestation">
+						<leovar:publisher xml:id="wp_org" xsi:type="organizzazione">
+							<leovar:orgname>Wikipedia</leovar:orgname>
+						</leovar:publisher>
+						<dc:source xsi:type="URI">https://it.wikisource.org/wiki/Indice:Leopardi_-_Canti,_Starita,_Napoli_1835.djvu</dc:source>
+					</leovar:sourcelevel>
+					<leovar:sourcelevel xsi:type="expression">
+						<leovar:author xlink:href="#gl_pers"/>
+						<dc:source xsi:type="isbd">Canti di Giacomo Leopardi : Edizione corretta, accresciuta, e sola approvata dall'autore / Giacomo Leopardi – Napoli : Saverio Starita, 1835</dc:source>
+						<dc:date>1835</dc:date>
+					</leovar:sourcelevel>
+				</leovar:sourcestm>
+				<leovar:sourcestm xml:id="lemonnier_1845" seq="4">
+					<leovar:sourcelevel xsi:type="manifestation">
+						<leovar:publisher xml:id="wp_org" xsi:type="organizzazione">
+							<leovar:orgname>Wikipedia</leovar:orgname>
+						</leovar:publisher>
+						<dc:source xsi:type="URI">https://it.wikisource.org/wiki/Indice:Leopardi_-_Opere_I,_Le_Monnier,_Firenze_1845.djvu</dc:source>
+					</leovar:sourcelevel>
+					<leovar:sourcelevel xsi:type="expression">
+						<leovar:author xlink:href="#gl_pers"/>
+						<leovar:curator xml:id="ar_pers" xsi:type="persona" ref="https://viaf.org/viaf/41882223/">
+							<leovar:firstname>Antonio</leovar:firstname>
+							<leovar:lastname>Ranieri</leovar:lastname>
+						</leovar:curator>
+						<dc:source xsi:type="isbd">Opere di Giacomo Leopardi : Edizione accresciuta, ordinata e corretta, secondo l'ultimo intendimento dell'autore, da Antonio Ranieri / Giacomo Leopardi – Firenze : Felice Le Monnier, 1845 – 2 voll.</dc:source>
+						<dc:date>1845</dc:date>
+					</leovar:sourcelevel>
+				</leovar:sourcestm>
+			</leovar:sources>
+		</leovar:sourcedesc>
+	</leovar:header>
+	<leovar:body>
+		<leovar:head>
+			<leovar:title>
+				A Silvia<leovar:var rel="ms_na">.</leovar:var>
+			</leovar:title>
+			<leovar:annotation>
+				<leovar:var rel="ms_na">
+					Pisa. 19.20.Aprile.1828.
+				</leovar:var>
+			</leovar:annotation>
+		</leovar:head>
+		<leovar:main>
+			<leovar:lg type="canzone-libera">
+				<leovar:lg type="stanza">
+					<leovar:l n="1">
+						Silvia, 
+						<leovar:vars>
+							<leovar:var rel="ms_na,piatti_1831">
+								sovvienti
+							</leovar:var>
+							<leovar:var rel="starita_1835">
+								rammenti
+							</leovar:var>
+							<leovar:var rel="lemonnier_1845">
+								rimembri
+							</leovar:var>
+						</leovar:vars>
+						ancora
+					</leovar:l>
+					<leovar:l n="2">
+						Quel tempo
+						<leovar:vars>
+							<leovar:var rel="ms_na,piatti_1831">
+								de la
+							</leovar:var>
+							<leovar:var rel="starita_1835,lemonnier_1845">
+								della
+							</leovar:var>
+						</leovar:vars>
+						tua vita mortale,
+					</leovar:l>
+					<leovar:l n="3">
+						Quando beltà 
+						<leovar:vars>
+							<leovar:var rel="ms_na">
+								splende<leovar:del rend="doublestrikes(vertical)">v</leovar:del>a
+							</leovar:var>
+							<leovar:var rel="piatti_1831,starita_1835,lemonnier_1845">
+								splendea
+							</leovar:var>
+						</leovar:vars>
+					</leovar:l>
+					<leovar:var rel="ms_na">
+						<leovar:l n="3.1">
+							<leovar:del rend="overstrike">Ne la fronte e nel sen tuo verginale,</leovar:del>
+							<leovar:add place="margin left">Nel volto verginale</leovar:add>
+						</leovar:l>
+					</leovar:var>
+					<leovar:l n="4">
+						<leovar:del rend="doublestrikes(vertical)">E</leovar:del>
+						<leovar:vars>
+							<leovar:var rel="ms_na,piatti_1831">
+								Ne gli 
+							</leovar:var>
+							<leovar:var rel="starita_1835,lemonnier_1845">
+								Negli
+							</leovar:var>
+						</leovar:vars>
+						<leovar:vars>
+							<leovar:var rel="ms_na">
+								<leovar:subst>
+									<leovar:del rend="overstrike" seq="1">sguardi incerti</leovar:del>
+									<leovar:add place="supralinear" rend="unmarked" seq="2">occhi tuoi ridenti</leovar:add>
+								</leovar:subst>
+							</leovar:var>
+							<leovar:var rel="piatti_1831,starita_1835,lemonnier_1845">
+								occhi tuoi ridenti
+							</leovar:var>
+						</leovar:vars>
+						e fuggitivi,
+						<leovar:var rel="ms_na">
+							<leovar:add place="margin left">E ne gli occhi tuoi molli e fuggitivi. dolci, vaghi</leovar:add>
+						</leovar:var>
+					</leovar:l>
+					<leovar:l n="5">
+						E tu, lieta e 
+						<leovar:vars>
+							<leovar:var rel="ms_na">
+								<leovar:subst>
+									<leovar:del rend="overstrike" seq="1">pudica,</leovar:del>
+									<leovar:add place="supralinear" rend="insertion" seq="2">pensosa,</leovar:add>
+								</leovar:subst>
+							</leovar:var>
+							<leovar:var rel="piatti_1831,starita_1835,lemonnier_1845">
+								pensosa
+							</leovar:var>
+						</leovar:vars>
+						il limitare
+					</leovar:l>
+					<leovar:l n="6">Di gioventù salivi?</leovar:l>
+				</leovar:lg>
+				<leovar:lg type="stanza">
+					<leovar:l n="7">
+						Sonavan le quiete
+					</leovar:l>
+					<leovar:l n="8">
+						Stanze, e le vie dintorno,
+					</leovar:l>
+					<leovar:l n="9">
+						Al tuo perpetuo canto,
+					</leovar:l>
+					<leovar:l n="10">
+						Allor che
+						<leovar:vars>
+							<leovar:var rel="ms_na,piatti_1831">
+								a l'opre
+							</leovar:var>
+							<leovar:var rel="starita_1835,lemonnier_1845">
+								all'opre
+							</leovar:var>
+						</leovar:vars>
+						femminili intenta
+					</leovar:l>
+					<leovar:l n="11">
+						Sedevi, assai <rhyme corresp="enta-10">contenta</rhyme>
+					</leovar:l>
+					<leovar:l n="12">
+						Di quel vago avvenir che in mente avevi.
+						<leovar:var rel="ms_na">
+							<leovar:add place="margin left">dolce.</leovar:add>
+						</leovar:var>
+					</leovar:l>
+					<leovar:l n="13">
+						Era il maggio odoroso: e tu solevi
+					</leovar:l>
+					<leovar:l n="14">
+						Così menare il giorno.
+					</leovar:l>
+				</leovar:lg>
+				<leovar:lg type="stanza">
+					<leovar:l n="15">
+						Io gli studi 
+						<leovar:var rel="ms_na">
+							<leovar:del rend="overstrike">miei dolci</leovar:del>
+							<leovar:add place="margin left">lunghi.</leovar:add>
+						</leovar:var>
+						leggiadri
+					</leovar:l>
+					<leovar:l n="16">
+						Talor lasciando e le sudate carte,<leovar:var rel="ms_na"><leovar:metamark function="insertion" rend="cross" xml:id="crossCarte">†</leovar:metamark></leovar:var>
+						<add place="margin left">dilette.</add>
+					</leovar:l>
+					<addSpan rend="cross" xlink:href="#crossCarte"/>
+					<leovar:l n="17">
+						<leovar:vars>
+							<leovar:var rel="ms_na">
+								<leovar:add place="margin left" xlink:href="#crossCarte">
+									<leovar:metamark function="insertion" rend="cross">†</leovar:metamark>
+									Ove il tempo mio primo
+								</leovar:add>
+							</leovar:var>
+							<leovar:var rel="piatti_1831,starita_1835,lemonnier_1845">
+								Ove il tempo mio primo
+							</leovar:var>
+						</leovar:vars>
+					</leovar:l>
+					<leovar:l n="18">
+						<leovar:vars>
+							<leovar:var rel="ms_na">
+								<leovar:add place="margin left">
+									E di me si spendea la miglior parte
+									<leovar:supplied reason="illegible">
+										<leovar:choice>
+											<leovar:seg>,</leovar:seg>
+											<leovar:seg>;</leovar:seg>
+										</leovar:choice>
+									</leovar:supplied>
+								</leovar:add>
+							</leovar:var>
+							<leovar:var rel="piatti_1831,starita_1835,lemonnier_1845">
+								E di me si spendea la miglior parte,
+							</leovar:var>
+						</leovar:vars>
+						<leovar:var rel="ms_na">
+							<leovar:add place="top opposite">
+								Ov'io di me spendea, Ov'io ponea di me la miglior parte. Ove de gli anni primi, acerbi, verdi Trapassando, Dispensando, i<leovar:del rend="doublestrikes(vertical)"><leovar:unclear reason="illegible" unit="char" extent="1">o</leovar:unclear></leovar:del>' venia la miglior parte. l'età più verde. E de gli anni io spendea la ec. l'età fiorita. Ove il fior de le forze ec.
+							</leovar:add>
+						</leovar:var>
+					</leovar:l>
+					<leovar:l n="19">
+						D'in su i 
+						<leovar:vars>
+							<leovar:var rel="ms_na">
+								<leovar:subst>
+									<leovar:del rend="overstrike" seq="1">balconi</leovar:del>
+									<leovar:add place="supralinear" rend="insertion" seq="2">veroni</leovar:add>
+								</leovar:subst>
+								<leovar:metamark function="insertion" rend="caret">^</leovar:metamark>del paterno ostello
+							</leovar:var>
+							<leovar:var rel="piatti_1831,starita_1835,lemonnier_1845">
+								D’in su i veroni del paterno ostello
+							</leovar:var>
+						</leovar:vars>
+					</leovar:l>
+					<leovar:l n="20">
+						Porgea
+						<leovar:vars>
+							<leovar:var rel="ms_na">
+								<leovar:add rend="overstrike">g</leovar:add>l<leovar:add rend="overstrike">i</leovar:add><leovar:del place="inline">'</leovar:del> orecchi<leovar:del place="inline">o</leovar:del>
+							</leovar:var>
+							<leovar:var rel="piatti_1831,starita_1835,lemonnier_1845">
+								gli orecchi
+							</leovar:var>
+						</leovar:vars>
+						al suon de la tua
+						<leovar:vars>
+							<leovar:var rel="ms_na,piatti_1831">
+								de la
+							</leovar:var>
+							<leovar:var rel="starita_1835,lemonnier_1845">
+								della
+							</leovar:var>
+						</leovar:vars>
+						tua voce,
+					</leovar:l>
+					<leovar:l n="21">
+						Ed
+						<leovar:vars>
+							<leovar:var rel="ms_na,piatti_1831">
+								a la
+							</leovar:var>
+							<leovar:var rel="starita_1835,lemonnier_1845">
+								alla
+							</leovar:var>
+						</leovar:vars>
+						man veloce
+					</leovar:l>
+					<leovar:l n="22">
+						Che
+						<leovar:var rel="ms_na">
+							<leovar:subst>
+								<leovar:del rend="overstrike" seq="1">percotea</leovar:del>
+								<leovar:add place="supralinear" rend="unmarked" seq="2">percorrea</leovar:add>
+							</leovar:subst>
+						</leovar:var>
+						<leovar:var rel="piatti_1831,starita_1835,lemonnier_1845">
+							percorrea
+						</leovar:var>
+						la faticosa tela.
+					</leovar:l>
+					<leovar:l n="23">
+						Mirava il ciel sereno,
+					</leovar:l>
+					<leovar:l n="24">
+						Le vie dorate e gli orti,
+					</leovar:l>
+					<leovar:l n="25">
+						E quinci il mar da lungi, e quindi il monte.
+					</leovar:l>
+					<leovar:l n="26">
+						Lingua mortal non dice
+					</leovar:l>
+					<leovar:l n="27">
+						Quel ch'io sentiva in sen.
+					</leovar:l>
+				</leovar:lg>
+			</leovar:lg>
+			<!-- ... -->
+		</leovar:main>
+	</leovar:body>
+</leovar:metavarianti>

@@ -195,7 +195,7 @@ header nav > ul > li > a:not(.cta-button)::after {
 	content: '';
 	cursor: pointer;
 	display: block;
-	height: 3px;
+	height: 0px;
 	left: 0;
 	opacity: 0;
 	position: absolute;
@@ -353,7 +353,7 @@ ul.temi-tag {
 ul.temi-tag li {
 	display: inline-block;
 }
-ul.temi-tag li a {
+.temi-tag a {
 	background-color: rgba(158,173,180,.2);
 	border: 2px solid rgba(158,173,180,0);
 	border-radius: 20px;
@@ -365,12 +365,13 @@ ul.temi-tag li a {
 	text-decoration: none;
 	text-transform: capitalize;
 	transition: background-color 250ms ease-in-out, border-color 250ms ease-in-out !important;
+	white-space: nowrap;
 }
-aside ul.temi-tag li a {
+aside .temi-tag a {
 	font-size: .8em;
 	margin: 0 1px 2px 0;
 }
-ul.temi-tag li a:hover {
+.temi-tag a:hover {
 	background-color: rgba(158,173,180,0);
 	border: 2px solid rgba(158,173,180,.2);
 	text-decoration: none !important;
@@ -1122,6 +1123,15 @@ p:last-child {
 .var-1845::before {
 	background-color: #6fbcc0;
 }
+.var-mag::before {
+	background-color: #b4d1df;
+}
+.var-var::before {
+	background-color: #94b3c2;
+}
+.var-rdf::before {
+	background-color: #7d919a;
+}
 [class^="py-"] h2:first-child, [class*=" py-"] h2:first-child, [class^="pt-"] h2:first-child, [class*=" pt-"] h2:first-child,
 [class^="py-"] h3:first-child, [class*=" py-"] h3:first-child, [class^="pt-"] h3:first-child, [class*=" pt-"] h3:first-child,
 [class^="py-"] h4:first-child, [class*=" py-"] h4:first-child, [class^="pt-"] h4:first-child, [class*=" pt-"] h4:first-child {
@@ -1471,17 +1481,17 @@ a img {
 #list-canti tr td:nth-child(1) {
 	color: #9eadb4;
 }
-#list-canti th {
+.sort-list th {
 	font-size: .9em;
 	padding-right: 2em;
 	position: sticky;
 	top: 0;
 	z-index: 1;
 }
-#list-canti th:not(.col-edizioni) {
+.sort-list th:not(.sort-disabled) {
 	cursor: pointer;
 }
-#list-canti th:not(.col-edizioni).active::after {
+.sort-list th:not(.sort-disabled).active::after {
 	content: 'W';
 	display: inline-block;
 	font-family: 'dripicons-v2';
@@ -1490,7 +1500,7 @@ a img {
 	padding-left: .5em;
 	width: 0;
 }
-#list-canti th.tablesorter-headerDesc.active::after {
+.sort-list th.tablesorter-headerDesc.active::after {
 	content: 'T';
 }
 #list-canti th.col-no,
@@ -1503,7 +1513,7 @@ a img {
 #list-canti span[data-var-badge] {
 	cursor: pointer;
 }
-#list-canti tr td {
+.sort-list tr td {
 	transition: opacity 200ms ease-in-out 50ms;
 }
 #list-canti[data-visible-tr="ms"] tr:not([data-edizione*="ms"]) td,
@@ -1527,6 +1537,32 @@ a img {
 #list-canti[data-visible-tr="ferrigni"] tr:not([data-place*="ferrigni"]) td {
 	opacity: .2;
 }
+#list-authorities img {
+	max-width: 60px;
+}
+#list-authorities tr > td {
+	white-space: nowrap;
+	width: 33%;
+}
+#list-authorities tr > td:first-child,
+#list-authorities tr > td:nth-child(2) {
+	width: 0;
+}
+#list-authorities tr td:nth-child(2) {
+	font-size: .825em;
+	line-height: 1.75rem;
+}
+#list-authorities tr td:nth-child(4) {
+	width: 100%;
+	white-space: normal;
+}
+#list-authorities .temi-tag a {
+	font-size: .8em;
+	line-height: 1.3;
+	margin: 0 0 1px 0;
+	padding: 1px 6px;
+}
+
 /*****************************
 *	Forms
 *****************************/

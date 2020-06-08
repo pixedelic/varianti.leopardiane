@@ -1,7 +1,7 @@
 (function($) {
 	"use strict";
-	var VARLEO = window.VARLEO || {};
-	window.VARLEO = VARLEO;
+	var LEOVAR = window.LEOVAR || {};
+	window.LEOVAR = LEOVAR;
 
 	window.requestAnimFrame = (function() {
 	return  window.requestAnimationFrame	   ||
@@ -48,13 +48,13 @@
 		}
 	};
 
-	VARLEO.utils = function(){
+	LEOVAR.utils = function(){
 		$('a[href="#"]').on('click', function(e){
 			e.preventDefault();
 		});
 	};
 
-	VARLEO.menu = function(){
+	LEOVAR.menu = function(){
 		var $header = $( 'header' ),
 			$nav = $( 'nav', $header ),
 			$parent = $nav.closest(' .limit-width' ),
@@ -74,7 +74,7 @@
 		});
 	};
 
-	VARLEO.timeLine = function(){
+	LEOVAR.timeLine = function(){
 		var $timeline = $('#timeline-box'),
 			$desc = $('.description', $timeline),
 			$boxes = $('.box-edizione', $timeline),
@@ -124,7 +124,7 @@
 		});
 	};
 
-	VARLEO.scroll = function(){
+	LEOVAR.scroll = function(){
 		$('.onscroll-elem').each(function(ind, el){
 			var waypoint = new Waypoint({
 				element: el,
@@ -190,7 +190,7 @@
 		});
 	};
 
-	VARLEO.parax = function(){
+	LEOVAR.parax = function(){
 		$('.parax').each(function(){
 			var $this = $(this),
 				bg = $this.css('background-image').replace(/^url\(['"](.+)['"]\)/, '$1');
@@ -204,7 +204,7 @@
 		});
 	};
 
-	VARLEO.poem = function(){
+	LEOVAR.poem = function(){
 		var style = '';
 		$('.poem').each(function(){
 			var $poem = $(this),
@@ -348,7 +348,7 @@
 		});
 	};
 
-	VARLEO.sticky = function(){
+	LEOVAR.sticky = function(){
 		$('.sticky').each(function(i, el){
 			var offset_top = $(el).attr('data-offset');
 			if ( typeof offset_top === 'undefined' || offset_top === '' ) {
@@ -364,14 +364,14 @@
 		});
 	};
 
-	VARLEO.gallery = function(){
+	LEOVAR.gallery = function(){
 		$('[data-fancybox]').fancybox({
 			animationEffect: "fade",
 			transitionEffect: "slide",
 		});
 	};
 
-	VARLEO.tabs = function(){
+	LEOVAR.tabs = function(){
 		$('.nav.nav-tabs').each(function(){
 			var $nav = $(this),
 				$tabs = $('.nav-item', $nav),
@@ -391,7 +391,7 @@
 		})
 	};
 
-	VARLEO.collapse = function(){
+	LEOVAR.collapse = function(){
 		$('a.collapse').on('click', function(){
 			var $a = $(this),
 				$parent = $a.parent(),
@@ -406,8 +406,9 @@
 		});
 	};
 
-	VARLEO.sortTable = function(){
-		var $table = $('#list-canti'),
+	LEOVAR.sortTable = function(){
+		var $table = $('.sort-list'),
+			initialSort = $table.attr('data-initialSort'),
 			$thead = $('thead', $table),
 			$ths = $('th', $thead),
 			$tbody = $('tbody', $table),
@@ -415,6 +416,10 @@
 			$legenda = $('#legenda'),
 			$gruppi = $('#gruppi'),
 			$luoghi = $('#luoghi');
+
+		if ( typeof initialSort == 'undefined' || initialSort == '' ) {
+			initialSort = 'desc';
+		}
 
 		$trs.each(function(){
 			var $tr = $(this),
@@ -436,7 +441,7 @@
 
 		$table.tablesorter({
 			headerTemplate: '',
-			sortInitialOrder: 'desc',
+			sortInitialOrder: initialSort,
 			selectorSort: 'th.col-sort'
 		});
 
@@ -493,7 +498,7 @@
 		});
 	};
 
-	VARLEO.smoothScroll = function(){
+	LEOVAR.smoothScroll = function(){
 
 		if ( window.location.hash ) scroll(0,0);
 
@@ -505,7 +510,7 @@
 				$href = $('#' + href[1]);
 				if ( $href.length && typeof $href.offset() !== 'undefined' ) {
 					$('html, body').animate({
-						scrollTop: $href.offset().top + 'px'
+						scrollTop: $href.offset().top-60 + 'px'
 					}, 1000, 'easeOutExpo');
 				}
 			}
@@ -515,13 +520,13 @@
 			var $hash = $(window.location.hash);
 			if ( $hash.length && typeof $hash.offset() !== 'undefined' ) {
 				$('html, body').animate({
-					scrollTop: $hash.offset().top + 'px'
+					scrollTop: $hash.offset().top-60 + 'px'
 				}, 1000, 'easeOutExpo');
 			}
 		}
 	};
 
-	VARLEO.textCloud = function(){
+	LEOVAR.textCloud = function(){
 		var $iframes = $('iframe');
 
 		$iframes.each(function(){
@@ -543,27 +548,27 @@
 		});
 	};
 
-	VARLEO.init = function() {
+	LEOVAR.init = function() {
 		$( document ).ready( function(){
 			$( 'html' ).addClass( 'dom-loaded' );
-			VARLEO.utils();
-			VARLEO.menu();
+			LEOVAR.utils();
+			LEOVAR.menu();
 			requestTimeout(function(){
-				VARLEO.scroll();
+				LEOVAR.scroll();
 			}, 500);
-			VARLEO.timeLine();
-			VARLEO.parax();
-			VARLEO.poem();
-			VARLEO.sticky();
-			VARLEO.gallery();
-			VARLEO.tabs();
-			VARLEO.collapse();
-			VARLEO.sortTable();
-			VARLEO.smoothScroll();
-			VARLEO.textCloud();
+			LEOVAR.timeLine();
+			LEOVAR.parax();
+			LEOVAR.poem();
+			LEOVAR.sticky();
+			LEOVAR.gallery();
+			LEOVAR.tabs();
+			LEOVAR.collapse();
+			LEOVAR.sortTable();
+			LEOVAR.smoothScroll();
+			LEOVAR.textCloud();
 		});
 	}
 
-	VARLEO.init();
+	LEOVAR.init();
 
 })(jQuery);

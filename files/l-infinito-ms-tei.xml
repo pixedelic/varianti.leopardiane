@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" >
 	<teiHeader>
 		<fileDesc>
 			<titleStmt>
 				<title type="main">Idillio | L'Infinito</title>
 				<title type="sub">Manoscritto autografo del 1819 trascritto in edizione elettronica e machine readable</title>
-				<author xml:id="gl" ref="http://viaf.org/viaf/12311353">
+				<author xml:id="gl_pers" ref="http://viaf.org/viaf/12311353">
 					<persName>
 						<name type="forename">Giacomo</name>
 						<name type="surname">Leopardi</name>
@@ -37,19 +38,19 @@
 			<sourceDesc>
 				<bibl>
 					<title>A Silvia</title>
-					<author corresp="#gl">
+					<author corresp="#gl_pers">
 						<persName>
 							<name type="forename">Giacomo</name>
 							<name type="surname">Leopardi</name>
 						</persName>
 					</author>
-					<editor xml:id="ar" ref="https://viaf.org/viaf/41882223/">
+					<editor xml:id="ar_pers" ref="https://viaf.org/viaf/41882223/">
 						<persName>
 							<name type="forename">Antonio</name>
 							<name type="surname">Ranieri</name>
 						</persName>
 					</editor>
-					<distributor xml:id="bnn" ref="http://digitale.bnnonline.it/">Biblioteca Nazionale di Napoli «Vittorio Emanuele III»</distributor>
+					<distributor xml:id="bnn_org" ref="http://digitale.bnnonline.it/">Biblioteca Nazionale di Napoli «Vittorio Emanuele III»</distributor>
 					<availability>
 						<p>Il manoscritto originale è conservato presso la Biblioteca Nazionale di Napoli «Vittorio Emanuele III» e fruibile on line</p>
 					</availability>
