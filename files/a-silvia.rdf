@@ -7,9 +7,8 @@
 	xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	xmlns:sch="http://schema.org/">
 
-	<rdf:Description rdf:ID="gl_pers">
+	<rdf:Description rdfs:id="gl_pers" rdf:about="https://pixedelic.github.io/variantileopardiane/giacomo-leopardi.html">
 		<rdfs:label>Leopardi, Giacomo, 1798-1837</rdfs:label>
-		<ex:homePage rdf:resource="https://pixedelic.github.io/variantileopardiane/giacomo-leopardi.html"/> 
 		<owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q172599"/>
 		<owl:sameAs rdf:resource="https://viaf.org/viaf/12311353"/>
 		<owl:sameAs rdf:resource="http://www.isni.org/0000+0001+2120+8191"/>
@@ -21,12 +20,11 @@
 
 	<foaf:Person rdf:about="#ar_pers">
 		<foaf:name>Giacomo Leopardi</foaf:name>
-		<foaf:img rdf:resource="/images/leopardi/giacomo-leopardi-1.jpg" />
+		<foaf:img rdf:resource="https://pixedelic.github.io/variantileopardiane/images/leopardi/giacomo-leopardi-1.jpg" />
 	</foaf:Person>
 
-	<rdf:Description rdf:ID="ar_pers">
+	<rdf:Description rdfs:id="ar_pers" rdf:about="https://pixedelic.github.io/variantileopardiane/antonio-ranieri.html">
 		<rdfs:label>Antonio, Ranieri, 1806-1888</rdfs:label>
-		<ex:homePage rdf:resource="https://pixedelic.github.io/variantileopardiane/antonio-ranieri.html"/> 
 		<owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q522838"/>
 		<owl:sameAs rdf:resource="https://viaf.org/viaf/41882223"/>
 		<owl:sameAs rdf:resource="http://www.isni.org/0000+0001+2278+7367"/>
@@ -39,7 +37,7 @@
 
 	<foaf:Person rdf:about="#ar_pers">
 		<foaf:name>Antonio Ranieri</foaf:name>
-		<foaf:img rdf:resource="/images/leopardi/antonio-ranieri.jpg" />
+		<foaf:img rdf:resource="https://pixedelic.github.io/variantileopardiane/images/leopardi/antonio-ranieri.jpg" />
 	</foaf:Person>
 
 	<rdf:Description rdf:about="https://pixedelic.github.io/variantileopardiane/canti.html">
@@ -66,9 +64,9 @@
 		<rdf:type rdf:resource="http://purl.org/ontology/bibo/Manuscript"/>
 		<owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q4489699"/>
 		<dcterms:isPartOf rdf:resource="https://pixedelic.github.io/variantileopardiane/canti.html"/>
-		<dcterms:creator rdf:about="#gl_pers"/>
-		<sch:author rdf:about="#gl_pers"/>
-		<dcterms:contributor rdf:about="#ar_pers"/>
+		<dcterms:creator rdf:resource="#gl_pers"/>
+		<sch:author rdf:resource="#gl_pers"/>
+		<dcterms:contributor rdf:resource="#ar_pers"/>
 		<dcterms:language rdf:resource="http://lexvo.org/id/iso639-3/ita"/>
 		<sch:dateCreated>1828-04-19 / 1828-04-20</sch:dateCreated>
 	</rdf:Description>
