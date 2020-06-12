@@ -32,12 +32,12 @@
 		<dc:subject xsi:type="dcterms:LCSH">info:lc/authorities/sh99001678</dc:subject>
 		<dc:subject xsi:type="dcterms:DCMIType">Text</dc:subject>
 		<dc:description  xml:lang="it">Manoscritto autografo dell'autore</dc:description>
-		<dc:date>2020</dc:date>
+		<dc:date>1828-04-19/1828-04-20</dc:date>
 		<dc:format xsi:type="dcterms:IMT">text/html</dc:format>
 		<dc:format xsi:type="dcterms:IMT">text/xml</dc:format>
 		<dc:format xsi:type="dcterms:IMT">RFC6129</dc:format>
 		<dc:source xsi:type="SBN" xml:id="bnn_org">NA0079</dc:source><!-- Biblioteca Nazionale di Napoli -->
-		<dc:source xsi:type="URI" xlink:href="#bnn">http://digitale.bnnonline.it/</dc:source><!-- non so se si può né come riferirsi a #bnn -->
+		<dc:source xsi:type="URI" xlink:href="#bnn_org">http://digitale.bnnonline.it/</dc:source><!-- non so se si può né come riferirsi a #bnn_org -->
 		<dc:language>ita</dc:language>
 		<dc:relation xsi:type="ISAD">NA0079 - C.L.XXI.7a</dc:relation>
 	</mag:bib>
@@ -51,6 +51,6 @@
 				<niso:name>XML</niso:name>
 				<niso:mime>text/xml</niso:mime>
 			</mag:format>
-		<mag:datetimecreated>2020-06-04T00:00:00.000</mag:datetimecreated>
+		<mag:datetimecreated>2020-06-04</mag:datetimecreated>
 	</mag:doc>
 </mag:metadigit>

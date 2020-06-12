@@ -889,7 +889,7 @@ span[data-var-badge="1845"] {
 	display: inline-block;
 }
 .pagination .page-item a {
-	border-radius: 3px;
+	border-radius: 50%;
 	display: block;
 	line-height: 2;
 	text-align: center;
