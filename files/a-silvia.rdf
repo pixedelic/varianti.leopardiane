@@ -7,7 +7,7 @@
 	xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	xmlns:sch="http://schema.org/">
 
-	<rdf:Description rdfs:id="gl_pers" rdf:about="https://pixedelic.github.io/variantileopardiane/giacomo-leopardi.html">
+	<rdf:Description rdfs:id="gl_pers" rdf:about="https://pixedelic.github.io/variantileopardiane/persone/giacomo-leopardi.html">
 		<rdfs:label>Leopardi, Giacomo, 1798-1837</rdfs:label>
 		<owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q172599"/>
 		<owl:sameAs rdf:resource="https://viaf.org/viaf/12311353"/>
@@ -23,7 +23,7 @@
 		<foaf:img rdf:resource="https://pixedelic.github.io/variantileopardiane/images/leopardi/giacomo-leopardi-1.jpg" />
 	</foaf:Person>
 
-	<rdf:Description rdfs:id="ar_pers" rdf:about="https://pixedelic.github.io/variantileopardiane/antonio-ranieri.html">
+	<rdf:Description rdfs:id="ar_pers" rdf:about="https://pixedelic.github.io/variantileopardiane/persone/antonio-ranieri.html">
 		<rdfs:label>Antonio, Ranieri, 1806-1888</rdfs:label>
 		<owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q522838"/>
 		<owl:sameAs rdf:resource="https://viaf.org/viaf/41882223"/>
@@ -54,7 +54,7 @@
 		<frbr:Expression rdf:resource="http://id.sbn.it/bid/VIA0069487"/>
 	</rdf:Description>
 
-	<rdf:Description rdf:about="https://pixedelic.github.io/variantileopardiane/a-silvia.html">
+	<rdf:Description rdf:about="https://pixedelic.github.io/variantileopardiane/canti/a-silvia.html">
 		<frbr:Item>NA0079 - C.L.XXI.7a</frbr:Item>
 		<rdfs:label>A Silvia – Leopardi, Giacomo, 1798-1837</rdfs:label>
 		<frbr:Work>A Silvia – Leopardi, Giacomo, 1798-1837</frbr:Work>
