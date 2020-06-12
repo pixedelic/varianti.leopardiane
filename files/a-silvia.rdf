@@ -7,8 +7,9 @@
 	xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	xmlns:sch="http://schema.org/">
 
-	<rdf:Description rdfs:id="gl_pers" rdf:about="https://pixedelic.github.io/variantileopardiane/giacomo-leopardi.html">
+	<rdf:Description rdf:ID="gl_pers">
 		<rdfs:label>Leopardi, Giacomo, 1798-1837</rdfs:label>
+		<owl:sameAs rdf:resource="https://pixedelic.github.io/variantileopardiane/giacomo-leopardi.html"/>
 		<owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q172599"/>
 		<owl:sameAs rdf:resource="https://viaf.org/viaf/12311353"/>
 		<owl:sameAs rdf:resource="http://www.isni.org/0000+0001+2120+8191"/>
@@ -18,13 +19,14 @@
 		<owl:sameAs rdf:resource="http://id.worldcat.org/fast/39974"/>
 	</rdf:Description>
 
-	<foaf:Person rdf:about="#ar_pers">
+	<foaf:Person rdf:about="#gl_pers">
 		<foaf:name>Giacomo Leopardi</foaf:name>
 		<foaf:img rdf:resource="https://pixedelic.github.io/variantileopardiane/images/leopardi/giacomo-leopardi-1.jpg" />
 	</foaf:Person>
 
-	<rdf:Description rdfs:id="ar_pers" rdf:about="https://pixedelic.github.io/variantileopardiane/antonio-ranieri.html">
+	<rdf:Description rdf:ID="ar_pers">
 		<rdfs:label>Antonio, Ranieri, 1806-1888</rdfs:label>
+		<owl:sameAs rdf:resource="https://pixedelic.github.io/variantileopardiane/antonio-ranieri.html"/>
 		<owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q522838"/>
 		<owl:sameAs rdf:resource="https://viaf.org/viaf/41882223"/>
 		<owl:sameAs rdf:resource="http://www.isni.org/0000+0001+2278+7367"/>
