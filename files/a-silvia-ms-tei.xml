@@ -5,7 +5,7 @@
 			<titleStmt>
 				<title type="main">A Silvia</title>
 				<title type="sub">Manoscritto autografo del 1828 trascritto in edizione elettronica e machine readable</title>
-				<author xml:id="gl_pers" ref="https://pixedelic.github.io/variantileopardiane/files/a-silvia.rdf#gl_pers">
+				<author xml:id="gl_pers" ref="http://viaf.org/viaf/12311353">
 					<persName>
 						<name type="forename">Giacomo</name>
 						<name type="surname">Leopardi</name>
@@ -47,7 +47,7 @@
 							<name type="surname">Leopardi</name>
 						</persName>
 					</author>
-					<editor xml:id="ar_pers" ref="https://pixedelic.github.io/variantileopardiane/files/a-silvia.rdf#ar_pers">
+					<editor xml:id="ar_pers" ref="https://viaf.org/viaf/41882223/">
 						<persName>
 							<name type="forename">Antonio</name>
 							<name type="surname">Ranieri</name>
