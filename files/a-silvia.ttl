@@ -6,7 +6,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
-<https://pixedelic.github.io/variantileopardiane/persone/giacomo-leopardi.html> rdfs:id  			"gl_pers" ;
+<https://pixedelic.github.io/variantileopardiane/giacomo-leopardi.html> rdfs:id  			"gl_pers" ;
 																				owl:sameAs  		"https://www.wikidata.org/wiki/Q172599" ,
 																									"https://viaf.org/viaf/12311353" ,
 																									"http://www.isni.org/0000+0001+2120+8191" ,
@@ -19,7 +19,7 @@
 																										foaf:img 	"/images/leopardi/giacomo-leopardi-1.jpg" ;
 																									] .
 
-<https://pixedelic.github.io/variantileopardiane/persone/antonio-ranieri.html>  rdfs:id  			"ar_pers" ;
+<https://pixedelic.github.io/variantileopardiane/antonio-ranieri.html>  rdfs:id  			"ar_pers" ;
 																				rdfs:label  		"Antonio, Ranieri, 1806-1888" ;
 																				owl:sameAs 			"https://www.wikidata.org/wiki/Q522838" ,
 																									"https://viaf.org/viaf/41882223" ,
@@ -46,7 +46,7 @@
 																									"https://www.wikidata.org/wiki/Q19142707" ;
 																				frbr:Expression		"http://id.sbn.it/bid/VIA0069487" .
 
-<https://pixedelic.github.io/variantileopardiane/canti/a-silvia.html> 			frbr:Item			"NA0079 - C.L.XXI.7a" ;
+<https://pixedelic.github.io/variantileopardiane/a-silvia.html> 			frbr:Item			"NA0079 - C.L.XXI.7a" ;
 																				rdfs:label          "A Silvia – Leopardi, Giacomo, 1798-1837" ;
 																				frbr:Work			"A Silvia – Leopardi, Giacomo, 1798-1837" ;
 																				frbr:Manifestation	"http://digitale.bnnonline.it/index.php?it/148/a-silvia-1828" ;
@@ -55,8 +55,8 @@
 																									"http://purl.org/ontology/bibo/Manuscript" ;
 																				owl:sameAs          "https://www.wikidata.org/wiki/Q4489699" ;
 																				dcterms:isPartOf    "https://pixedelic.github.io/variantileopardiane/canti.html" ;
-																				dcterms:creator     "https://pixedelic.github.io/variantileopardiane/persone/giacomo-leopardi.html" ;
-																				sch:author          "https://pixedelic.github.io/variantileopardiane/persone/giacomo-leopardi.html" ;
-																				dcterms:contributor "https://pixedelic.github.io/variantileopardiane/persone/antonio-ranieri.html" ;
+																				dcterms:creator     "https://pixedelic.github.io/variantileopardiane/giacomo-leopardi.html" ;
+																				sch:author          "https://pixedelic.github.io/variantileopardiane/giacomo-leopardi.html" ;
+																				dcterms:contributor "https://pixedelic.github.io/variantileopardiane/antonio-ranieri.html" ;
 																				dcterms:language    "http://lexvo.org/id/iso639-3/ita" ;
 																				sch:dateCreated     "1828-04-19 / 1828-04-20" .
