@@ -13,8 +13,7 @@
 	<mag:gen>
 		<mag:stprog>https://pixedelic.github.io/variantileopardiane/</mag:stprog>
 		<mag:collection>https://pixedelic.github.io/variantileopardiane/canti.html</mag:collection>
-		<mag:agency>IT:RN0005</mag:agency>
-		<!-- è la mia biblioteca comunale... il campo è obbligatorio, ma non so se posso mettere semplicemente il mio nome -->
+		<mag:agency>Manuel Masia</mag:agency>
 		<mag:access_rights>1</mag:access_rights>
 		<mag:completeness>1</mag:completeness>
 	</mag:gen>
