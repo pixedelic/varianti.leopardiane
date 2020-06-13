@@ -3,42 +3,53 @@
 @prefix sch: <http://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
-<#gl_pers> 																	rdfs:label			"Leopardi, Giacomo, 1798-1837" ;
-																			owl:sameAs  		"https://www.wikidata.org/wiki/Q172599" ,
+<#gl_pers> 																	a foaf:Person ;
+																								foaf:name	"Giacomo Leopardi" ;
+																								foaf:img 	"https://pixedelic.github.io/variantileopardiane/images/leopardi/giacomo-leopardi-1.jpg" ;
+																								foaf:knows	[
+																									foaf:Person [
+																										foaf:name	"Antonio Ranieri" ;
+																									] ;
+																								] ;
+																			rdfs:label			"Leopardi, Giacomo, 1798-1837" ;
+																			owl:sameAs			"https://www.wikidata.org/wiki/Q172599" ,
 																								"https://viaf.org/viaf/12311353" ,
 																								"http://www.isni.org/0000+0001+2120+8191" ,
 																								"https://opac.sbn.it/opacsbn/opac/iccu/scheda_authority.jsp?bid=IT%5CICCU%5CCFIV%5C002049" ,
 																								"https://openlibrary.org/authors/OL45982A/Giacomo_Leopardi" ,
 																								"https://www.worldcat.org/identities/lccn-n79084166" ,
-																								"http://id.worldcat.org/fast/39974" ;
-																			foaf:Person 		[
-																									foaf:name	"Giacomo Leopardi" ;
-																									foaf:img 	"/images/leopardi/giacomo-leopardi-1.jpg" ;
-																								] .
+																								"http://id.worldcat.org/fast/39974" .
 
-<#ar_pers>																	rdfs:label  		"Antonio, Ranieri, 1806-1888" ;
-																			owl:sameAs 			"https://www.wikidata.org/wiki/Q522838" ,
+<#ar_pers> 																	a foaf:Person ;
+																								foaf:name	"Antonio Ranieri" ;
+																								foaf:img 	"https://pixedelic.github.io/variantileopardiane/images/leopardi/antonio-ranieri.jpg" ;
+																								foaf:knows	[
+																									foaf:Person [
+																										foaf:name	"Giacomo Leopardi" ;
+																									] ;
+																								] ;
+																			rdfs:label			"Antonio, Ranieri, 1806-1888" ;
+																			owl:sameAs			"https://www.wikidata.org/wiki/Q522838" ,
 																								"https://viaf.org/viaf/41882223" ,
 																								"http://www.isni.org/0000+0001+2278+7367" ,
 																								"https://opac.sbn.it/opacsbn/opac/iccu/scheda_authority.jsp?bid=IT%5CICCU%5CCFIV%5C035320" ,
 																								"https://notes9.senato.it/Web/senregno.NSF/d7aba38662bfb3b8c125785e003c4334/80783be298042d1f4125646f005edf97?OpenDocument" ,
 																								"https://openlibrary.org/authors/OL54408A/Antonio_Ranieri" , 
 																								"https://www.worldcat.org/identities/lccn-n80030780" ,
-																								"http://id.worldcat.org/fast/51627" ;
-																			foaf:Person 		[
-																									foaf:name	"Antonio Ranieri" ;
-																									foaf:img 	"/images/leopardi/antonio-ranieri.jpg" ;
-																								] .
+																								"http://id.worldcat.org/fast/51627" .
 
-<https://pixedelic.github.io/variantileopardiane/canti.html>    			rdfs:label          "Canti / Leopardi, Giacomo, 1798-1837" ;
+<https://pixedelic.github.io/variantileopardiane/canti.html>    			a bibo:Book ;
+																			rdfs:label			"Canti / Leopardi, Giacomo, 1798-1837" ;
 																			frbr:Work			"Canti / Leopardi, Giacomo, 1798-1837" ;
-																			owl:sameAs          "https://www.wikidata.org/wiki/Q3655711" ,
+																			owl:sameAs			"https://www.wikidata.org/wiki/Q3655711" ,
 																								"https://www.wikidata.org/wiki/Q43857634" ,
 																								"https://www.wikidata.org/wiki/Q23838035" ;
-																			owl:priorVersion    "https://www.wikidata.org/wiki/Q19142707" ;
+																			owl:priorVersion	"https://www.wikidata.org/wiki/Q19142707" ;
 																			frbr:Manifestation	"https://www.wikidata.org/wiki/Q3655711" ,
 																								"https://www.wikidata.org/wiki/Q43857634" ,
 																								"https://www.wikidata.org/wiki/Q23838035" ,
@@ -46,16 +57,17 @@
 																			frbr:Expression		"http://id.sbn.it/bid/VIA0069487" .
 
 <https://pixedelic.github.io/variantileopardiane/a-silvia.html> 			frbr:Item			"NA0079 - C.L.XXI.7a" ;
-																			rdfs:label          "A Silvia – Leopardi, Giacomo, 1798-1837" ;
+																			rdfs:label			"A Silvia – Leopardi, Giacomo, 1798-1837" ;
 																			frbr:Work			"A Silvia – Leopardi, Giacomo, 1798-1837" ;
 																			frbr:Manifestation	"http://digitale.bnnonline.it/index.php?it/148/a-silvia-1828" ;
-																			rdf:type            "https://schema.org/DigitalDocument" ,
+																			skos:definition		"Manoscritto autografo del 1828 trascritto in edizione elettronica e machine readable" ;
+																			rdf:type			"https://schema.org/DigitalDocument" ,
 																								"http://schema.org/Manuscript" ,
 																								"http://purl.org/ontology/bibo/Manuscript" ;
-																			owl:sameAs          "https://www.wikidata.org/wiki/Q4489699" ;
-																			dcterms:isPartOf    "https://pixedelic.github.io/variantileopardiane/canti.html" ;
-																			dcterms:creator     "#gl_pers" ;
-																			sch:author          "#gl_pers" ;
-																			dcterms:contributor "#ar_pers" ;
-																			dcterms:language    "http://lexvo.org/id/iso639-3/ita" ;
-																			sch:dateCreated     "1828-04-19 / 1828-04-20" .
+																			owl:sameAs			"https://www.wikidata.org/wiki/Q4489699" ;
+																			dcterms:isPartOf	"https://pixedelic.github.io/variantileopardiane/canti.html" ;
+																			dcterms:creator		"#gl_pers" ;
+																			sch:author			"#gl_pers" ;
+																			dcterms:contributor	"#ar_pers" ;
+																			dcterms:language	"http://lexvo.org/id/iso639-3/ita" ;
+																			sch:dateCreated		"1828-04-19 / 1828-04-20" .

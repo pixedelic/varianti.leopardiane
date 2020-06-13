@@ -5,44 +5,51 @@
 	xmlns:dcterms="http://purl.org/dc/terms/"
 	xmlns:frbr="http://purl.org/vocab/frbr/core#"
 	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:bibo="http://purl.org/ontology/bibo/"
 	xmlns:sch="http://schema.org/">
 
-	<rdf:Description rdf:ID="gl_pers">
+	<foaf:Person rdf:ID="gl_pers">
+		<foaf:name>Giacomo Leopardi</foaf:name>
+		<foaf:img rdf:resource="https://pixedelic.github.io/variantileopardiane/images/leopardi/giacomo-leopardi-1.jpg" />
+		<foaf:knows>
+			<foaf:Person>
+				<foaf:name>Antonio Ranieri</foaf:name>
+			</foaf:Person>
+		</foaf:knows>
+		<rdf:type>Leopardi, Giacomo, 1798-1837</rdf:type>
 		<rdfs:label>Leopardi, Giacomo, 1798-1837</rdfs:label>
 		<owl:sameAs rdf:resource="https://pixedelic.github.io/variantileopardiane/giacomo-leopardi.html"/>
 		<owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q172599"/>
 		<owl:sameAs rdf:resource="https://viaf.org/viaf/12311353"/>
-		<owl:sameAs rdf:resource="http://www.isni.org/0000+0001+2120+8191"/>
+		<owl:sameAs rdf:resource="http://isni.org/isni/0000000121208191"/>
 		<owl:sameAs rdf:resource="https://opac.sbn.it/opacsbn/opac/iccu/scheda_authority.jsp?bid=IT%5CICCU%5CCFIV%5C002049"/>
 		<owl:sameAs rdf:resource="https://openlibrary.org/authors/OL45982A/Giacomo_Leopardi"/>
 		<owl:sameAs rdf:resource="https://www.worldcat.org/identities/lccn-n79084166"/>
 		<owl:sameAs rdf:resource="http://id.worldcat.org/fast/39974"/>
-	</rdf:Description>
-
-	<foaf:Person rdf:about="#gl_pers">
-		<foaf:name>Giacomo Leopardi</foaf:name>
-		<foaf:img rdf:resource="https://pixedelic.github.io/variantileopardiane/images/leopardi/giacomo-leopardi-1.jpg" />
 	</foaf:Person>
 
-	<rdf:Description rdf:ID="ar_pers">
+	<foaf:Person rdf:ID="ar_pers">
+		<foaf:name>Antonio Ranieri</foaf:name>
+		<foaf:img rdf:resource="https://pixedelic.github.io/variantileopardiane/images/leopardi/antonio-ranieri.jpg" />
+		<foaf:knows>
+			<foaf:Person>
+				<foaf:name>Giacomo Leopardi</foaf:name>
+			</foaf:Person>
+		</foaf:knows>
 		<rdfs:label>Antonio, Ranieri, 1806-1888</rdfs:label>
 		<owl:sameAs rdf:resource="https://pixedelic.github.io/variantileopardiane/antonio-ranieri.html"/>
 		<owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q522838"/>
 		<owl:sameAs rdf:resource="https://viaf.org/viaf/41882223"/>
-		<owl:sameAs rdf:resource="http://www.isni.org/0000+0001+2278+7367"/>
+		<owl:sameAs rdf:resource="http://isni.org/isni/0000000122787367"/>
 		<owl:sameAs rdf:resource="https://opac.sbn.it/opacsbn/opac/iccu/scheda_authority.jsp?bid=IT%5CICCU%5CCFIV%5C035320"/>
 		<owl:sameAs rdf:resource="https://notes9.senato.it/Web/senregno.NSF/d7aba38662bfb3b8c125785e003c4334/80783be298042d1f4125646f005edf97?OpenDocument"/>
 		<owl:sameAs rdf:resource="https://openlibrary.org/authors/OL54408A/Antonio_Ranieri"/>
 		<owl:sameAs rdf:resource="https://www.worldcat.org/identities/lccn-n80030780"/>
 		<owl:sameAs rdf:resource="http://id.worldcat.org/fast/51627"/>
-	</rdf:Description>
-
-	<foaf:Person rdf:about="#ar_pers">
-		<foaf:name>Antonio Ranieri</foaf:name>
-		<foaf:img rdf:resource="https://pixedelic.github.io/variantileopardiane/images/leopardi/antonio-ranieri.jpg" />
 	</foaf:Person>
 
-	<rdf:Description rdf:about="https://pixedelic.github.io/variantileopardiane/canti.html">
+	<bibo:Book rdf:about="https://pixedelic.github.io/variantileopardiane/canti.html">
 		<rdfs:label>Canti / Leopardi, Giacomo, 1798-1837</rdfs:label>
 		<frbr:Work>Canti / Leopardi, Giacomo, 1798-1837</frbr:Work>
 		<owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q3655711"/>
@@ -54,13 +61,14 @@
 		<owl:priorVersion rdf:resource="https://www.wikidata.org/wiki/Q19142707"/><!-- di questo non sono sicuro... -->
 		<frbr:Manifestation rdf:resource="https://www.wikidata.org/wiki/Q19142707"/>
 		<frbr:Expression rdf:resource="http://id.sbn.it/bid/VIA0069487"/>
-	</rdf:Description>
+	</bibo:Book>
 
 	<rdf:Description rdf:about="https://pixedelic.github.io/variantileopardiane/a-silvia.html">
 		<frbr:Item>NA0079 - C.L.XXI.7a</frbr:Item>
 		<rdfs:label>A Silvia – Leopardi, Giacomo, 1798-1837</rdfs:label>
 		<frbr:Work>A Silvia – Leopardi, Giacomo, 1798-1837</frbr:Work>
 		<frbr:Manifestation rdf:resource="http://digitale.bnnonline.it/index.php?it/148/a-silvia-1828"/>
+		<skos:definition>Manoscritto autografo del 1828 trascritto in edizione elettronica e machine readable.</skos:definition>
 		<rdf:type rdf:resource="https://schema.org/DigitalDocument"/>
 		<rdf:type rdf:resource="http://schema.org/Manuscript"/>
 		<rdf:type rdf:resource="http://purl.org/ontology/bibo/Manuscript"/>
