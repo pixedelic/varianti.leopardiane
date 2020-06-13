@@ -136,12 +136,15 @@ header {
 #logo {
 	float: left;
 	margin: 0;
-	padding: 27px 0;
+	padding: 23px 0 17px;
 	position: relative;
 	z-index: 0;
 }
 #logo a, #logo img {
 	display: block;
+}
+#logo img {
+	width: 188px;
 }
 #logo::before {
 	background-color: #050a0d;
