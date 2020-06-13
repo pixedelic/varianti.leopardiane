@@ -144,7 +144,7 @@ header {
 	display: block;
 }
 #logo img {
-	width: 188px;
+	width: 185px;
 }
 #logo::before {
 	background-color: #050a0d;
@@ -152,7 +152,7 @@ header {
 	display: block;
 	height: 10px;
 	position: absolute;
-	right: 0;
+	right: -3px;
 	top: 0;
 	width: 100vw;
 	z-index: -1;
