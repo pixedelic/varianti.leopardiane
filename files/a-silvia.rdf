@@ -13,7 +13,7 @@
 		<foaf:name>Giacomo Leopardi</foaf:name>
 		<foaf:img rdf:resource="https://pixedelic.github.io/variantileopardiane/images/leopardi/giacomo-leopardi-1.jpg" />
 		<foaf:knows>
-			<foaf:Person>
+			<foaf:Person rdf:about="#ar_pers">
 				<foaf:name>Antonio Ranieri</foaf:name>
 			</foaf:Person>
 		</foaf:knows>
@@ -33,7 +33,7 @@
 		<foaf:name>Antonio Ranieri</foaf:name>
 		<foaf:img rdf:resource="https://pixedelic.github.io/variantileopardiane/images/leopardi/antonio-ranieri.jpg" />
 		<foaf:knows>
-			<foaf:Person>
+			<foaf:Person rdf:about="#gl_pers">
 				<foaf:name>Giacomo Leopardi</foaf:name>
 			</foaf:Person>
 		</foaf:knows>
@@ -61,6 +61,9 @@
 		<owl:priorVersion rdf:resource="https://www.wikidata.org/wiki/Q19142707"/><!-- di questo non sono sicuro... -->
 		<frbr:Manifestation rdf:resource="https://www.wikidata.org/wiki/Q19142707"/>
 		<frbr:Expression rdf:resource="http://id.sbn.it/bid/VIA0069487"/>
+		<dcterms:creator rdf:resource="#gl_pers"/>
+		<sch:author rdf:resource="#gl_pers"/>
+		<dcterms:contributor rdf:resource="#ar_pers"/>
 	</bibo:Book>
 
 	<rdf:Description rdf:about="https://pixedelic.github.io/variantileopardiane/a-silvia.html">
@@ -76,7 +79,6 @@
 		<dcterms:isPartOf rdf:resource="https://pixedelic.github.io/variantileopardiane/canti.html"/>
 		<dcterms:creator rdf:resource="#gl_pers"/>
 		<sch:author rdf:resource="#gl_pers"/>
-		<dcterms:contributor rdf:resource="#ar_pers"/>
 		<dcterms:language rdf:resource="http://lexvo.org/id/iso639-3/ita"/>
 		<sch:dateCreated>1828-04-19 / 1828-04-20</sch:dateCreated>
 	</rdf:Description>

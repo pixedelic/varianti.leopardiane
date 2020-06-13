@@ -12,9 +12,8 @@
 																								foaf:name	"Giacomo Leopardi" ;
 																								foaf:img 	"https://pixedelic.github.io/variantileopardiane/images/leopardi/giacomo-leopardi-1.jpg" ;
 																								foaf:knows	[
-																									foaf:Person [
+																									<#ar_pers> foaf:Person ;
 																										foaf:name	"Antonio Ranieri" ;
-																									] ;
 																								] ;
 																			rdfs:label			"Leopardi, Giacomo, 1798-1837" ;
 																			owl:sameAs			"https://www.wikidata.org/wiki/Q172599" ,
@@ -29,9 +28,8 @@
 																								foaf:name	"Antonio Ranieri" ;
 																								foaf:img 	"https://pixedelic.github.io/variantileopardiane/images/leopardi/antonio-ranieri.jpg" ;
 																								foaf:knows	[
-																									foaf:Person [
+																									<#gl_pers> foaf:Person ;
 																										foaf:name	"Giacomo Leopardi" ;
-																									] ;
 																								] ;
 																			rdfs:label			"Antonio, Ranieri, 1806-1888" ;
 																			owl:sameAs			"https://www.wikidata.org/wiki/Q522838" ,
@@ -54,7 +52,11 @@
 																								"https://www.wikidata.org/wiki/Q43857634" ,
 																								"https://www.wikidata.org/wiki/Q23838035" ,
 																								"https://www.wikidata.org/wiki/Q19142707" ;
-																			frbr:Expression		"http://id.sbn.it/bid/VIA0069487" .
+																			frbr:Expression		"http://id.sbn.it/bid/VIA0069487" ;
+																			dcterms:creator		"#gl_pers" ;
+																			sch:author 			"#gl_pers" ;
+																			dcterms:contributor	"#ar_pers" .
+
 
 <https://pixedelic.github.io/variantileopardiane/a-silvia.html> 			frbr:Item			"NA0079 - C.L.XXI.7a" ;
 																			rdfs:label			"A Silvia – Leopardi, Giacomo, 1798-1837" ;
@@ -68,6 +70,5 @@
 																			dcterms:isPartOf	"https://pixedelic.github.io/variantileopardiane/canti.html" ;
 																			dcterms:creator		"#gl_pers" ;
 																			sch:author			"#gl_pers" ;
-																			dcterms:contributor	"#ar_pers" ;
 																			dcterms:language	"http://lexvo.org/id/iso639-3/ita" ;
 																			sch:dateCreated		"1828-04-19 / 1828-04-20" .
