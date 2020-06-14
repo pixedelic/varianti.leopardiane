@@ -43,20 +43,76 @@
 		<dc:language>ita</dc:language>
 		<dc:relation xsi:type="ISAD">NA0079 - C.L.XXI.7a</dc:relation>
 	</mag:bib>
-	<mag:img xml:id="leovar21_img_1" imggroupID="#leovar21_img_1">
-		<mag:sequence_number>21.1</mag:sequence_number>
-		<mag:nomenclature>Varianti di A Silvia - Versione XML</mag:nomenclature>
+	<mag:img xml:id="leovar21_img_1" imggroupID="#leovar21_gallery">
+		<mag:sequence_number>21.1r</mag:sequence_number>
+		<mag:nomenclature>A Silvia, manoscritto autografo - Biblioteca Nazionale di Napoli - Sezione manoscritti e rari - C.L.XXI.7a, c. 1r</mag:nomenclature>
+		<mag:side>right</mag:side>
+		<mag:file Location="URL" xlink:href="https://pixedelic.github.io/variantileopardiane/images/a-silvia/giacomo_leopardi-a_silvia-1.jpg" xlink:type="simple"/>
+		<mag:md5>c19b1ddf04d875d2d74849274d7047b0</mag:md5>
+		<mag:image_dimensions>
+			<mag:imagelength>1339</mag:imagelength>
+			<mag:imagewidth>945</mag:imagewidth>
+			<mag:samplingfrequencyunit>3</mag:samplingfrequencyunit>
+			<mag:format>JPEG</mag:format>
+			<mag:mime>image/jpeg</mag:mime>
+			<mag:compression>JPG</mag:compression>
+		</mag:image_dimensions>
+	</mag:img>
+	<mag:img xml:id="leovar21_img_2" imggroupID="#leovar21_gallery">
+		<mag:sequence_number>21.1v</mag:sequence_number>
+		<mag:nomenclature>A Silvia, manoscritto autografo - Biblioteca Nazionale di Napoli - Sezione manoscritti e rari - C.L.XXI.7a, c. 1v</mag:nomenclature>
+		<mag:side>left</mag:side>
+		<mag:file Location="URL" xlink:href="https://pixedelic.github.io/variantileopardiane/images/a-silvia/giacomo_leopardi-a_silvia-2.jpg" xlink:type="simple"/>
+		<mag:md5>90d3a51b0c411711c4531aa964da34cf</mag:md5>
+		<mag:image_dimensions>
+			<mag:imagelength>1339</mag:imagelength>
+			<mag:imagewidth>945</mag:imagewidth>
+			<mag:samplingfrequencyunit>3</mag:samplingfrequencyunit>
+			<mag:format>JPEG</mag:format>
+			<mag:mime>image/jpeg</mag:mime>
+			<mag:compression>JPG</mag:compression>
+		</mag:image_dimensions>
+	</mag:img>
+	<mag:img xml:id="leovar21_img_3" imggroupID="#leovar21_gallery">
+		<mag:sequence_number>21.2r</mag:sequence_number>
+		<mag:nomenclature>A Silvia, manoscritto autografo - Biblioteca Nazionale di Napoli - Sezione manoscritti e rari - C.L.XXI.7a, c. 2r</mag:nomenclature>
+		<mag:side>right</mag:side>
+		<mag:file Location="URL" xlink:href="https://pixedelic.github.io/variantileopardiane/images/a-silvia/giacomo_leopardi-a_silvia-3.jpg" xlink:type="simple"/>
+		<mag:md5>61dad0e2f6b2e2d18140699cfce4144a</mag:md5>
+		<mag:image_dimensions>
+			<mag:imagelength>1339</mag:imagelength>
+			<mag:imagewidth>945</mag:imagewidth>
+			<mag:samplingfrequencyunit>3</mag:samplingfrequencyunit>
+			<mag:format>JPEG</mag:format>
+			<mag:mime>image/jpeg</mag:mime>
+			<mag:compression>JPG</mag:compression>
+		</mag:image_dimensions>
+	</mag:img>
+	<mag:img xml:id="leovar21_img_4" imggroupID="#leovar21_gallery">
+		<mag:sequence_number>21.2v</mag:sequence_number>
+		<mag:nomenclature>A Silvia, manoscritto autografo - Biblioteca Nazionale di Napoli - Sezione manoscritti e rari - C.L.XXI.7a, c. 2v</mag:nomenclature>
+		<mag:side>left</mag:side>
+		<mag:file Location="URL" xlink:href="https://pixedelic.github.io/variantileopardiane/images/a-silvia/giacomo_leopardi-a_silvia-4.jpg" xlink:type="simple"/>
+		<mag:md5>d086b6ca99bc141c8c4a9efb53140f70</mag:md5>
+		<mag:image_dimensions>
+			<mag:imagelength>1339</mag:imagelength>
+			<mag:imagewidth>945</mag:imagewidth>
+			<mag:samplingfrequencyunit>3</mag:samplingfrequencyunit>
+			<mag:format>JPEG</mag:format>
+			<mag:mime>image/jpeg</mag:mime>
+			<mag:compression>JPG</mag:compression>
+		</mag:image_dimensions>
 	</mag:img>
 	<mag:doc>
 		<mag:sequence_number>21</mag:sequence_number>
 		<mag:nomenclature>Varianti di A Silvia - Versione XML</mag:nomenclature>
 		<mag:file Location="URL" xlink:href="https://pixedelic.github.io/variantileopardiane/files/a-silvia-var.xml" xlink:type="simple"/>
-			<mag:md5>997b6a67b72fbce9780d93b27be54f74</mag:md5>
-			<mag:filesize>13KB</mag:filesize>
-			<mag:format>
-				<niso:name>XML</niso:name>
-				<niso:mime>text/xml</niso:mime>
-			</mag:format>
+		<mag:md5>997b6a67b72fbce9780d93b27be54f74</mag:md5>
+		<mag:filesize>13KB</mag:filesize>
+		<mag:format>
+			<niso:name>XML</niso:name>
+			<niso:mime>text/xml</niso:mime>
+		</mag:format>
 		<mag:datetimecreated>2020-06-04</mag:datetimecreated>
 	</mag:doc>
 </mag:metadigit>
