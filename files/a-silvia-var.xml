@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<leovar:metavarianti xmlns:leovar="https://pixedelic.github.io/variantileopardiane/"
+<leovar:metavarianti xmlns:leovar="https://pixedelic.github.io/variantileopardiane/leovar.pdf"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="https://pixedelic.github.io/variantileopardiane/ https://pixedelic.github.io/variantileopardiane/schema.xsd"
+	xsi:schemaLocation="https://pixedelic.github.io/variantileopardiane/ leovar.xsd"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:dcterms="http://purl.org/dc/terms/">
 	<leovar:header>
 		<leovar:filedesc>
@@ -45,7 +44,7 @@
 						<dc:source xsi:type="URI">https://it.wikisource.org/wiki/Indice:Leopardi_-_Canti,_Piatti,_Firenze_1831.djvu</dc:source>
 					</leovar:sourcelevel>
 					<leovar:sourcelevel xsi:type="expression">
-						<leovar:author xlink:href="#gl_pers"/>
+						<leovar:author xsi:IDREF="#gl_pers"/>
 						<dc:source xsi:type="isbd">Canti del Conte Giacomo Leopardi / Giacomo Leopardi – Firenze : Guglielmo Piatti, 1831</dc:source>
 						<dc:date>1831</dc:date>
 					</leovar:sourcelevel>
@@ -58,7 +57,7 @@
 						<dc:source xsi:type="URI">https://it.wikisource.org/wiki/Indice:Leopardi_-_Canti,_Starita,_Napoli_1835.djvu</dc:source>
 					</leovar:sourcelevel>
 					<leovar:sourcelevel xsi:type="expression">
-						<leovar:author xlink:href="#gl_pers"/>
+						<leovar:author xsi:IDREF="#gl_pers"/>
 						<dc:source xsi:type="isbd">Canti di Giacomo Leopardi : Edizione corretta, accresciuta, e sola approvata dall'autore / Giacomo Leopardi – Napoli : Saverio Starita, 1835</dc:source>
 						<dc:date>1835</dc:date>
 					</leovar:sourcelevel>
@@ -71,7 +70,7 @@
 						<dc:source xsi:type="URI">https://it.wikisource.org/wiki/Indice:Leopardi_-_Opere_I,_Le_Monnier,_Firenze_1845.djvu</dc:source>
 					</leovar:sourcelevel>
 					<leovar:sourcelevel xsi:type="expression">
-						<leovar:author xlink:href="#gl_pers"/>
+						<leovar:author xsi:IDREF="#gl_pers"/>
 						<leovar:curator xml:id="ar_pers" xsi:type="persona" ref="https://viaf.org/viaf/41882223/">
 							<leovar:firstname>Antonio</leovar:firstname>
 							<leovar:lastname>Ranieri</leovar:lastname>
@@ -235,11 +234,11 @@
 						Talor lasciando e le sudate carte,<leovar:var rel="ms_na"><leovar:metamark function="insertion" rend="cross" xml:id="crossCarte">†</leovar:metamark></leovar:var>
 						<add place="margin left">dilette.</add>
 					</leovar:l>
-					<addSpan rend="cross" xlink:href="#crossCarte"/>
+					<addSpan rend="cross" xsi:IDREF="#crossCarte"/>
 					<leovar:l n="17">
 						<leovar:vars>
 							<leovar:var rel="ms_na">
-								<leovar:add place="margin left" xlink:href="#crossCarte">
+								<leovar:add place="margin left" xsi:IDREF="#crossCarte">
 									<leovar:metamark function="insertion" rend="cross">†</leovar:metamark>
 									Ove il tempo mio primo
 								</leovar:add>

@@ -16,6 +16,9 @@
 		<mag:agency>Manuel Masia</mag:agency>
 		<mag:access_rights>1</mag:access_rights>
 		<mag:completeness>1</mag:completeness>
+		<mag:img_group xml:id="leovar21_gallery">
+			<niso:name>JPEG</niso:name>
+		</mag:img_group>
 	</mag:gen>
 	<mag:bib level="m"><!-- m = monografia -->
 		<dc:identifier xsi:type="URI">https://www.britannica.com/topic/A-Silvia</dc:identifier>
@@ -36,10 +39,14 @@
 		<dc:format xsi:type="dcterms:IMT">text/xml</dc:format>
 		<dc:format xsi:type="dcterms:IMT">RFC6129</dc:format>
 		<dc:source xsi:type="SBN" xml:id="bnn_org">NA0079</dc:source><!-- Biblioteca Nazionale di Napoli -->
-		<dc:source xsi:type="URI" xlink:href="#bnn_org">http://digitale.bnnonline.it/</dc:source><!-- non so se si può né come riferirsi a #bnn_org -->
+		<dc:source xsi:type="URI" xsi:IDREF="#bnn_org">http://digitale.bnnonline.it/</dc:source><!-- non so se si può né come riferirsi a #bnn_org -->
 		<dc:language>ita</dc:language>
 		<dc:relation xsi:type="ISAD">NA0079 - C.L.XXI.7a</dc:relation>
 	</mag:bib>
+	<mag:img xml:id="leovar21_img_1" imggroupID="#leovar21_img_1">
+		<mag:sequence_number>21.1</mag:sequence_number>
+		<mag:nomenclature>Varianti di A Silvia - Versione XML</mag:nomenclature>
+	</mag:img>
 	<mag:doc>
 		<mag:sequence_number>21</mag:sequence_number>
 		<mag:nomenclature>Varianti di A Silvia - Versione XML</mag:nomenclature>
