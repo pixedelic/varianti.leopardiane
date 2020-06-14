@@ -1551,7 +1551,8 @@ a img {
 #list-authorities tr > td:nth-child(2) {
 	width: 0;
 }
-#list-authorities tr td:nth-child(2) {
+#list-authorities tr td:nth-child(2),
+#list-authorities tr td:last-child {
 	font-size: .825em;
 	line-height: 1.75rem;
 }
