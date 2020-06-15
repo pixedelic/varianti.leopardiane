@@ -3,8 +3,10 @@
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:dcmitype="http://purl.org/dc/dcmitype/"
 	xmlns:frbr="http://purl.org/vocab/frbr/core#"
 	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:frad="http://iflastandards.info/ns/fr/frad/"
 	xmlns:dbo="http://dbpedia.org/ontology/"
 	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 	xmlns:bibo="http://purl.org/ontology/bibo/"
@@ -55,9 +57,16 @@
 		<owl:sameAs rdf:resource="http://id.worldcat.org/fast/51627"/>
 	</foaf:Person>
 
+	<frad:C1008 rdf:ID="bnn_org"><!-- Agency -->
+		<frad:C1006>Biblioteca Nazionale di Napoli Vittorio Emanuele III</frad:C1006><!-- Name -->
+		<frad:C1009>NA0079</frad:C1009><!-- Identifier -->
+		<owl:sameAs rdf:resource="http://digitale.bnnonline.it/"/>
+	</frad:C1008>
+
 	<bibo:Book rdf:about="https://pixedelic.github.io/variantileopardiane/canti.html">
 		<rdfs:label>Canti / Leopardi, Giacomo, 1798-1837</rdfs:label>
 		<frbr:Work>Canti / Leopardi, Giacomo, 1798-1837</frbr:Work>
+		<dcterms:title>Canti / Leopardi, Giacomo, 1798-1837</dcterms:title>
 		<owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q3655711"/>
 		<frbr:Manifestation rdf:resource="https://www.wikidata.org/wiki/Q3655711"/>
 		<owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q43857634"/>
@@ -68,25 +77,30 @@
 		<frbr:Manifestation rdf:resource="https://www.wikidata.org/wiki/Q19142707"/>
 		<frbr:Expression rdf:resource="http://id.sbn.it/bid/VIA0069487"/>
 		<dcterms:creator rdf:resource="#gl_pers"/>
+		<frbr:creator rdf:resource="#gl_pers"/>
 		<sch:author rdf:resource="#gl_pers"/>
 		<dcterms:contributor rdf:resource="#ar_pers"/>
 	</bibo:Book>
 
 	<bibframe:Manuscript rdf:about="https://pixedelic.github.io/variantileopardiane/a-silvia.html">
 		<frbr:Item>NA0079 - C.L.XXI.7a</frbr:Item>
-		<rdfs:label>A Silvia – Leopardi, Giacomo, 1798-1837</rdfs:label>
-		<frbr:Work>A Silvia – Leopardi, Giacomo, 1798-1837</frbr:Work>
+		<rdfs:label>A Silvia</rdfs:label>
+		<frbr:Work>A Silvia</frbr:Work>
+		<dcterms:title>A Silvia</dcterms:title>
+		<bibframe:Place>Pisa</bibframe:Place>
 		<frbr:Manifestation rdf:resource="http://digitale.bnnonline.it/index.php?it/148/a-silvia-1828"/>
 		<skos:definition>Manoscritto autografo del 1828 trascritto in edizione elettronica e machine readable.</skos:definition>
-		<bibframe:Place>Pisa</bibframe:Place>
 		<rdf:type rdf:resource="https://schema.org/DigitalDocument"/>
 		<rdf:type rdf:resource="http://schema.org/Manuscript"/>
 		<rdf:type rdf:resource="http://purl.org/ontology/bibo/Manuscript"/>
 		<owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q4489699"/>
 		<dcterms:isPartOf rdf:resource="https://pixedelic.github.io/variantileopardiane/canti.html"/>
 		<dcterms:creator rdf:resource="#gl_pers"/>
+		<frbr:creator rdf:resource="#gl_pers"/>
 		<sch:author rdf:resource="#gl_pers"/>
+		<frbr:owner rdf:resource="#bnn_org"/>
 		<dcterms:language rdf:resource="http://lexvo.org/id/iso639-3/ita"/>
 		<sch:dateCreated>1828-04-19 / 1828-04-20</sch:dateCreated>
+		<dcmitype:Image rdf:resource="https://pixedelic.github.io/variantileopardiane/images/a-silvia/giacomo_leopardi-a_silvia-1.jpg"/>
 	</bibframe:Manuscript>
 </rdf:RDF>

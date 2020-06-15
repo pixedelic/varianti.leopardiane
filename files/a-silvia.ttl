@@ -2,13 +2,15 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sch: <http://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 @prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix frad: <http://iflastandards.info/ns/fr/frad/> .
 @prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
 <#gl_pers> 															a foaf:Person ;
 																						foaf:name	"Giacomo Leopardi" ;
@@ -49,6 +51,11 @@
 																						"https://www.worldcat.org/identities/lccn-n80030780" ,
 																						"http://id.worldcat.org/fast/51627" .
 
+<#bnn_org> 															a frad:C1008 ;
+																	frad:C1006			"Biblioteca Nazionale di Napoli Vittorio Emanuele III" ;
+																	frad:C1009			"NA0079" ;
+																	owl:sameAs			"http://digitale.bnnonline.it/" .
+
 <https://pixedelic.github.io/variantileopardiane/canti.html>		a bibo:Book ;
 																	rdfs:label			"Canti / Leopardi, Giacomo, 1798-1837" ;
 																	frbr:Work			"Canti / Leopardi, Giacomo, 1798-1837" ;
@@ -62,6 +69,7 @@
 																						"https://www.wikidata.org/wiki/Q19142707" ;
 																	frbr:Expression		"http://id.sbn.it/bid/VIA0069487" ;
 																	dcterms:creator		"#gl_pers" ;
+																	frbr:creator		"#gl_pers" ;
 																	sch:author 			"#gl_pers" ;
 																	dcterms:contributor	"#ar_pers" .
 
@@ -79,6 +87,7 @@
 																	owl:sameAs			"https://www.wikidata.org/wiki/Q4489699" ;
 																	dcterms:isPartOf	"https://pixedelic.github.io/variantileopardiane/canti.html" ;
 																	dcterms:creator		"#gl_pers" ;
+																	frbr:creator		"#gl_pers" ;
 																	sch:author			"#gl_pers" ;
 																	dcterms:language	"http://lexvo.org/id/iso639-3/ita" ;
 																	sch:dateCreated		"1828-04-19 / 1828-04-20" .
