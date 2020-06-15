@@ -53,7 +53,7 @@
 							<name type="surname">Ranieri</name>
 						</persName>
 					</editor>
-					<distributor xml:id="bnn_org" ref="http://digitale.bnnonline.it/">Biblioteca Nazionale di Napoli «Vittorio Emanuele III» - Sezione manoscritti e rari</distributor>
+					<distributor xml:id="bnn_org" ref="https://pixedelic.github.io/variantileopardiane/files/a-silvia.rdf#bnn_org">Biblioteca Nazionale di Napoli «Vittorio Emanuele III» - Sezione manoscritti e rari</distributor>
 					<availability>
 						<p>Il manoscritto originale è conservato presso la Biblioteca Nazionale di Napoli «Vittorio Emanuele III» e fruibile on line. Il testo è qui trascritto previa autorizzazione dell'ente.</p>
 					</availability>
