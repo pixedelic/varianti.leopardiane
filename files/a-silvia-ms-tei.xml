@@ -5,7 +5,7 @@
 			<titleStmt>
 				<title type="main">A Silvia</title>
 				<title type="sub">Manoscritto autografo del 1828 trascritto in edizione elettronica e machine readable</title>
-				<author xml:id="gl_pers" ref="https://pixedelic.github.io/variantileopardiane/files/a-silvia.rdf#gl_pers">
+				<author xml:id="gl_pers" ref="https://pixedelic.github.io/variantileopardiane/files/a-silvia.rdf#gl_pers"><!-- check -->
 					<persName>
 						<name type="forename">Giacomo</name>
 						<name type="surname">Leopardi</name>
