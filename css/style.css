@@ -1463,7 +1463,8 @@ a img {
 	margin-right: .5em;
 	vertical-align: baseline;
 }
-#file-xml a.ui {
+#file-xml a.ui,
+a.ui.alt {
     color: #9eadb4;
     font-size: .825rem;
     font-weight: 700;
