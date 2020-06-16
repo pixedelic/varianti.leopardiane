@@ -1082,6 +1082,8 @@ p:last-child {
 .poem-title {
 	font-size: 1em;
 	position: relative;
+}
+body:not(.showing-vars) .poem-title {
 	z-index: 1;
 }
 .poem-title .line {

@@ -270,6 +270,7 @@
 					$verse.addClass('active');
 
 					$('.show-vars').remove();
+					$('body').removeClass('showing-vars');
 
 					$dataVars.each(function(i, dV){
 						var $dv = $(dV),
@@ -309,6 +310,7 @@
 					});
 
 					$stanza.append($showVars);
+					$('body').addClass('showing-vars');
 
 					var varsH = $showVars.height(),
 						stanzaT = $stanza.position().top,
