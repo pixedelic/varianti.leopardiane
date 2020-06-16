@@ -20,24 +20,24 @@
 			<niso:name>JPEG</niso:name>
 		</mag:img_group>
 	</mag:gen>
-	<mag:bib level="m"><!-- m = monografia -->
+	<mag:bib level="m" xml:id="leovar21"><!-- m = monografia -->
 		<dc:identifier xsi:type="URI">https://www.britannica.com/topic/A-Silvia</dc:identifier>
 		<dcterms:isPartOf xsi:type="URI">http://id.worldcat.org/fast/1358438</dcterms:isPartOf>
 		<dc:title>A Silvia</dc:title>
 		<dc:creator>Leopardi, Giacomo</dc:creator>
 		<dc:subject>filologia, poesia italiana, letteratura italiana, letteratura, metadatazione, studi leopardiani</dc:subject>
-		<dc:subject xsi:type="dcterms:DDC">851.7</dc:subject>
-		<dc:subject xsi:type="dcterms:UDC">801.8</dc:subject>
-		<dc:subject xsi:type="dcterms:UDC">82-1</dc:subject>
-		<dc:subject xsi:type="dcterms:LCSH">info:lc/authorities/sh85100821</dc:subject>
-		<dc:subject xsi:type="dcterms:LCSH">info:lc/authorities/sh85077507</dc:subject>
-		<dc:subject xsi:type="dcterms:LCSH">info:lc/authorities/sh99001678</dc:subject>
+		<dc:subject xsi:type="dcterms:DDC">851.7</dc:subject><!-- poesia italiana dell'800 -->
+		<dc:subject xsi:type="dcterms:UDC">801.8</dc:subject><!-- Sources of linguistics and philology. Collections of texts -->
+		<dc:subject xsi:type="dcterms:UDC">82-1</dc:subject><!-- Poetry. Poems. Verse -->
+		<dc:subject xsi:type="dcterms:LCSH">info:lc/authorities/sh85100821</dc:subject><!-- Philology -->
+		<dc:subject xsi:type="dcterms:LCSH">info:lc/authorities/sh85077507</dc:subject><!-- Literature -->
+		<dc:subject xsi:type="dcterms:LCSH">info:lc/authorities/sh99001678</dc:subject><!-- Poetry -->
 		<dc:subject xsi:type="dcterms:DCMIType">Text</dc:subject>
 		<dc:description  xml:lang="it">Manoscritto autografo dell'autore</dc:description>
 		<dc:date>1828-04-19/1828-04-20</dc:date>
 		<dc:format xsi:type="dcterms:IMT">text/html</dc:format>
 		<dc:format xsi:type="dcterms:IMT">text/xml</dc:format>
-		<dc:format xsi:type="dcterms:IMT">RFC6129</dc:format>
+		<dc:format xsi:type="dcterms:IMT">RFC6129</dc:format><!-- tei/xml -->
 		<dc:source xsi:type="SBN" xml:id="bnn_org">NA0079</dc:source><!-- Biblioteca Nazionale di Napoli -->
 		<dc:source xsi:type="URI" xsi:IDREF="#bnn_org">http://digitale.bnnonline.it/</dc:source><!-- non so se si può né come riferirsi a #bnn_org -->
 		<dc:language>ita</dc:language>
@@ -103,7 +103,7 @@
 			<mag:compression>JPG</mag:compression>
 		</mag:image_dimensions>
 	</mag:img>
-	<mag:doc>
+	<mag:doc xsi:IDREF="#leovar21">
 		<mag:sequence_number>21</mag:sequence_number>
 		<mag:nomenclature>Varianti di A Silvia - Versione XML</mag:nomenclature>
 		<mag:file Location="URL" xlink:href="https://pixedelic.github.io/variantileopardiane/files/a-silvia-var.xml" xlink:type="simple"/>

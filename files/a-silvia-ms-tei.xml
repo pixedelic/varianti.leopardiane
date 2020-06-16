@@ -63,7 +63,7 @@
 		</fileDesc>
 	</teiHeader>
 	<text>
-		<pb xml:id="asilvia1r" facs="‎⁨../images⁩/a-silvia⁩/giacomo_leopardi-a_silvia-1.jpg" type="recto"/><!-- ID e facs non so se siano corretti -->
+		<pb xml:id="asilvia1r" facs="‎⁨https://pixedelic.github.io/variantileopardiane/images⁩/a-silvia⁩/giacomo_leopardi-a_silvia-1.jpg" type="recto"/><!-- ID e facs non so se siano corretti -->
 		<front>
 			<docTitle>
 				<titlePart>A Silvia.</titlePart>
@@ -88,8 +88,10 @@
 						Quando beltà splende<del rend="doublestrikes(vertical)">v</del>a
 					</l>
 					<l n="3bis">
-						<del rend="overstrike">Ne la fronte e nel sen tuo verginale,</del>
-						<add place="margin left">Nel volto verginale</add>
+						<subst>
+							<del rend="overstrike">Ne la fronte e nel sen tuo verginale,</del>
+							<add place="margin left">Nel volto verginale</add>
+						</subst>
 					</l>
 					<l n="4">
 						<del rend="doublestrikes(vertical)">E</del>
@@ -99,7 +101,7 @@
 							<add place="supralinear" rend="unmarked" seq="2">occhi tuoi ridenti</add>
 						</subst>
 						e <rhyme xml:id="ivi-4">fuggitivi</rhyme>,
-						<add place="margin left">E ne gli occhi tuoi molli e <rhyme sameAs="ivi-4">fuggitivi</rhyme>. dolci, vaghi</add>
+						<add place="margin left">E ne gli occhi tuoi molli e <rhyme sameAs="#ivi-4">fuggitivi</rhyme>. dolci, vaghi</add>
 					</l>
 					<l n="5">
 						E tu, lieta e 
@@ -194,7 +196,7 @@
 						</subst>
 						la faticosa tela.
 					</l>
-					<pb xml:id="asilvia1v" facs="‎⁨../images⁩/a-silvia⁩/giacomo_leopardi-a_silvia-2.jpg" type="verso"/><!-- ID e facs non so se siano corretti -->
+					<pb xml:id="asilvia1v" facs="‎⁨https://pixedelic.github.io/variantileopardiane/images⁩/a-silvia⁩/giacomo_leopardi-a_silvia-2.jpg" type="verso"/><!-- ID e facs non so se siano corretti -->
 					<l n="23">
 						Mirava il ciel <rhyme xml:id="eno-23">sereno</rhyme>,
 					</l>
@@ -281,7 +283,7 @@
 						La dolce lode or de le negre chiome,
 						<add place="margin right">chiome brune.</add>
 					</l>
-					<pb xml:id="asilvia2r" facs="‎⁨../images⁩/a-silvia⁩/giacomo_leopardi-a_silvia-3.jpg" type="recto"/><!-- ID e facs non so se siano corretti -->
+					<pb xml:id="asilvia2r" facs="‎⁨https://pixedelic.github.io/variantileopardiane/images⁩/a-silvia⁩/giacomo_leopardi-a_silvia-3.jpg" type="recto"/><!-- ID e facs non so se siano corretti -->
 					<l n="46">
 						Or de gli sguardi innamorati e <rhyme xml:id="ivi-46">schivi</rhyme>;
 						<add place="margin left">chiome verecondi.</add>
@@ -358,7 +360,7 @@
 					</l>
 				</lg>
 			</lg>
-			<pb xml:id="asilvia2v" facs="‎⁨../images⁩/a-silvia⁩/giacomo_leopardi-a_silvia-4.jpg" type="verso"/><!-- ID e facs non so se siano corretti -->
+			<pb xml:id="asilvia2v" facs="‎⁨https://pixedelic.github.io/variantileopardiane/images⁩/a-silvia⁩/giacomo_leopardi-a_silvia-4.jpg" type="verso"/><!-- ID e facs non so se siano corretti -->
 		</body>
 	</text>
 </TEI>
