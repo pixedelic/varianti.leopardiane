@@ -39,7 +39,7 @@
 				</note>
 			</notesStmt>
 			<sourceDesc>
-				<bibl>
+				<bibl type="poem"><!-- da usare anche per lista dei Canti volendo, con <listBibl> <bibl type="poem"> -->
 					<title>A Silvia</title>
 					<author corresp="#gl_pers">
 						<persName>
@@ -181,7 +181,7 @@
 						<metamark function="insertion" rend="caret">^</metamark>del paterno ostello
 					</l>
 					<l n="20">
-						Porgea <add rend="overstrike">g</add>l<add rend="overstrike">i</add><del place="inline">'</del> orecchi<del place="inline">o</del> al suon de la tua <rhyme xml:id="oce-20">voce</rhyme>,
+						Porgea <add rend="overstrike">g</add>l<add place="inline">i</add><del rend="overstrike">'</del> orecchi<del rend="overstrike">o</del> al suon de la tua <rhyme xml:id="oce-20">voce</rhyme>,
 					</l>
 					<l n="21">
 						Ed a la man <rhyme corresp="#oce-20">veloce</rhyme>
