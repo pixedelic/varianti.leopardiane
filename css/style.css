@@ -1058,12 +1058,12 @@ h6, .h6 {
 	margin-top: .5em;
 	text-transform: uppercase;
 }
-h1:first-chid, .h1:first-chid,
-h2:first-chid, .h2:first-chid,
-h3:first-chid, .h3:first-chid,
-h4:first-chid, .h4:first-chid,
-h5:first-chid, .h5:first-chid,
-h6:first-chid, .h6:first-chid {
+h1:first-child, .h1:first-child,
+h2:first-child, .h2:first-child,
+h3:first-child, .h3:first-child,
+h4:first-child, .h4:first-child,
+h5:first-child, .h5:first-child,
+h6:first-child, .h6:first-child {
 	margin-top: 0;
 }
 h5 a {
