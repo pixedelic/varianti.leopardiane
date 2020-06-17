@@ -10,7 +10,7 @@
 	xmlns:dbo="http://dbpedia.org/ontology/"
 	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 	xmlns:bibo="http://purl.org/ontology/bibo/"
-	xmlns:bibframe="http://id.loc.gov/ontologies/bibframe/"
+	xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
 	xmlns:sch="http://schema.org/">
 
 	<foaf:Person rdf:ID="gl_pers">
@@ -82,12 +82,12 @@
 		<dcterms:contributor rdf:resource="#ar_pers"/>
 	</bibo:Book>
 
-	<bibframe:Manuscript rdf:about="https://pixedelic.github.io/variantileopardiane/a-silvia.html">
+	<bf:Manuscript rdf:about="https://pixedelic.github.io/variantileopardiane/a-silvia.html">
 		<frbr:Item>NA0079 - C.L.XXI.7a</frbr:Item>
 		<rdfs:label>A Silvia</rdfs:label>
 		<frbr:Work>A Silvia</frbr:Work>
 		<dcterms:title>A Silvia</dcterms:title>
-		<bibframe:Place>Pisa</bibframe:Place>
+		<bf:Place>Pisa</bf:Place>
 		<frbr:Manifestation rdf:resource="http://digitale.bnnonline.it/index.php?it/148/a-silvia-1828"/>
 		<skos:definition>Manoscritto autografo del 1828 trascritto in edizione elettronica e machine readable.</skos:definition>
 		<rdf:type rdf:resource="https://schema.org/DigitalDocument"/>
@@ -102,5 +102,5 @@
 		<dcterms:language rdf:resource="http://lexvo.org/id/iso639-3/ita"/>
 		<sch:dateCreated>1828-04-19 / 1828-04-20</sch:dateCreated>
 		<dcmitype:Image rdf:resource="https://pixedelic.github.io/variantileopardiane/images/a-silvia/giacomo_leopardi-a_silvia-1.jpg"/>
-	</bibframe:Manuscript>
+	</bf:Manuscript>
 </rdf:RDF>

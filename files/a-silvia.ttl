@@ -9,7 +9,7 @@
 @prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
-@prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 <#gl_pers> 															a foaf:Person ;
@@ -74,13 +74,13 @@
 																	dcterms:contributor	"#ar_pers" .
 
 
-<https://pixedelic.github.io/variantileopardiane/a-silvia.html> 	a bibframe:Manuscript ;
+<https://pixedelic.github.io/variantileopardiane/a-silvia.html> 	a bf:Manuscript ;
 																	frbr:Item			"NA0079 - C.L.XXI.7a" ;
 																	rdfs:label			"A Silvia – Leopardi, Giacomo, 1798-1837" ;
 																	frbr:Work			"A Silvia – Leopardi, Giacomo, 1798-1837" ;
 																	frbr:Manifestation	"http://digitale.bnnonline.it/index.php?it/148/a-silvia-1828" ;
 																	skos:definition		"Manoscritto autografo del 1828 trascritto in edizione elettronica e machine readable" ;
-																	bibframe:Place		"Pisa" ;
+																	bf:Place			"Pisa" ;
 																	rdf:type			"https://schema.org/DigitalDocument" ,
 																						"http://schema.org/Manuscript" ,
 																						"http://purl.org/ontology/bibo/Manuscript" ;
