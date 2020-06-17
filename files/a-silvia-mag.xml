@@ -32,9 +32,12 @@
 		<dc:subject xsi:type="dcterms:LCSH">info:lc/authorities/sh85100821</dc:subject><!-- Philology -->
 		<dc:subject xsi:type="dcterms:LCSH">info:lc/authorities/sh85077507</dc:subject><!-- Literature -->
 		<dc:subject xsi:type="dcterms:LCSH">info:lc/authorities/sh99001678</dc:subject><!-- Poetry -->
+		<dc:subject xsi:type="dcterms:BNCF">8036 Filologia</dc:subject>
+		<dc:subject xsi:type="dcterms:BNCF">10934 Letteratura italiana - Sec. XIX</dc:subject>
+		<dc:subject xsi:type="dcterms:BNCF">14864 Poesia italiana - Sec. XIX-XX</dc:subject>
 		<dc:subject xsi:type="dcterms:DCMIType">Text</dc:subject>
 		<dc:description  xml:lang="it">Manoscritto autografo dell'autore</dc:description>
-		<dc:date>1828-04-19/1828-04-20</dc:date>
+		<dc:date xsi:type="dcterms:ISO8601">1828-04-19/1828-04-20</dc:date>
 		<dc:format xsi:type="dcterms:IMT">text/html</dc:format>
 		<dc:format xsi:type="dcterms:IMT">text/xml</dc:format>
 		<dc:format xsi:type="dcterms:IMT">RFC6129</dc:format><!-- tei/xml -->
