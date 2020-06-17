@@ -64,17 +64,17 @@
 	</teiHeader>
 	<text>
 		<pb xml:id="asilvia1r" facs="‎⁨../images⁩/a-silvia⁩/giacomo_leopardi-a_silvia-1.jpg" type="recto"/><!-- ID e facs non so se siano corretti -->
-		<front>
-			<docTitle>
-				<titlePart>A Silvia.</titlePart>
-			</docTitle>
-			<dateline><!-- Sinceramente non so come segnalarne la posizione a margine -->
-				<name type="place">Pisa.</name>,
-				<date from="1828-04-19" to="1828-04-20">19.20.Aprile.1828.</date>
-			</dateline>
-		</front>
 		<body>
+			<dateline>
+				<note place="margin left">
+					<name type="place">Pisa.</name>,
+					<date from="1828-04-19" to="1828-04-20">19.20.Aprile.1828.</date>
+				</note>
+			</dateline>
 			<lg type="canzone-libera">
+				<head>
+					<title>A Silvia.</title>
+				</head>
 				<lg type="stanza">
 					<l n="1">
 						<persName>
