@@ -17,8 +17,9 @@
 				foaf:name	"Giacomo Leopardi" ;
 				foaf:img 	"https://pixedelic.github.io/variantileopardiane/images/leopardi/giacomo-leopardi-1.jpg" ;
 				foaf:knows	[
-					<#ar_pers> foaf:Person ;
-						foaf:name	"Antonio Ranieri" ;
+					<#ar_pers> 
+						foaf:Person ;
+							foaf:name	"Antonio Ranieri" ;
 				] ;
 			rdfs:label			"Leopardi, Giacomo, 1798-1837" ;
 			dbo:birthDate		"1798-06-29" ;
@@ -40,8 +41,9 @@
 				foaf:name	"Antonio Ranieri" ;
 				foaf:img 	"https://pixedelic.github.io/variantileopardiane/images/leopardi/antonio-ranieri.jpg" ;
 				foaf:knows	[
-					<#gl_pers> foaf:Person ;
-						foaf:name	"Giacomo Leopardi" ;
+					<#gl_pers> 
+						foaf:Person ;
+							foaf:name	"Giacomo Leopardi" ;
 				] ;
 			rdfs:label			"Antonio, Ranieri, 1806-1888" ;
 			owl:sameAs			"https://www.wikidata.org/wiki/Q522838" ,
